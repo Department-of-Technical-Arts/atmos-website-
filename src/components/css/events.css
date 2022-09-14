@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.background {
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    position: absolute;
+    background-image: url(../../assets/earth-g174993377_1920\ 1.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    height: 201px;
+    width: 609px;
+    top: 35%;
+    left: 50%;
+}
+
+h1 {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 150px;
+    font-weight: 600;
+    height: 182px;
+    mix-blend-mode: difference;
+    color: #e9e9dd;
+    transform: translate(-50%, -50%);
+}
+
+.card-container {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    top: 60%;
+    justify-content: space-between;
+    padding: 0 10%;
+    flex: 0 1 auto;
+}
+
+.hover-cards {
+    position: relative;
+    background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
+    height: 220px;
+    width: 180px;
+    border-radius: 45px;
+    font-family: 'Inter';
+    color: #fffffc;
+    text-transform: uppercase;
+    bottom: 0;
+}
+
+.hover-cards p {
+    font-size: 18px;
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translate( -50%);
+    line-height: 27px;
+    width: 210px;
+}
