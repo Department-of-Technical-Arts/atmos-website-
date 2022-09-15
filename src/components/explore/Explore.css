@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+.bground {
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    position: absolute;
+    background-image: url("./bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.content {
+    position: relative;
+    height: 201px;
+    width: 609px;
+    top: 35%;
+    left: 50%;
+}
+
+.title {
+    position: absolute;
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    height: 182px;
+    /*color: #e9e9dd;*/
+    color:white;
+}
+.big-title{
+    height:182px;
+    font-size: 130px;
+    min-width:1000px;
+    font-weight: 600;
+    max-width:1200px;
+    transform: translate(-58%, 2%);
+}
+
+.small-title{
+    height:100px;
+    font-size: 85px;
+    font-weight: 200;
+    min-width:700px;
+    max-width: 1000px;
+    transform: translate(-83%, -85%);
+}
+
+.description{
+    position: relative;
+    height: 400px;
+    width: 600px;
+    top: 38%;
+    left: 0;
+}
+
+.desc{
+    transform: translate(25%, -64%);
+    text-align: left;
+    font-size: 30px;
+    padding:5px;
+}
+
+.explore-btn{
+    background: #15272B;
+    opacity: 0.75;
+    border-radius: 25px;
+    border:0;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #B0E1EC;
+    padding:25px;
+    text-align: left;
+    transform: translate(-25%,0);
+    cursor:pointer;
+}
+
+.explore-btn:hover{
+    background:#B0E1EC;
+    color:#15272B;
+    opacity:0.60;
+}
+

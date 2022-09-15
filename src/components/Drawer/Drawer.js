@@ -3,6 +3,7 @@ import { Drawer, IconButton, ListItemIcon } from "@mui/material";
 import { useState } from "react";
 import { List, ListItemButton,ListItem, ListItemText,Button } from "@mui/material";
 import "./Drawer.css";
+import {IoMenu} from 'react-icons/io5';
 
 const DrawerComp = ({ links }) => {
   const [open, setOpen] = useState(false);
@@ -25,8 +26,9 @@ const DrawerComp = ({ links }) => {
             </ListItem>
         </List>
       </Drawer>
-        <Button onClick={()=>setOpen(!open)} sx={{marginLeft:"90%"}}>
-            {open ? "": "Icon"}
+        <Button onClick={()=>setOpen(!open)}>
+            {/*{open ? "": "Icon"}*/}
+            {open ? "":<IoMenu color="white" fontSize={36} />}
         </Button>
     </>
   );

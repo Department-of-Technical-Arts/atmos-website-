@@ -1,23 +1,29 @@
-.wrapper{
-    margin-right:80%;
+.navbar {
+    position: initial;
+}
+
+.wrapper {
+    margin-right: 80%;
+    margin-left: 2%;
+    margin-top: 2%;
     display: flex;
     flex-direction: column;
 }
 
 
-.header{
+.header {
     font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 40px;
-line-height: 48px;
-text-align: center;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
 }
 
-.white{
-    color:white
+.white {
+    color: white
 }
 
-.blue{
-    color:#379DB4
+.blue {
+    color: #379DB4
 }
