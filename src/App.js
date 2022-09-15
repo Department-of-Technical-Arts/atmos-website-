@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Events/>
-      <Gallery/>
+      {/* <Gallery/> */}
     </>
   );
 }
