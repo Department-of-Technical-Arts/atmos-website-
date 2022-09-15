@@ -13,8 +13,8 @@ function App() {
       <div className="App">
         <NavBar links= { linksArray}/>
         <Explore />
-        <Events/>
-        <Gallery/>
+        {/* <Events/> */}
+        {/* <Gallery/> */}
       </div>
     </>
   );

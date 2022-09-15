@@ -1,5 +1,6 @@
 import React from 'react' ;
 import "../components/css/events.css"
+import NavBar from './Navbar/NavBar';
 
 function Events() {
 
@@ -7,6 +8,7 @@ function Events() {
         <>
             <div className='background-container'>
                 <div className='background'>
+                    <NavBar/>
                     <div className='content'>
                         <h1>EVENTS</h1>
                     
