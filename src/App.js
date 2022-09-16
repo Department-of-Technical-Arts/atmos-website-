@@ -6,6 +6,7 @@ import NavBar from './components/Navbar/NavBar'
 import Explore from './components/explore/Explore'
 import Landing from './components/landing'
 import Sponsors from './components/sponsors';
+import About from './components/About';
 
 const linksArray= ['Home','Blog']
 
@@ -15,7 +16,7 @@ function App() {
       <div className="App">
         <NavBar links= { linksArray}/>
         {/* <Landing/> */}
-
+        <About/>
         {/* <Explore /> */}
         {/* <Sponsors/> */}
         {/* <Events/> */}
