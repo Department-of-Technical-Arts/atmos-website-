@@ -1,5 +1,5 @@
 import React from 'react'
-import "./competitions.css"
+import "./talks.css"
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import Slider from '../slider/Slider'
 
@@ -8,11 +8,11 @@ const Competitions = () => {
   return (
     <div>
         <div className="headerContainer">
-            <h1 className="header">Competitions</h1>
+            <h1 className="header">Talks</h1>
         </div>
         
         <div className="eventsContainer">
-          <div>
+        <div>
             <h3 className="subHeader">
               PREVIOUS
             </h3>
