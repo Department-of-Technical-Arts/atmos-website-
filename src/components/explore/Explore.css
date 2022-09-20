@@ -12,11 +12,37 @@
     width: 100vw;
 }
 
+@keyframes zoomIn {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.5);
+    }
+}
+
+
 .bground {
     top: 0;
     left: 0;
     /* background-color: black; */
     position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: 2s ease-out 0s 1 zoomIn;
+    transform: scale(1.5);
     background-image: url("./bg1.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -24,6 +50,7 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
+
 }
 
 .content {
@@ -41,27 +68,28 @@
     font-style: normal;
     height: 182px;
     /*color: #e9e9dd;*/
-    color:white;
+    color: white;
 }
-.big-title{
-    height:182px;
+
+.big-title {
+    height: 182px;
     font-size: 130px;
-    min-width:1000px;
+    min-width: 1000px;
     font-weight: 600;
-    max-width:1200px;
+    max-width: 1200px;
     transform: translate(-58%, 2%);
 }
 
-.small-title{
-    height:100px;
+.small-title {
+    height: 100px;
     font-size: 85px;
     font-weight: 200;
-    min-width:700px;
+    min-width: 700px;
     max-width: 1000px;
     transform: translate(-83%, -85%);
 }
 
-.description{
+.description {
     position: relative;
     height: 400px;
     width: 600px;
@@ -69,31 +97,180 @@
     left: 0;
 }
 
-.desc{
+.desc {
     transform: translate(25%, -64%);
     text-align: left;
     font-size: 30px;
-    padding:5px;
+    padding: 5px;
 }
 
-.explore-btn{
+@keyframes slideInFromL {
+    0% {
+        transform: translateX(-300%);
+    }
+
+    100% {
+        transform: translateX(-25%);
+    }
+}
+
+.explore-btn {
     background: #15272B;
     opacity: 0.75;
     border-radius: 25px;
-    border:0;
+    border: 0;
     font-weight: 600;
     font-size: 25px;
     line-height: 30px;
     color: #B0E1EC;
-    padding:25px;
+    padding: 25px;
     text-align: left;
-    transform: translate(-25%,0);
-    cursor:pointer;
+    transform: translate(-25%, 0);
+    cursor: pointer;
+    animation: 2s ease-out 0s 1 slideInFromL;
+    ;
 }
 
-.explore-btn:hover{
-    background:#B0E1EC;
-    color:#15272B;
-    opacity:0.60;
+.explore-btn:hover {
+    background: #B0E1EC;
+    color: #15272B;
+    opacity: 0.60;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
+.background-container1 {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+@keyframes zoomIn1 {
+    0% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(4);
+    }
+}
+
+.bground1 {
+    top: 0;
+    left: 0;
+    /* background-color: black; */
+    position: absolute;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image1 {
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: absolute;
+    animation: 2s ease-out 0s 1 zoomIn1;
+    transform: scale(4);
+    background-image: url("./bg1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.content1 {
+    position: relative;
+    height: 201px;
+    width: 609px;
+    top: 35%;
+    left: 50%;
+    animation: 1s ease-out 0s 1 fadeOut;
+    opacity: 0;
+}
+
+.title1 {
+    position: absolute;
+    text-align: left;
+    font-family: 'Inter';
+    font-style: normal;
+    height: 182px;
+    /*color: #e9e9dd;*/
+    color: white;
+}
+
+.big-title {
+    height: 182px;
+    font-size: 130px;
+    min-width: 1000px;
+    font-weight: 600;
+    max-width: 1200px;
+    transform: translate(-58%, 2%);
+}
+
+.small-title {
+    height: 100px;
+    font-size: 85px;
+    font-weight: 200;
+    min-width: 700px;
+    max-width: 1000px;
+    transform: translate(-83%, -85%);
+}
+
+.description1 {
+    position: relative;
+    height: 400px;
+    width: 600px;
+    top: 38%;
+    left: 0;
+    animation: 1s ease-out 0s 1 fadeOut;
+    opacity: 0;
+}
+
+
+.desc1 {
+    transform: translate(25%, -64%);
+    text-align: left;
+    font-size: 30px;
+    padding: 5px;
+}
+
+.explore-btn1 {
+    background: #15272B;
+    opacity: 0.75;
+    border-radius: 25px;
+    border: 0;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+    color: #B0E1EC;
+    padding: 25px;
+    text-align: left;
+    transform: translate(-25%, 0);
+    cursor: pointer;
+    animation: 1s ease-out 0s 1 fadeOut;
+    opacity: 0;
+
+}

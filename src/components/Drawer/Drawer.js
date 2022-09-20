@@ -1,28 +1,44 @@
-import React, { useEffect } from "react";
+import React, { useEffect,useState } from "react";
 import { Drawer, IconButton, ListItemIcon } from "@mui/material";
-import { useState } from "react";
 import { List, ListItemButton,ListItem, ListItemText,Button } from "@mui/material";
 import "./Drawer.css";
 import {IoMenu} from 'react-icons/io5';
+import {Link,useNavigate} from "react-router-dom"
 
-const DrawerComp = ({ links }) => {
+const DrawerComp = () => {
   const [open, setOpen] = useState(false);
   return (
     <>
       
-      <Drawer open={open} anchor="right" onClose={() => setOpen(false)} PaperProps={{sx:{margin:'auto', background: 'rgba(4,0,0,0.4)'}}} >
+      <Drawer open={open} anchor="right" onClose={() => setOpen(false)} PaperProps={{sx:{margin:'auto', background: 'rgba(4,0,0,0.4)', paddingTop:"6%"}}} >
       <List>
             <ListItem>
-                <ListItemText primary="ABOUT" sx={{color: 'white'}}/>
+              <ListItemButton>
+                <a href="/about">
+                <ListItemText primaryTypographyProps={{fontSize: '26px'}} primary="ABOUT" sx={{color: 'white',marginTop:"35%"}}/>
+                </a>
+              </ListItemButton>
             </ListItem>
             <ListItem>
-                <ListItemText primary= 'EVENTS ' sx={{color: 'white'}}/>
+              <ListItemButton>
+              <a href="/events">
+                <ListItemText primaryTypographyProps={{fontSize: '26px'}} primary= 'EVENTS ' sx={{color: 'white',marginTop:"45%"}}/>
+              </a>
+              </ListItemButton>
             </ListItem>
             <ListItem>
-                <ListItemText primary= 'SPONSORS ' sx={{color: 'white'}}/>
+              <ListItemButton>
+              <a href="/sponsors">
+                <ListItemText primaryTypographyProps={{fontSize: '26px'}} primary= 'SPONSORS ' sx={{color: 'white' ,marginTop:"45%"}}/>
+              </a>
+              </ListItemButton>
             </ListItem>
             <ListItem>
-                <ListItemText primary= 'GALLERY ' sx={{color: 'white'}}/>
+                <ListItemButton>
+              <a href="/gallery">
+                  <ListItemText primaryTypographyProps={{fontSize: '26px'}} primary= 'GALLERY' sx={{color: 'white' ,marginTop:"45%"}}/>
+              </a>
+                </ListItemButton>
             </ListItem>
         </List>
       </Drawer>

@@ -4,7 +4,28 @@
     box-sizing: border-box;
 }
 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes zoomIn2 {
+    0% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
 .background-container {
     position: relative;
     height: 100vh;
@@ -12,11 +33,11 @@
 }
 
 .background {
+    z-index: -1;
     top: 0;
     left: 0;
-    /* background-color: black; */
+    background-color: black;
     position: absolute;
-    background-image: url(../../assets/earth-g174993377_1920\ 1.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -25,12 +46,29 @@
     overflow: hidden;
 }
 
-.content {
+.image-events {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("../../assets/earth-g174993377_1920\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    animation: 1s ease-out 0s 1 zoomIn2;
+}
+
+.content-events {
     position: relative;
     height: 201px;
     width: 609px;
-    top: 20%;
+    top: 35%;
     left: 50%;
+
+    animation: 2s ease-out 0s 1 fadeIn;
 }
 
 h1 {
@@ -67,6 +105,8 @@ h1 {
     color: #fffffc;
     text-transform: uppercase;
     bottom: 0;
+
+    animation: 2s ease-out 0s 1 fadeIn;
 }
 
 .hover-cards p {
@@ -74,7 +114,7 @@ h1 {
     position: absolute;
     top: 225px;
     left: 50%;
-    transform: translate( -50%);
+    transform: translate(-50%);
     line-height: 27px;
-    width: 180px;
+    width: 210px;
 }

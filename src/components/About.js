@@ -7,7 +7,6 @@ function About(){
         <>
             <div className="background-container-gallery">
                 <div className="background-gallery">
-                    <NavBar />
                     <div className="content-gallery">
                         <h1>ABOUT US</h1>
                     </div>

@@ -1,8 +1,11 @@
 import React from 'react' ;
 import "../components/css/landing.css"
-import {FiArrowDown} from 'react-icons/fi';
+import {IoIosArrowDropdownCircle} from 'react-icons/io';
+import {Link,useNavigate} from "react-router-dom"
+import {Button} from "@mui/material";
 
 function Landing() {
+
     return(
         <>
             <div className='background-container'>
@@ -11,7 +14,10 @@ function Landing() {
                         <h1>ATMOS</h1>
                     </div>
                 </div>
-                <FiArrowDown color="white" size="30"/>
+                {/*<Button component={RouterLink} to="/explore" sx={{margin:"500px"}}>Click me</Button>*/}
+                <a href="/explore" className='landing-btn'>
+                    <IoIosArrowDropdownCircle color="white" size="38"/>
+                </a>
             </div>
         </>
     )

@@ -5,6 +5,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+
 .background-container {
     position: relative;
     height: 100vh;
@@ -15,6 +16,7 @@
     top: 0;
     left: 0;
     position: absolute;
+    background-color: black;
     background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -51,3 +53,9 @@ h1 {
 
 }
 
+.landing-btn {
+    position: absolute;
+    top: 92%;
+    left: 50%;
+    bottom: 10%;
+}

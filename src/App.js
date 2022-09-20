@@ -7,20 +7,24 @@ import Explore from './components/explore/Explore'
 import Landing from './components/landing'
 import Sponsors from './components/sponsors';
 import About from './components/About';
-
-const linksArray= ['Home','Blog']
+import {Routes,Route,BrowserRouter} from "react-router-dom";
 
 function App() {
   return (
     <>
       <div className="App">
-        <NavBar links= { linksArray}/>
-        {/* <Landing/> */}
-        <About/>
-        {/* <Explore /> */}
-        {/* <Sponsors/> */}
-        {/* <Events/> */}
-        {/* <Gallery/> */}
+        <NavBar/>
+        <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Landing/>}/>
+          <Route path="explore" element={<Explore />} />
+          <Route path="events" element={<Events />} />
+          <Route path="gallery" element={<Gallery/>} />
+          <Route path="sponsors" element={<Sponsors/>}/>
+          <Route path="about" element={<About/>}/>
+        </Routes>
+        </BrowserRouter>
+         
 
       </div>
     </>

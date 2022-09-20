@@ -1,6 +1,5 @@
 import React from 'react' ;
 import "../components/css/events.css"
-import NavBar from './Navbar/NavBar';
 
 function Events() {
 
@@ -8,8 +7,8 @@ function Events() {
         <>
             <div className='background-container'>
                 <div className='background'>
-                    <NavBar/>
-                    <div className='content'>
+                    <div className="image-events"></div>
+                    <div className='content-events'>
                         <h1>EVENTS</h1>
                     
                     </div>
