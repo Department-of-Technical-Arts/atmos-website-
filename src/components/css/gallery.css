@@ -33,6 +33,18 @@
     left: 50%;
 }
 
+.content-gallery h1 {
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-size: 150px;
+    font-weight: 600;
+    height: 182px;
+    mix-blend-mode: difference;
+    color: #e9e9dd;
+    transform: translate(-50%, -50%);
+}
+
 .card-container-gallery {
     position: absolute;
     display: grid;
