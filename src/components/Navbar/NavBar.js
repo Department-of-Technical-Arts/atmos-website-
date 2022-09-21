@@ -1,6 +1,7 @@
 import React from "react";
 import DrawerComp from "../Drawer/Drawer";
 import {AppBar, Toolbar} from "@mui/material";
+import {Link} from "react-router-dom";
 import "./NavBar.css"
 
 const NavBar = () => {

@@ -8,6 +8,11 @@ import Landing from './components/landing'
 import Sponsors from './components/sponsors';
 import About from './components/About';
 import {Routes,Route,BrowserRouter} from "react-router-dom";
+import Talks from './components/talks/Talks';
+import Competitions from './components/competitions/competitions';
+import Workshops from './components/workshops/workshops';
+import ProShows from './components/proshows/proshows';
+
 
 function App() {
   return (
@@ -22,6 +27,10 @@ function App() {
           <Route path="gallery" element={<Gallery/>} />
           <Route path="sponsors" element={<Sponsors/>}/>
           <Route path="about" element={<About/>}/>
+          <Route path="talks" element={<Talks/>}/>
+          <Route path="competitions" element={<Competitions/>}/>
+          <Route path="workshops" element={<Workshops/>}/>
+          <Route path="proshows" element={<ProShows/>}/>
         </Routes>
         </BrowserRouter>
          

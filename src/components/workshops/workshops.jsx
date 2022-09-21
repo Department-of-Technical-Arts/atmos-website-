@@ -1,18 +1,18 @@
 import React from 'react'
-import "./talks.css"
+import "./workshops.css"
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import Slider from '../slider/Slider'
 
 
-const Talks = () => {
+const Workshops = () => {
   return (
     <div>
         <div className="headerContainer">
-            <h1 className="header">Talks</h1>
+            <h1 className="header">Workshops</h1>
         </div>
         
         <div className="eventsContainer">
-        <div>
+          <div>
             <h3 className="subHeader">
               PREVIOUS
             </h3>
@@ -39,4 +39,4 @@ const Talks = () => {
   )
 }
 
-export default Talks
+export default Workshops
