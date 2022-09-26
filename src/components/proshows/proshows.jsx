@@ -51,7 +51,7 @@ const ProShows = () => {
           <h3 className="subHeader2">NEXT</h3>
           <div className='card1-container'>
             
-            <a href="/competitions"><div className='hover-cards'>></div></a>
+            <a href="/competitions"><div className='hover-cards'></div></a>
             <a href="/workshops"><div className='hover-cards'></div></a>
 
           </div>
