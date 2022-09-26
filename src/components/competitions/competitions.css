@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 .card-container-competition-1 {
     position: absolute;
     display: flex;
@@ -24,4 +25,24 @@
     align-items: flex-end;
     flex-direction: row;
     gap: 5%;
+}
+
+.card-container-competition-1 p {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    top: -25px;
+    font-family: 'Inter';
+    left: 25%;
+    transform: translateX(-75%);
+}
+
+.card-container-competition-2 p {
+    position: absolute;
+    font-size: 18px;
+    color: white;
+    top: -25px;
+    font-family: 'Inter';
+    right: 25%;
+    transform: translateX(75%);
 }
