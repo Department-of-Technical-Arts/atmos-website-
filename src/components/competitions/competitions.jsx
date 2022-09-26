@@ -6,36 +6,25 @@ import Slider from '../slider/Slider'
 
 const Competitions = () => {
   return (
-    <div>
-        <div className="headerContainer">
-            <h1 className="header">Competitions</h1>
-        </div>
-        
-        <div className="eventsContainer">
-          <div>
-            <h3 className="subHeader">
-              PREVIOUS
-            </h3>
-            <div className="sliderContainer">
-            <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-            <img src={placeholder} alt="bruh" width="207px" height="244px"  className="sliderContainer" />
-            
-
+          <>
+            <div className='background-container'>
+                <div className='background'>
+                    <div className="image-events"></div>
+                    <div className='content-events'>
+                        <h1>COMPETITIONS</h1>
+                    
+                    </div>
+                    <div className='card-container-competition-1 .competition-cards-1'>
+                      <a href="/competitions"><div className='hover-cards'><p>Competition</p></div></a>
+                      <a href="/workshops"><div className='hover-cards'><p>workshops</p></div></a>
+                    </div>
+                    <div className='card-container-competition-2 .competition-cards-2'>
+                      <a href="/talks"><div className='hover-cards'><p>talks</p></div></a>
+                      <a href="/proshows"><div className='hover-cards'><p>pro-shows</p></div></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div>
-          <h3 className="subHeader">
-          CURRENT
-            </h3>
-            <div className="sliderContainer">
-              <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-              <img src={placeholder} alt="bruh" width="207px" height="244px"  />
-              {/* <Slider/> */}
-            </div>
-          </div>
-        </div>
-
-    </div>
+          </>
   )
 }
 

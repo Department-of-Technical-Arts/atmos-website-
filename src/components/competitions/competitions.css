@@ -1,54 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
-body{
-    min-height: 100%;
-    background-image:url("../../images/competions/earth-g174993377_1920\ 1.png");
-    background-size: cover;
-    /* background-size: auto 100%; */
-    background-repeat:no-repeat;
+.card-container-competition-1 {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    top: 60%;
+    justify-content: flex-start;
+    padding: 0 10%;
+    flex: 0 1 auto;
+    width: 100vw;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5%;
 }
-.headerContainer{
-    
-    display:flex;
-    margin-top:311px;
-    justify-content:center;
 
-}
-.header{
-    font-family: 'Inter', sans-serif;
-
-    font-size: 100px;
-    font-weight: 600;
-    line-height: 182px;
-    letter-spacing: 0em;
-   
-
-    mix-blend-mode: difference;
-    
-    color: #E9E9DD;
-
-/* left: 471px; */
-/* top: 311px; */
-border-radius: nullpx;
-
-}
-.eventsContainer{
-    display:flex;
-    justify-content:space-around;
-    margin-bottom:40px;
-
-}
-.subHeader{
-    text-align:center;
-    font-family: 'Inter', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 27px;
-/* identical to box height */
-
-
-color: #FFFFFC;
-}
-.sliderContainer{
-   margin-right:20px
+.card-container-competition-2 {
+    position: absolute;
+    display: flex;
+    flex-wrap: nowrap;
+    top: 60%;
+    justify-content: flex-end;
+    padding: 0 10%;
+    flex: 0 1 auto;
+    width: 100vw;
+    align-items: flex-end;
+    flex-direction: row;
+    gap: 5%;
 }
