@@ -6,36 +6,27 @@ import Slider from '../slider/Slider'
 
 const Workshops = () => {
   return (
-    <div>
-        <div className="headerContainer">
-            <h1 className="header">Workshops</h1>
-        </div>
-        
-        <div className="eventsContainer">
-          <div>
-            <h3 className="subHeader">
-              PREVIOUS
-            </h3>
-            <div className="sliderContainer">
-            <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-            <img src={placeholder} alt="bruh" width="207px" height="244px"  className="sliderContainer" />
-            
-
+    <>
+            <div className='background-container'>
+                <div className='background'>
+                    <div className="image-events"></div>
+                    <div className='content-events'>
+                        <h1>WORKSHOPS</h1>
+                    
+                    </div>
+                    <div className='card-container-competition-1 .competition-cards-1'>
+                      <p>Previous</p>
+                      <a href="/competitions"><div className='hover-cards'><p></p></div></a>
+                      <a href="/workshops"><div className='hover-cards'><p></p></div></a>
+                    </div>
+                    <div className='card-container-competition-2 .competition-cards-2'>
+                      <p>Current</p>
+                      <a href="/talks"><div className='hover-cards'><p></p></div></a>
+                      <a href="/proshows"><div className='hover-cards'><p></p></div></a>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div>
-          <h3 className="subHeader">
-          CURRENT
-            </h3>
-            <div className="sliderContainer">
-              <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-              <img src={placeholder} alt="bruh" width="207px" height="244px"  />
-              {/* <Slider/> */}
-            </div>
-          </div>
-        </div>
-
-    </div>
+          </>
   )
 }
 
