@@ -17,7 +17,7 @@ const Slider =  () => {
                 <SwiperSlide>
 
                         <img src={placeholder} alt="bruh" width="207px" height="244px" />
-
+                        
                 </SwiperSlide>
                 <SwiperSlide>
 

@@ -12,6 +12,7 @@ import Talks from './components/talks/Talks';
 import Competitions from './components/competitions/competitions';
 import Workshops from './components/workshops/workshops';
 import ProShows from './components/proshows/proshows';
+import Contest from './components/Contest/Contest';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="competitions" element={<Competitions/>}/>
           <Route path="workshops" element={<Workshops/>}/>
           <Route path="proshows" element={<ProShows/>}/>
+          <Route path="contest" element={<Contest />}/>
         </Routes>
         </BrowserRouter>
          

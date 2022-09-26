@@ -17,8 +17,9 @@ const Competitions = () => {
               PREVIOUS
             </h3>
             <div className="sliderContainer">
-            <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-            <img src={placeholder} alt="bruh" width="207px" height="244px"  className="sliderContainer" />
+            
+            <a href='/contest'><img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" /></a>
+            <a href='/contest'><img src={placeholder} alt="bruh" width="207px" height="244px"  className="sliderContainer" /></a>
             
 
             </div>
@@ -28,8 +29,8 @@ const Competitions = () => {
           CURRENT
             </h3>
             <div className="sliderContainer">
-              <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
-              <img src={placeholder} alt="bruh" width="207px" height="244px"  />
+              <a href='/contest'><img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" /></a>
+              <a href='/contest'><img src={placeholder} alt="bruh" width="207px" height="244px"  /></a>
               {/* <Slider/> */}
             </div>
           </div>

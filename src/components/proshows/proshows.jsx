@@ -16,7 +16,7 @@ const ProShows = () => {
             <h3 className="subHeader">
               PREVIOUS
             </h3>
-            <div className="sliderContainer">
+            <div className="sliderContainer" >
             <img src={placeholder} alt="bruh" width="207px" height="244px" className="sliderContainer" />
             <img src={placeholder} alt="bruh" width="207px" height="244px"  className="sliderContainer" />
             
