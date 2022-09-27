@@ -3,6 +3,7 @@
     justify-content: center;
     /* padding: 20px; */
 }
+
 .placeholder-title{
     height: 50px;
     font-size: 2vh;
@@ -11,12 +12,37 @@
     padding: auto;
     color: wheat;
 }
-
-.swiperButton{
+.swiperButtonPrev{
+    background: url('./left.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: difference;
+    border: none;
+    /* justify-content: center;
+    align-items: center; */
+    z-index: 100;
     height: 10vh;
     width: 10vw;
-    color: wheat;
+    /* padding-left: 4vw;
+    padding-top: 50%; */
     position: absolute;
-    left: 0;
-    top: 00px;
+    left: 3vw;
+    top: 70%;
+}
+.swiperButtonNext{
+    background: url('./right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: difference;
+    border: none;
+    /* justify-content: center;
+    align-items: center; */
+    height: 10vh;
+    width: 10vw;
+    /* padding-left: 4vw;
+    padding-top: 50%; */
+    z-index: 100;
+    position: absolute;
+    left: 37vw;
+    top: 70%;
 }

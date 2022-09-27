@@ -47,14 +47,14 @@
     transform: translateX(75%);
 }
 .card1-container {
-    position: absolute;
+    position: absolute; 
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
     flex-wrap: nowrap;
     width: 50vw;
     top: 60%;
     justify-content: space-between;
-    padding: 0% 10%;
+    padding: 0% 10%; 
     flex: 0 1 auto;
 }
 .card2-container {

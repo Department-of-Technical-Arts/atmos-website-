@@ -1,10 +1,13 @@
-import React from 'react'
+import {React, useState} from 'react'
 import "./competitions.css"
+import { Swiper, SwiperSlide} from 'swiper/react';
+
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import Slider from '../slider/Slider'
-
+import '../slider/slider.css'
 
 const Competitions = () => {
+  const [swiper, setSwiper] = useState(null);
   return (
     <>
     <div className='background-container'>
@@ -22,12 +25,16 @@ const Competitions = () => {
             </div> */}
             <h3 className="subHeader1">PREVIOUS</h3>
           <h3 className="subHeader2">CURRENT</h3>
+          <button className='swiperButtonPrev' onClick={() => {
+            console.log("prev");
+            swiper.slidePrev()
+            }}></button>
+          
+
           <div className='card1-container'>
-            
-            <Slider />
-
+            <Slider swiper={swiper} setSwiper={setSwiper}/>
           </div>
-
+          <button className='swiperButtonNext' onClick={() => swiper.slideNext()}></button>
          
           <div className='card2-container'>
             <a href="/talks"><div className='hover-cards'></div></a>

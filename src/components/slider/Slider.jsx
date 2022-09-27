@@ -1,23 +1,26 @@
 import {React, useState} from 'react';
-import { Swiper, SwiperSlide, useSwiper, setSwiperInstance } from 'swiper/react';
+import { Swiper, SwiperSlide} from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import './slider.css'
 
 
-const Slider =  () => {
-        const [swiper, setSwiper] = useState(null);
-
+const Slider =  ({swiper, setSwiper}) => {
+        
+        
         return (
                 // <div className="sliderContainer">
                 <>
-                <button className='swiperButton' onClick={() => swiper.slideNext()}>SLIDE</button>
+                
                 <Swiper
-                        spaceBetween={5}
+                        className='swiper-cont'
+                        spaceBetween={100}
+                        pagination={{ clickable: true }}
+                        navigation
+                        scrollbar={{ draggable: true }}
                         grabCursor={true}
                         slidesPerView={2}
-                        navigation
                         onSwiper={(swiper) => setSwiper(swiper)}
                         >
                         
@@ -103,9 +106,9 @@ const Slider =  () => {
                         </SwiperSlide>
                         
                 </Swiper>
-
+                
                 </>
-                // </div>
+                 
         );
 };
 
