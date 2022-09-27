@@ -11,3 +11,12 @@
     padding: auto;
     color: wheat;
 }
+
+.swiperButton{
+    height: 10vh;
+    width: 10vw;
+    color: wheat;
+    position: absolute;
+    left: 0;
+    top: 00px;
+}
