@@ -26,10 +26,10 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             </div>
         </div>
         <div className='content-right'>
-            <div className='title'>
+            <div className='contest-title'>
                 {title}
             </div>
-            <div className='description'>
+            <div className='contest-description'>
                 {desc}
             </div>
             <div className='socials'>

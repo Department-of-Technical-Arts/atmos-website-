@@ -69,6 +69,7 @@
     height: 182px;
     /*color: #e9e9dd;*/
     color: white;
+    
 }
 
 .big-title {
@@ -78,6 +79,7 @@
     font-weight: 600;
     max-width: 1200px;
     transform: translate(-58%, 2%);
+    
 }
 
 .small-title {

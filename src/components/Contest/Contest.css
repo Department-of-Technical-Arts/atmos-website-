@@ -11,7 +11,7 @@
 }
 @keyframes contestTitleZoomIn {
     0% {
-        transform: scale(0.85);
+        transform: scale(1);
     }
     100% {
         transform: scale(1);
@@ -70,8 +70,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
-    line-height: 44px;
+    font-size: 3.5vh;
+    line-height: 4.29vh;
     text-align: center;
     color: #FFFFFF;
 }
@@ -98,8 +98,8 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 30px;
-    line-height: 44px;
+    font-size: 3.5vh;
+    line-height: 4.29vh;
     text-align: center;
     
 }
@@ -109,39 +109,40 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    height: 70vh;
+    height: 80vh;
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
 
 }
-.title{
+.contest-title{
     animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
     padding-top: 80px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 80px;
-    line-height: 97px;
-
+    font-size: 7.8vh;
+    line-height: 9.4vh;
+    margin-bottom: 10vh;
     color: #E9E9DD;
     mix-blend-mode: difference;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.description{
+.contest-description{
+    width: 75%;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 30px;
-    line-height: 36px;
+    font-size: 3vh;
+    line-height: 3.51vh;
     text-align: center;
-    mix-blend-mode:difference;
+    mix-blend-mode: exclusion;
     color: #FFFFFF;
 }
 .socials{
     z-index: 100;
-    padding-top: 40vh;
+    padding-top: 10vh;
     width: 100%;
     height: 90vh;
     display: flex;
