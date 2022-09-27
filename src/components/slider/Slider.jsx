@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import 'swiper/css';
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
-
+import './slider.css'
 
 const Slider =  () => {
     return (

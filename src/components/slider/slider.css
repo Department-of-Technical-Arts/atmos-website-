@@ -3,3 +3,11 @@
     justify-content: center;
     /* padding: 20px; */
 }
+.placeholder-title{
+    height: 50px;
+    font-size: 2vh;
+    text-shadow: 100px;
+    text-decoration-color: blue;
+    padding: auto;
+    color: wheat;
+}
