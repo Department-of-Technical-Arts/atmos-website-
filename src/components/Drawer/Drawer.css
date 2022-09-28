@@ -1,3 +1,8 @@
-.button{
-    margin-left:auto;
+.button {
+  margin-left: auto;
+}
+
+.close-btn {
+  margin-left: auto;
+  transform: translate(-70%, -100%);
 }

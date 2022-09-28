@@ -1,62 +1,108 @@
-@import url('https://fonts.googleapis.com/css2?family=Croissant+One&display=swap');
-body{
-    min-height: 100%;
-    background-image:url("../../images/competions/earth-g174993377_1920\ 1.png");
-    background-size: cover;
-    /* background-size: auto 100%; */
-    background-repeat:no-repeat;
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+body {
+  min-height: 100%;
+  background-size: cover;
+  /* background-size: auto 100%; */
+  background-repeat: no-repeat;
 }
-.headerContainer{
-    
-    display:flex;
-    margin-top:311px;
-    justify-content:center;
-
+.background-container-workshops {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
-.header{
-    font-family: 'Inter', sans-serif;
 
-    font-size: 100px;
-    font-weight: 600;
-    line-height: 182px;
-    letter-spacing: 0em;
-   
-
-    mix-blend-mode: difference;
-    
-    color: #E9E9DD;
-
-/* left: 471px; */
-/* top: 311px; */
-border-radius: nullpx;
-
+.background-workshops {
+  top: 0;
+  left: 0;
+  background-color: black;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
-.eventsContainer{
-    display:flex;
-    justify-content:space-around;
-    margin-bottom:40px;
 
+.image-workshops {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("../../assets/earth-g174993377_1920\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 zoomIn2;
 }
-.subHeader{
-    text-align:center;
-    font-family: 'Inter', sans-serif;
-font-style: normal;
-font-weight: 700;
-font-size: 22px;
-line-height: 27px;
-/* identical to box height */
 
+.content-workshops {
+  position: relative;
+  height: 201px;
+  width: 609px;
+  top: 35%;
+  left: 50%;
+  animation: 2s ease-out 0s 1 fadeIn;
+}
 
-color: #FFFFFC;
+.content-workshops h1 {
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 150px;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  transform: translate(-50%, -50%);
 }
-.sliderContainer{
-   margin-right:20px
+.headerContainer {
+  display: flex;
+  margin-top: 311px;
+  justify-content: center;
 }
-.leftarrow{
-    position: absolute;
-    left: 800px;
+.header {
+  font-family: "Inter", sans-serif;
+
+  font-size: 100px;
+  font-weight: 600;
+  line-height: 182px;
+  letter-spacing: 0em;
+
+  mix-blend-mode: difference;
+
+  color: #e9e9dd;
+
+  /* left: 471px; */
+  /* top: 311px; */
+  border-radius: nullpx;
 }
-.rightarrow{
-    position: absolute;
-    left: 1350px;
+.eventsContainer {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+.subHeader {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 27px;
+  /* identical to box height */
+
+  color: #fffffc;
+}
+.sliderContainer {
+  margin-right: 20px;
+}
+.leftarrow {
+  position: absolute;
+  left: 800px;
+}
+.rightarrow {
+  position: absolute;
+  left: 1350px;
 }

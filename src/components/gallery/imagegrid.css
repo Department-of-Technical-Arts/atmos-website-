@@ -1,0 +1,86 @@
+.container-grid {
+  transform: translate(0%, 20%);
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-rows: 100px 300px;
+  grid-gap: 2%;
+  grid-auto-flow: dense;
+  padding: 10%;
+}
+
+.gallery-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.gallery-item .image-gallery-grid {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.gallery-item .image-gallery-grid img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  cursor: pointer;
+}
+
+.gallery-item:hover .image-gallery-grid {
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+
+.w-1 {
+  grid-column: span 1;
+}
+.w-2 {
+  grid-column: span 2;
+}
+.w-3 {
+  grid-column: span 3;
+}
+.w-4 {
+  grid-column: span 4;
+}
+.w-5 {
+  grid-column: span 5;
+}
+.w-6 {
+  grid-column: span 6;
+}
+
+.h-1 {
+  grid-row: span 1;
+}
+.h-2 {
+  grid-row: span 2;
+}
+.h-3 {
+  grid-row: span 3;
+}
+.h-4 {
+  grid-row: span 4;
+}
+.h-5 {
+  grid-row: span 5;
+}
+.h-6 {
+  grid-row: span 6;
+}
+
+@media screen and (max-width: 500px) {
+  .container-grid {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .w-1,
+  .w-2,
+  .w-3,
+  .w-4,
+  .w-5,
+  .w-6 {
+    grid-column: span 1;
+  }
+}

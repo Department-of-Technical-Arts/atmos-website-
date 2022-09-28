@@ -1,0 +1,49 @@
+.standout-container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 169vh;
+  height: 100vh;
+}
+
+.lec {
+  width: 42vh;
+  position: absolute;
+  transform: translate(25vh, 30vh);
+  align-items: center;
+}
+
+.eve {
+  width: 42vh;
+  position: absolute;
+  transform: translate(100vh, 55vh);
+  align-items: center;
+}
+
+.talks {
+  width: 42vh;
+  position: absolute;
+  transform: translate(25vh, 100vh);
+  align-items: center;
+}
+
+.comp {
+  width: 42vh;
+  position: absolute;
+  transform: translate(100vh, 120vh);
+  text-align: center;
+}
+
+.standout-header {
+  font-size: 7vh;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  margin-bottom: 4vh;
+}
+
+.standout-desc {
+  background: rgba(96, 96, 96, 0.4);
+  font-size: 3vh;
+  border-radius: 25px;
+  color: white;
+  padding: 40px;
+}
