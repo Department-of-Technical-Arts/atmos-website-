@@ -116,9 +116,5 @@ const Slider =  ({swiper, setSwiper}) => {
 
 
 
-// const SwiperButtonNext = ({ children }) => {
-//         const swiper = useSwiper();
-//         return <button className='swiperButton' onClick={() => swiper.slideNext()}>{children}</button>;
-//       };
 
 export default Slider;

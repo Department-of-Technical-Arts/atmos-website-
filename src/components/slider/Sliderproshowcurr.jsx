@@ -5,15 +5,14 @@ import 'swiper/css';
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import './slider.css'
 
-
-const Slider =  ({swiper, setSwiper}) => {
+ const Slider2 =  ({swiper, setSwiper}) => {
         
         
         return (
                 // <div className="sliderContainer">
                 <>
                 
-                <Swiper 
+                <Swiper
                         className='swiper-cont'
                         spaceBetween={100}
                         pagination={{ clickable: true }}
@@ -114,11 +113,9 @@ const Slider =  ({swiper, setSwiper}) => {
         );
 };
 
-
-
 // const SwiperButtonNext = ({ children }) => {
 //         const swiper = useSwiper();
 //         return <button className='swiperButton' onClick={() => swiper.slideNext()}>{children}</button>;
 //       };
 
-export default Slider;
+export default Slider2;

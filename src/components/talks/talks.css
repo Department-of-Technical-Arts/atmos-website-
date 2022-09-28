@@ -52,3 +52,12 @@ color: #FFFFFC;
 .sliderContainer{
     margin-right:20px
  }
+
+ .leftarrow{
+    position: absolute;
+    left: 800px;
+}
+.rightarrow{
+    position: absolute;
+    left: 1350px;
+}

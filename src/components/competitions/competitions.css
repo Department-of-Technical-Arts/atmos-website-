@@ -98,3 +98,12 @@
     line-height: 27px;
     color:#FFFFFC;
 }
+
+.leftarrow{
+    position: absolute;
+    left: 800px;
+}
+.rightarrow{
+    position: absolute;
+    left: 1350px;
+}
