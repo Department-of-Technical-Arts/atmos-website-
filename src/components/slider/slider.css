@@ -12,7 +12,7 @@
     padding: auto;
     color: wheat;
 }
-.swiperButtonPrev{
+.swiperButtonPrevPrev{
     background: url('./left.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -29,7 +29,7 @@
     left: 3vw;
     top: 70%;
 }
-.swiperButtonNext{
+.swiperButtonPrevNext{
     background: url('./right.png');
     background-repeat: no-repeat;
     background-position: center;
@@ -44,5 +44,39 @@
     z-index: 100;
     position: absolute;
     left: 37vw;
+    top: 70%;
+}
+.swiperButtonCurrPrev{
+    background: url('./left.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: difference;
+    border: none;
+    /* justify-content: center;
+    align-items: center; */
+    z-index: 100;
+    height: 10vh;
+    width: 10vw;
+    /* padding-left: 4vw;
+    padding-top: 50%; */
+    position: absolute;
+    left: 52vw;
+    top: 70%;
+}
+.swiperButtonCurrNext{
+    background: url('./right.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    mix-blend-mode: difference;
+    border: none;
+    /* justify-content: center;
+    align-items: center; */
+    height: 10vh;
+    width: 10vw;
+    /* padding-left: 4vw;
+    padding-top: 50%; */
+    z-index: 100;
+    position: absolute;
+    left: 88vw;
     top: 70%;
 }

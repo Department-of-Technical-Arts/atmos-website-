@@ -101,9 +101,9 @@
 
 .leftarrow{
     position: absolute;
-    left: 800px;
+    left: 60vw;
 }
 .rightarrow{
     position: absolute;
-    left: 1350px;
+    left: 100vw;
 }

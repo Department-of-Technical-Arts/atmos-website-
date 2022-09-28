@@ -15,7 +15,7 @@ const Slider =  ({swiper, setSwiper}) => {
                 
                 <Swiper 
                         className='swiper-cont'
-                        spaceBetween={100}
+                        spaceBetween={10}
                         pagination={{ clickable: true }}
                         navigation
                         scrollbar={{ draggable: true }}
