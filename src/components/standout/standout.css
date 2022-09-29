@@ -1,6 +1,7 @@
 .standout-container {
   width: 100%;
   position: relative;
+  bottom: 200px;
   margin-bottom: 169vh;
   height: 100vh;
 }
@@ -8,13 +9,17 @@
 .lec {
   width: 42vh;
   position: absolute;
+  left: 7vw;
   transform: translate(25vh, 30vh);
   align-items: center;
+  z-index: 1;
+  
 }
 
 .eve {
   width: 42vh;
   position: absolute;
+  left: 12vw;
   transform: translate(100vh, 55vh);
   align-items: center;
 }
@@ -22,6 +27,7 @@
 .talks {
   width: 42vh;
   position: absolute;
+  left: 7vw;
   transform: translate(25vh, 100vh);
   align-items: center;
 }
@@ -29,6 +35,8 @@
 .comp {
   width: 42vh;
   position: absolute;
+  left: 12vw;
+  top: 70px;
   transform: translate(100vh, 120vh);
   text-align: center;
 }
@@ -38,6 +46,9 @@
   mix-blend-mode: difference;
   color: #e9e9dd;
   margin-bottom: 4vh;
+  mix-blend-mode: difference;
+  z-index: -1;
+  
 }
 
 .standout-desc {
