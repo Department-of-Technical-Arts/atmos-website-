@@ -11,7 +11,7 @@ function Sponsors() {
           <div >
             <div className="image-gallery-spons"></div>
             <div className="content-gallery-spons">
-              <h1 className="oursponsors-title">Our Previous Sponsors</h1>
+              <h1 className="oursponsors-title">OUR PREVIOUS SPONSORS</h1>
               <h1 className="sponsors-title">Title Sponsor</h1>
               <h1 className="cotitle-sponsors">Co-Title Sponsors</h1>
               <h1 className="associate-sponsors">Associate Sponsors</h1>

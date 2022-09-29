@@ -32,6 +32,7 @@
   width: 100%;
   overflow: hidden;
   animation: 1s ease-out 0s 1 zoomIn2;
+  background-attachment: fixed;
 }
 
 .content-about {
@@ -62,7 +63,7 @@
   position: relative;
   letter-spacing: 0.2rem;
   width: 1000px;
-  height: 800px;
+  height: 100px;
   left: -480px;
   top: 200px;
 }
