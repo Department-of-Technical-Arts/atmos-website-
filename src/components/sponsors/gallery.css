@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
+.background-container-gallery {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+}
+
+@keyframes zoomIn2 {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.image-gallery {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 zoomIn2;
+}
+
+.content-gallery {
+  position: absolute;
+  justify-items: center;
+  align-items: center;
+}
+
+.gallery-title {
+  position: fixed;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 150px;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  transform: translate(-50%, -50%);
+}
+
+.oursponsors-title {
+  text-align: center;
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  display: inline-flex;
+  white-space: nowrap;
+  font-size: 90px;  
+  color: #e9e9dd;
+  transform: translate(-50%, -50%);
+  padding-top: 200px;
+  justify-items: center;
+  place-items: center;
+}
+.logo-image{
+  height: 150px;
+  width: auto;
+  border-radius: 15px;
+}
+.forever-logo{
+  height: 150px;
+  width : 200px;
+}
+.sponsors-title {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;  
+  color: #e9e9dd;
+  padding-top: 100px;
+  transform: translate(-50%, -50%);
+}
+
+.cotitle-sponsors{
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;  
+  color: #e9e9dd;
+  padding-top: 300px;
+  transform: translate(-50%, -50%);
+}
+.gold-sponsors{
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;  
+  color: #e9e9dd;
+  padding-top: 900px;
+  transform: translate(-50%, -50%);
+}
+
+.associate-sponsors{
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;  
+  color: #e9e9dd;
+  padding-top: 650px;
+  transform: translate(-50%, -50%);
+}
+
+.associate-sponsors-2{
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;  
+  color: #e9e9dd;
+  padding-top: 450px;
+  transform: translate(-50%, -50%);
+}
+.card-container-gallery {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 34px;
+  width: 100vw;
+  top: 40%;
+  justify-content: space-around;
+  padding: 0 10%;
+  align-content: center;
+  align-items: center;
+  justify-items: center;
+}
