@@ -2,7 +2,6 @@ import { React, useState } from "react";
 import "./workshops.css";
 import placeholder from "../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png";
 import Slider from "../slider/Slider";
-import Slider2 from "../slider/Slidercomcurr";
 import "../slider/slider.css";
 
 const Workshops = () => {

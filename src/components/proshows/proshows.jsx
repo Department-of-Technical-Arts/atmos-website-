@@ -2,12 +2,12 @@ import {React, useState} from 'react'
 import "./proshows.css"
 import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
 import Slider from '../slider/Slider'
-import Slider2 from '../slider/Slidercomcurr'
+
 
 
 const ProShows = () => {
-  
-  const competionsNames = ["SPES NOVO","Under Pressure","Nuclear Blues","CaseSensitive","GRAND PRIX MANIA","ESCALADE"]
+
+  const proShowsNames = ["Armaan Malik","Nishant Suri","Danny Avila","Aerreo","Sanam","Vivek Singh","Pineapple Express"]
 
   const [swiper, setSwiper] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
@@ -60,7 +60,7 @@ const ProShows = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider data={competionsNames} type="comp" swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={proShowsNames} type="talk" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
@@ -73,7 +73,7 @@ const ProShows = () => {
             }}></button>
          
           <div className='card2-container' >
-            <Slider data={competionsNames} type="comp" swiper={swiper2} setSwiper={setSwiper2}/>
+            <Slider data={proShowsNames} type="proshow" swiper={swiper2} setSwiper={setSwiper2}/>
           </div>
           <button 
         className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>

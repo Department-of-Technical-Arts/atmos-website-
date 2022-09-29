@@ -37,8 +37,16 @@ const Slider =  ({swiper, setSwiper, data, type}) => {
                         >
                                 {/* {console.log(Object.keys(names))
                                 } */}
-                                {Object.values(data).map((value,i)=>(<SwiperSlide>
+                                {(type=="comp"||type=="work") && Object.values(data).map((value,i)=>(<SwiperSlide>
                                                 <a href={`/contest/${type}/${i}`}>
+                                                        <img src={placeholder} alt="bruh" width="207px" height="244px" />
+                                                        <div className="placeholder-title">{value}</div>
+                                                </a>
+                                        </SwiperSlide>)
+                                        
+                                )}
+                                {(type=="talk"||type=="proshow") && Object.values(data).map((value,i)=>(<SwiperSlide>
+                                                <a href={`/gallery/${type}/${i}`}>
                                                         <img src={placeholder} alt="bruh" width="207px" height="244px" />
                                                         <div className="placeholder-title">{value}</div>
                                                 </a>

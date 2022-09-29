@@ -25,12 +25,12 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         "Wall Street Business Challenge":"A week-long business case study competition in which the participants are given real-life corporate problems and asked to present a solution in the form of slides. It has been the highest participation event of Orbe Novo with more than 800 registration. The prize money last time was 35K which we're expecting to increase to 45K to match with other competitions in academic circles"
     }
     const workshops ={
-        "Smart Automobile Workshop":"Has your childhood fantasy been developing intelligent vehicles? Are you interested in the most current changes to the auto industry? In that case, A 2-day online workshop on smart vehicles with certification is offered to you by Team Vulcan and SAE. This program is intended to teach students about industrial workflow and how electric automobile components work, as well as how concepts are developed, designs are created, and manufacturing processes are carried out.",
-        "Current Trends in pharmaceutical sciences":"Panacea, The Pharmacy Association at BITS Pilani Hyderabad is thrilled to present you its (NO) National Symposium, Current Trends in Pharmaceutical Sciences (CTPS), themed Recovery with Resilience, if you are interested in entering the pharmaceutical industry or have a talent for drug discovery or biomedical research in the future but do not know where to start.",
-        "ROBOTICS BOOTCAMP":"A fun 3 Day Robotics Workshop is brought to you by the Automation and Robotics Club, BITS Pilani Hyderabad Campus this cultural-tech fest, Orbe Novo'22. With no prerequisites, featuring hands-on experience and a 5-in-1 kit. The event will be conducted on 29th, 30th and 31st March and will walk you through essential Electronics, Programming, and Design skills for Robotics. Learn to tinker with physical tools, design, debug , and much more. Live offline sessions will be held throughout the event, and all content will be featured on our website. Discussions on solving problems and clearing doubts will be held throughout.",
-        "EXPERT ENCOUNTER":"Have you ever imagined what it would be like to meet a talented individual in the beautifully fascinating field of automobiles because of your intrinsic enthusiasm?Don’t shy away! We've got you covered. MEA is proud to have Mr. Arvind Goel, MD & CEO at TATA Autocomp, speak at our keynote seminar, EXPERT ENCOUNTER, and share his extraordinary experiences with us. He has been an exemplary worldwide leader for 40 years in the Indian and Chinese automotive sectors, from greenfield Truck & MUV to strategic joint ventures. He successfully led Tata AutoComp into five new joint ventures, two technology agreements, and the acquisition of TitanX, an engine and powertrain manufacturing facility in Sweden. Really impressive, no? Do you wish to learn about his life before TATA? Mr. Goel earned a bachelor's degree in Mechanical Engineering from NIT KKR and went on to receive an education from Harvard. We’re honoured to have him as our guest speaker.",
-        "CRYPTOGRAPHY WORKSHOP":"Ever wonder what makes \"hacking\" so thrilling, how your data is safeguarded, or what safeguards your PC has in place. For all the cybersecurity enthusiasts and curious people out there, Prepare for an Introduction to Cryptography Workshop by the CSA, where we will walk you through all the skills and demonstrations needed, from scratch, to get into the world of exploits and vulnerabilities. The workshop's agenda includes learning about how various cryptographic algorithms function as well as the fundamental ideas that underlie their elegant operation.",
-        "3D Rendering Workshop":"SEDS, the aerospace club of BPHC held a 3D Rendering Workshop themed “Your Vision of Martian Society” during Orbe Novo. It gave a fascinating insight into the various facets of 3-D graphic design and piqued the learners curiosity.",
+        "Smart Automobile Workshop":"A 2-day online workshop on smart vehicles with certification was offered by Team Vulcan and SAE. This program was intended to teach students about industrial workflow and how electric automobile components work, as well as how concepts are developed, designs are created, and manufacturing processes are carried out.",
+        "Current Trends in pharmaceutical sciences":"Panacea, The Pharmacy Association at BITS Pilani Hyderabad presented it’s (NO) National Symposium, Current Trends in Pharmaceutical Sciences (CTPS), themed Recovery with Resilience, if you are interested in entering the pharmaceutical industry or have a talent for drug discovery or biomedical research in the future but do not know where to start.",
+        "ROBOTICS BOOTCAMP":"A fun 3 Day Robotics Workshop was brought to us by the Automation and Robotics Club, BITS Pilani Hyderabad Campus this cultural-tech fest, Orbe Novo'22. With no prerequisites, featuring hands-on experience and a 5-in-1 kit.",
+        "EXPERT ENCOUNTER":"MEA hosted Mr. Arvind Goel, MD & CEO at TATA Autocomp, speak at our keynote seminar, EXPERT ENCOUNTER, and share his extraordinary experiences with us. He has been an exemplary worldwide leader for 40 years in the Indian and Chinese automotive sectors.",
+        "CRYPTOGRAPHY WORKSHOP":"For all the cybersecurity enthusiasts and curious people out there, Cryptography Workshop was hosted by the CSA, where they explained about all the skills and demonstrations needed, from scratch, to get into the world of exploits and vulnerabilities.",
+        "3D Rendering Workshop":"SEDS, the aerospace club of BPHC held a 3D Rendering Workshop themed “Your Vision of Martian Society” during Orbe Novo. It gave a fascinating insight into the various facets of 3-D graphic design and piqued the learner’s curiosity.",
         "Quadcopter":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it."
     
     }
@@ -51,9 +51,38 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             if (i==params.id){
                 setTitle(value)
                 setDescript(workshops[value])
+
+                const title = document.getElementById("contest-page-title");
+    
+                var numWords = value.split(' ').length; 
+
+                if (numWords > 2) {
+                    title.style.fontSize = "6.8vh";
+                }
             }
         })}
     },[])
+    useEffect(()=>{
+        const title = document.getElementById("contest-page-title");
+    
+        console.log(title)
+        var numWords = title.textContent.split(' ').length; 
+    
+        if (numWords > 2) {
+            title.style.fontSize = "6.8vh";
+        }
+    },[title])
+
+    window.addEventListener('DOMContentLoaded', () => {
+        const title = document.getElementById("contest-page-title");
+    
+        console.log(title)
+        var numWords = title.text().split(' ').length; 
+    
+        if (numWords > 2) {
+            title.style.fontSize = "6.8px";
+        }
+    });
 
     return (
 
@@ -79,7 +108,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             </div>
         </div>
         <div className='content-right'>
-            <div className='contest-title'>
+            <div id="contest-page-title" className='contest-title'>
                 {/* {(params.type=="comp") && Object.keys(competions).map((value,i)=>{
                     console.log(competions)
                     if (i==params.id) {

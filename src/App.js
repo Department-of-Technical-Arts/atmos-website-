@@ -24,7 +24,7 @@ function App() {
             <Route path="/" element={<Landing />} />
             <Route path="explore" element={<Explore />} />
             <Route path="events" element={<Events />} />
-            <Route path="gallery" element={<Gallery />} />
+            <Route path="gallery/:type/:id" element={<Gallery />} />
             <Route path="sponsors" element={<Sponsors />} />
             <Route path="about" element={<About />} />
             <Route path="talks" element={<Talks />} />

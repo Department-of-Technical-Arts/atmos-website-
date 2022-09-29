@@ -2,15 +2,15 @@ import { React, useState } from "react";
 import "./talks.css";
 import { Swiper, SwiperSlide } from "swiper/react";
 import placeholder from "../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png";
-import Slider from "../slider/Slidertalk";
-import Slider2 from "../slider/Slidertalkcurr";
+import Slider from "../slider/Slider";
+
 import "../slider/slider.css";
 
 const Talks = () => {
   const [swiper, setSwiper] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
 
-  const workshopNames = ["Smart Automobile Workshop","Current Trends in pharmaceutical sciences","ROBOTICS BOOTCAMP","EXPERT ENCOUNTER","CRYPTOGRAPHY WORKSHOP","3D Rendering Workshop","Quadcopter"]
+  const talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Waria Hussain","Dr V Anantha Nageswaran"]
 
   return (
     <>
@@ -27,7 +27,7 @@ const Talks = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider data={workshopNames} type="work" swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={talksNames} type="talk" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
@@ -40,7 +40,7 @@ const Talks = () => {
             }}></button>
          
           <div className='card2-container' >
-            <Slider data={workshopNames} type="work" swiper={swiper2} setSwiper={setSwiper2}/>
+            <Slider data={talksNames} type="talk" swiper={swiper2} setSwiper={setSwiper2}/>
           </div>
           <button 
         className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>

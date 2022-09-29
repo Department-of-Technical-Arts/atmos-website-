@@ -125,6 +125,7 @@
     font-weight: 600;
     font-size: 7.8vh;
     line-height: 9.4vh;
+    text-transform: uppercase;
     margin-bottom: 10vh;
     color: #E9E9DD;
     mix-blend-mode: difference;
@@ -135,10 +136,10 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 600;
-    font-size: 3vh;
-    line-height: 3.51vh;
+    font-size: 2.5vh;
+    line-height: 3vh;
     text-align: center;
-    mix-blend-mode: exclusion;
+    mix-blend-mode: difference;
     color: #FFFFFF;
     text-overflow: ellipsis;
 }

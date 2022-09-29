@@ -7,8 +7,7 @@
 .placeholder-title{
     height: 50px;
     font-size: 2vh;
-    text-shadow: 100px;
-    text-decoration-color: blue;
+    text-transform: uppercase;
     padding: auto;
     color: wheat;
 }
