@@ -8,6 +8,11 @@ import Slider2 from '../slider/Slidercomcurr'
 import '../slider/slider.css'
 
 const Competitions = () => {
+
+  // THE COMPETITIONS GO HERE ````
+  
+  const competionsNames = ["SPES NOVO","Under Pressure","Nuclear Blues","CaseSensitive","GRAND PRIX MANIA","ESCALADE"]
+
   const [swiper, setSwiper] = useState(null);
   const [swiper2, setSwiper2] = useState(null);
 
@@ -33,7 +38,7 @@ const Competitions = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={competionsNames} type="comp" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
@@ -46,7 +51,7 @@ const Competitions = () => {
             }}></button>
          
           <div className='card2-container' >
-          <Slider swiper={swiper2} setSwiper={setSwiper2}/>
+            <Slider data={competionsNames} type="comp" swiper={swiper2} setSwiper={setSwiper2}/>
           </div>
           <button 
         className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>

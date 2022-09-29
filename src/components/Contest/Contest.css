@@ -118,6 +118,7 @@
 }
 .contest-title{
     animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
+    height: 30vh;
     padding-top: 80px;
     font-family: 'Inter';
     font-style: normal;
@@ -139,6 +140,7 @@
     text-align: center;
     mix-blend-mode: exclusion;
     color: #FFFFFF;
+    text-overflow: ellipsis;
 }
 .socials{
     z-index: 100;

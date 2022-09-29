@@ -31,7 +31,7 @@ function App() {
             <Route path="competitions" element={<Competitions />} />
             <Route path="workshops" element={<Workshops />} />
             <Route path="proshows" element={<ProShows />} />
-            <Route path="contest" element={<Contest />} />
+            <Route path="contest/:type/:id" element={<Contest />} />
           </Routes>
         </BrowserRouter>
       </div>
