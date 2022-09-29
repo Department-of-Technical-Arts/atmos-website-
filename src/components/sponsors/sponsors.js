@@ -1,7 +1,7 @@
 import React from "react";
 
-import Imagegrid from "./sponsors/imagegridSpons";
-import "./sponsors/spons.css";
+import Imagegrid from "./imagegridSpons";
+import "./spons.css";
 
 function Sponsors() {
   return (
