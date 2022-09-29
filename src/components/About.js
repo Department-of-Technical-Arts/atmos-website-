@@ -10,7 +10,7 @@ function About() {
           <div className="image-about"></div>
           <div className="content-about">
             <h1 class = "heading">ABOUT US</h1>
-            <p class = "content">
+            <p class = "about-description">
               Since its inception in 2012, ATMOS, a yearly national-level techno-management festival run by the BITS Pilani, Hyderabad Campus (BHPC), has experienced tremendous growth in popularity. Year after year, we keep pushing our limits and striving for more.<br /><br />
 
               This festival, formally named as the Assimilation of Technically Motivated Souls but more commonly abbreviated as ATMOS, attempts to identify young people with technical and managerial talent.<br /><br />
