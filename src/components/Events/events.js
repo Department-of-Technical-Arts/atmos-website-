@@ -1,5 +1,5 @@
 import React from 'react' ;
-import "../components/css/events.css"
+import "./events.css"
 
 function Events() {
 

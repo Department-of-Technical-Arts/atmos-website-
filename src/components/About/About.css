@@ -32,6 +32,7 @@
   width: 100%;
   overflow: hidden;
   animation: 1s ease-out 0s 1 zoomIn2;
+  background-attachment: fixed;
 }
 
 .content-about {
@@ -46,10 +47,23 @@
   position: absolute;
   font-family: "Inter";
   font-style: normal;
-  font-size: 150px;
-  font-weight: 600;
-  height: 182px;
+  font-size: 120px;
+  font-weight: 500;
+  height: 40px;
+  width: 650px;
   mix-blend-mode: difference;
   color: #e9e9dd;
   transform: translate(-50%, -50%);
+}
+
+.about-description{
+  color: #e9e9dd;
+  font-size: 1.5rem;
+  font-family: "Inter";
+  position: relative;
+  letter-spacing: 0.2rem;
+  width: 1000px;
+  height: 100px;
+  left: -480px;
+  top: 200px;
 }

@@ -1,12 +1,12 @@
 import logo from "./logo.svg";
 import "./App.css";
-import Events from "./components/events";
+import Events from "./components/Events/events";
 import Gallery from "./components/gallery/gallery";
 import NavBar from "./components/Navbar/NavBar";
 import Explore from "./components/explore/Explore";
 import Landing from "./components/landing/landing";
-import Sponsors from "./components/sponsors";
-import About from "./components/About";
+import Sponsors from "./components/sponsors/sponsors";
+import About from "./components/About/About";
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Talks from "./components/talks/Talks";
 import Competitions from "./components/competitions/competitions";
