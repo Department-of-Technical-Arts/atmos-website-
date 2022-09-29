@@ -19,8 +19,8 @@
 .eve {
   width: 42vh;
   position: absolute;
-  left: 12vw;
-  transform: translate(100vh, 55vh);
+  right : 16vw;
+  transform: translate(0vh, 60vh);
   align-items: center;
 }
 
@@ -28,16 +28,16 @@
   width: 42vh;
   position: absolute;
   left: 7vw;
-  transform: translate(25vh, 100vh);
+  transform: translate(25vh, 110vh);
   align-items: center;
 }
 
 .comp {
   width: 42vh;
   position: absolute;
-  left: 12vw;
-  top: 70px;
-  transform: translate(100vh, 120vh);
+  right: 16vw;
+  /* top: 70px;   */
+  transform: translate(0vh, 140vh);
   text-align: center;
 }
 
