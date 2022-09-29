@@ -27,7 +27,7 @@ const Workshops = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider data={workshopNames} type="work" swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={workshopNames} time="prev" type="work" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
@@ -40,7 +40,7 @@ const Workshops = () => {
             }}></button>
          
           <div className='card2-container' >
-            <Slider data={workshopNames} type="work" swiper={swiper2} setSwiper={setSwiper2}/>
+            <Slider data={workshopNames} time="curr" type="work" swiper={swiper2} setSwiper={setSwiper2}/>
           </div>
           <button 
         className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>

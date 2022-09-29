@@ -38,12 +38,15 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
 
     const [title_names, setTitle] = useState("")
     const [description, setDescript] = useState("")
+    const [register, setReg] = useState(false)
     useEffect(()=>{
         if (params.type=="comp"){
         Object.keys(competions).forEach((value,i)=>{
             if (i==params.id){
                 setTitle(value)
                 setDescript(competions[value])
+
+                
             }
         })}
         else if(params.type=="work"){
@@ -52,6 +55,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                 setTitle(value)
                 setDescript(workshops[value])
 
+                
                 const title = document.getElementById("contest-page-title");
     
                 var numWords = value.split(' ').length; 
@@ -61,17 +65,9 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                 }
             }
         })}
+
+        setReg((params.time=="curr"))
     },[])
-    useEffect(()=>{
-        const title = document.getElementById("contest-page-title");
-    
-        console.log(title)
-        var numWords = title.textContent.split(' ').length; 
-    
-        if (numWords > 2) {
-            title.style.fontSize = "6.8vh";
-        }
-    },[title])
 
     window.addEventListener('DOMContentLoaded', () => {
         const title = document.getElementById("contest-page-title");
@@ -95,11 +91,11 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                 <div className='prize-text'>{prize}</div>
             </div>
             <div className='buttons-menu'>
-                <div className='button-view'>
+            {register && <div className='button-view'>
                     <button className='button'>
                         REGISTER
                     </button>
-                </div>
+                </div>}
                 <div className='button-view'>
                     <button className='button'>
                         EXPLORE

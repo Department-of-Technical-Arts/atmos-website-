@@ -7,7 +7,7 @@ import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unspl
 import './slider.css'
 
 
-const Slider =  ({swiper, setSwiper, data, type}) => {
+const Slider =  ({swiper, setSwiper, data, type, time}) => {
         
         let names = []
 
@@ -38,7 +38,7 @@ const Slider =  ({swiper, setSwiper, data, type}) => {
                                 {/* {console.log(Object.keys(names))
                                 } */}
                                 {(type=="comp"||type=="work") && Object.values(data).map((value,i)=>(<SwiperSlide>
-                                                <a href={`/contest/${type}/${i}`}>
+                                                <a href={`/contest/${time}/${type}/${i}`}>
                                                         <img src={placeholder} alt="bruh" width="207px" height="244px" />
                                                         <div className="placeholder-title">{value}</div>
                                                 </a>

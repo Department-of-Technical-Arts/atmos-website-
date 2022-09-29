@@ -30,6 +30,7 @@
     background-image: url('./contestBG.png');
     height: 100%;
     width: 100%;
+    z-index: 0;
     
 }
 .content-left{
@@ -52,9 +53,11 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size:contain;
-    border-radius: 50px;    
+    border-radius: 50px;   
+     
 }
 .prize{
+    
     margin-bottom: 1vh;
     
     display: flex;
@@ -67,6 +70,7 @@
     border-radius: 50px;
 }
 .prize-text{
+    z-index: 1;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
@@ -74,25 +78,30 @@
     line-height: 4.29vh;
     text-align: center;
     color: #FFFFFF;
+    
 }
 .buttons-menu{
     height: 10vh;
     width: 80%;
     display: flex;
     flex-direction: row;
+    
+    /* align-content: center;
+    justify-items:flex-start; */
 }
 .button-view{
     margin-left: auto;
-    /* display: flex;
-    align-items: center; */
+    display: flex;
+    margin: auto;
     width: 40%;
     height: 6vh;
     background: rgba(0, 0, 0, 0.88);
     border-radius: 50px;
 }
 .button{
-    margin-top: 1vh;
+    margin: auto;
     background: none;
+    place-self: center;
     border: none;
     color: white;
     font-family: 'Inter';

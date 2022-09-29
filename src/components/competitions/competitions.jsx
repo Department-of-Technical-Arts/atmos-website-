@@ -37,7 +37,7 @@ const Competitions = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider data={competionsNames} type="comp" swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={competionsNames} time="prev" type="comp" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
@@ -50,7 +50,7 @@ const Competitions = () => {
             }}></button>
          
           <div className='card2-container' >
-            <Slider data={competionsNames} type="comp" swiper={swiper2} setSwiper={setSwiper2}/>
+            <Slider data={competionsNames} time="curr"type="comp" swiper={swiper2} setSwiper={setSwiper2}/>
           </div>
           <button 
         className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>

@@ -27,7 +27,7 @@ const Talks = () => {
             }}></button>
 
           <div className='card1-container'>
-            <Slider data={talksNames} type="talk" swiper={swiper} setSwiper={setSwiper}/>
+            <Slider data={talksNames} time="prev" type="talk" swiper={swiper} setSwiper={setSwiper}/>
           </div>
           <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
           
