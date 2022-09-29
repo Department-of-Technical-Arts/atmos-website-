@@ -59,21 +59,21 @@
   font-style: normal;
   display: inline-flex;
   white-space: nowrap;
-  font-size: 90px;  
+  font-size: 90px;
   color: #e9e9dd;
   transform: translate(-50%, -50%);
   padding-top: 200px;
   justify-items: center;
   place-items: center;
 }
-.logo-image{
+.logo-image {
   height: 150px;
   width: auto;
   border-radius: 15px;
 }
-.forever-logo{
+.forever-logo {
   height: 150px;
-  width : 200px;
+  width: 200px;
 }
 .sponsors-title {
   position: relative;
@@ -81,54 +81,54 @@
   font-style: normal;
   font-size: 50px;
   font-weight: 600;
-  height: 182px;  
+  height: 182px;
   color: #e9e9dd;
   padding-top: 100px;
   transform: translate(-50%, -50%);
 }
 
-.cotitle-sponsors{
+.cotitle-sponsors {
   position: relative;
   font-family: "Inter";
   font-style: normal;
   font-size: 50px;
   font-weight: 600;
-  height: 182px;  
+  height: 182px;
   color: #e9e9dd;
   padding-top: 300px;
   transform: translate(-50%, -50%);
 }
-.gold-sponsors{
+.gold-sponsors {
   position: relative;
   font-family: "Inter";
   font-style: normal;
   font-size: 50px;
   font-weight: 600;
-  height: 182px;  
+  height: 182px;
   color: #e9e9dd;
   padding-top: 900px;
   transform: translate(-50%, -50%);
 }
 
-.associate-sponsors{
+.associate-sponsors {
   position: relative;
   font-family: "Inter";
   font-style: normal;
   font-size: 50px;
   font-weight: 600;
-  height: 182px;  
+  height: 182px;
   color: #e9e9dd;
   padding-top: 650px;
   transform: translate(-50%, -50%);
 }
 
-.associate-sponsors-2{
+.associate-sponsors-2 {
   position: relative;
   font-family: "Inter";
   font-style: normal;
   font-size: 50px;
   font-weight: 600;
-  height: 182px;  
+  height: 182px;
   color: #e9e9dd;
   padding-top: 450px;
   transform: translate(-50%, -50%);

@@ -1,16 +1,14 @@
-.container-grid {
+.container-grid-spons {
   transform: translate(0%, 20%);
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 100px 300px;
   grid-gap: 2%;
-  
-        align-items: center;
-        justify-content: center;
+
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
   padding-top: 500px;
-  
-  
 }
 
 .container-grid-2 {
@@ -19,9 +17,9 @@
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 100px 300px;
   grid-gap: 2%;
-  
-        align-items: center;
-        justify-content: center;
+
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
   padding-top: 200px;
 }
@@ -31,9 +29,9 @@
   grid-template-columns: repeat(5, 1fr);
   grid-auto-rows: 100px 300px;
   grid-gap: 2%;
-  
-        align-items: center;
-        justify-content: center;
+
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
   padding-top: 350px;
 }
@@ -44,9 +42,9 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px 300px;
   grid-gap: 2%;
-  
-        align-items: center;
-        justify-content: center;
+
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -58,37 +56,37 @@
   grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 100px 300px;
   grid-gap: 2%;
-  
-        align-items: center;
-        justify-content: center;
+
+  align-items: center;
+  justify-content: center;
   grid-auto-flow: dense;
   padding-top: 200px;
   padding-bottom: 200px;
   padding-left: 60px;
 }
 
-.gallery-item {
+.spons-item {
   width: 100%;
   height: 100%;
   position: relative;
 }
 
-.gallery-item .image-gallery-grid {
+.spons-item .image-spons-grid {
   width: 100%;
   height: 100%;
   overflow: hidden;
 }
 
-.gallery-item .image-gallery-grid img {
+.spons-item .image-spons-grid img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: 50% 50%;
-  
+
   cursor: pointer;
 }
 
-.gallery-item:hover .image-gallery-grid {
+.spons-item:hover .image-spons-grid {
   transform: scale(1.1);
   transition: 0.5s ease-in-out;
 }
