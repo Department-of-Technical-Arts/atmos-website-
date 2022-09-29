@@ -21,7 +21,7 @@
   align-items: center;
   justify-content: center;
   grid-auto-flow: dense;
-  padding-top: 200px;
+  padding-top: 350px;
 }
 .container-grid-3 {
   transform: translate(0%, 20%);

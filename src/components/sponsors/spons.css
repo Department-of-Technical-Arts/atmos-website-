@@ -19,12 +19,13 @@
     transform: scale(1);
   }
 }
-.image-gallery {
+
+.image-gallery-spons {
   z-index: -1;
   top: 0;
   left: 0;
   position: fixed;
-  background-color: black;
+  background-image: url("../../assets/anirudh-Xu4Pz7GI9JY-unsplash\ 1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -34,10 +35,12 @@
   animation: 1s ease-out 0s 1 zoomIn2;
 }
 
-.content-gallery {
+.content-gallery-spons {
   position: absolute;
-  justify-items: center;
-  align-items: center;
+  height: 201px;
+  width: 609px;
+  top: 20%;
+  left: 50%;
 }
 
 .gallery-title {

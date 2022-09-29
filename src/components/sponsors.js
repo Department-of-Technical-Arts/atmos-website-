@@ -8,9 +8,9 @@ function Sponsors() {
     <>
       <>
         <div className="background-container-gallery">
-          <div className="background-gallery">
-            <div className="image-gallery"></div>
-            <div className="content-gallery">
+          <div >
+            <div className="image-gallery-spons"></div>
+            <div className="content-gallery-spons">
               <h1 className="oursponsors-title">Our Previous Sponsors</h1>
               <h1 className="sponsors-title">Title Sponsor</h1>
               <h1 className="cotitle-sponsors">Co-Title Sponsors</h1>
