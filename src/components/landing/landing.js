@@ -15,7 +15,7 @@ function Landing() {
   useEffect(() => {
     const handleScroll = async (e) => {
       const height = elementRef.current?.scrollHeight;
-      const vhPixels = height * 0.72;
+      const vhPixels = height * 0.85;
 
       const smoothScroll = (h) => {
         let i = h || 0;
