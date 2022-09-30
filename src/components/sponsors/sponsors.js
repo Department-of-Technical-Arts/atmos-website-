@@ -7,7 +7,7 @@ function Sponsors() {
   return (
     <>
       <>
-        <div className="background-container-gallery">
+        <div>
           <div >
             <div className="image-gallery-spons"></div>
             <div className="content-gallery-spons">
@@ -16,6 +16,7 @@ function Sponsors() {
               <h1 className="cotitle-sponsors">Co-Title Sponsors</h1>
               <h1 className="associate-sponsors">Associate Sponsors</h1>
               <h1 className="gold-sponsors">Gold Sponsors</h1>
+              <h1 className="silver-sponsors">Silver Sponsors</h1>
             </div>
             <Imagegrid />
           </div>
