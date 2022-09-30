@@ -11,7 +11,9 @@ function Gallery() {
           <div className="content-gallery">
             <h1 className="gallery-title">GALLERY</h1>
           </div>
-          <Imagegrid />
+          <div className="gallery-grid">
+            <Imagegrid />
+          </div>
         </div>
       </div>
     </>

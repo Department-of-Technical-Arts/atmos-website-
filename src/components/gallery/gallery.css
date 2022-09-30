@@ -19,8 +19,20 @@
     transform: scale(1);
   }
 }
+
+.background-gallery {
+  top: 0;
+  left: 0;
+  background-color: black;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+
 .image-gallery {
-  z-index: -1;
   top: 0;
   left: 0;
   position: fixed;
@@ -30,40 +42,33 @@
   background-position: center;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  max-width: 100%;
   animation: 1s ease-out 0s 1 zoomIn2;
 }
 
 .content-gallery {
-  position: absolute;
+  position: fixed;
   height: 201px;
   width: 609px;
   top: 20%;
   left: 50%;
+  z-index: 3;
 }
 
 .gallery-title {
   position: fixed;
   font-family: "Inter";
   font-style: normal;
-  font-size: 150px;
+  font-size: 20vh;
   font-weight: 600;
-  height: 182px;
+  height: 25vh;
   mix-blend-mode: difference;
   color: #e9e9dd;
   transform: translate(-50%, -50%);
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
 
-.card-container-gallery {
+.gallery-grid {
   position: absolute;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 34px;
-  width: 100vw;
-  top: 40%;
-  justify-content: space-around;
-  padding: 0 10%;
-  align-content: center;
-  align-items: center;
-  justify-items: center;
+  top: -40%;
 }
