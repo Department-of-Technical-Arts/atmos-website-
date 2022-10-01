@@ -43,17 +43,6 @@
   left: 50%;
 }
 
-.gallery-title {
-  position: fixed;
-  font-family: "Inter";
-  font-style: normal;
-  font-size: 150px;
-  font-weight: 600;
-  height: 182px;
-  mix-blend-mode: difference;
-  color: #e9e9dd;
-  transform: translate(-50%, -50%);
-}
 
 .oursponsors-title {
   text-align: center;
@@ -70,13 +59,26 @@
   place-items: center;
 }
 .logo-image {
-  height: 150px;
+  height: 100px;
   width: auto;
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .forever-logo {
   height: 150px;
   width: 200px;
+}
+.unacademy-logo {
+  height: 400px;
+  width: auto;
+}
+.adda-logo {
+  height: 150px;
+  width: auto;
+}
+.redfm-logo {
+  height: 150px;
+  width: auto;
+  border-radius: 10px;
 }
 .sponsors-title {
   position: relative;
@@ -86,7 +88,7 @@
   font-weight: 600;
   height: 182px;
   color: #e9e9dd;
-  padding-top: 100px;
+  padding-top: 50px;
   transform: translate(-50%, -50%);
 }
 
@@ -98,7 +100,7 @@
   font-weight: 600;
   height: 182px;
   color: #e9e9dd;
-  padding-top: 300px;
+  padding-top: 230px;
   transform: translate(-50%, -50%);
 }
 .gold-sponsors {
@@ -109,7 +111,18 @@
   font-weight: 600;
   height: 182px;
   color: #e9e9dd;
-  padding-top: 900px;
+  padding-top: 700px;
+  transform: translate(-50%, -50%);
+}
+.silver-sponsors {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 600;
+  height: 182px;
+  color: #e9e9dd;
+  padding-top: 1300px;
   transform: translate(-50%, -50%);
 }
 
@@ -121,7 +134,7 @@
   font-weight: 600;
   height: 182px;
   color: #e9e9dd;
-  padding-top: 650px;
+  padding-top: 500px;
   transform: translate(-50%, -50%);
 }
 
