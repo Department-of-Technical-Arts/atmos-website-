@@ -12,7 +12,7 @@ export default [
   "./gallerypics/11.jpg",
   "./gallerypics/12.jpg",
   "./gallerypics/13.jpg",
-  "./gallerypics/14.png",
+  "./gallerypics/14.jpg",
   "./gallerypics/15.png",
   "./gallerypics/16.png",
   "./gallerypics/17.png",
