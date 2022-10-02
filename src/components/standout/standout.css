@@ -13,13 +13,12 @@
   transform: translate(25vh, 30vh);
   align-items: center;
   z-index: 1;
-  
 }
 
 .eve {
   width: 42vh;
   position: absolute;
-  right : 16vw;
+  right: 16vw;
   transform: translate(0vh, 60vh);
   align-items: center;
 }
@@ -48,13 +47,10 @@
   margin-bottom: 4vh;
   mix-blend-mode: difference;
   z-index: -1;
-  
 }
 
 .standout-desc {
-  background: rgba(96, 96, 96, 0.4);
   font-size: 3vh;
   border-radius: 25px;
   color: white;
-  padding: 40px;
 }
