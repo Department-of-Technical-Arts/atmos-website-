@@ -91,3 +91,13 @@
     }
     
 }
+@media (min-width: 300px) and (max-width: 320px){
+    .nav-heading{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+    .wrapper{
+        margin-right: 63%;
+    }
+    
+}
