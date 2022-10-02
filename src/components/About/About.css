@@ -35,35 +35,50 @@
   background-attachment: fixed;
 }
 
-.content-about {
-  position: absolute;
-  height: 201px;
-  width: 609px;
-  top: 20%;
-  left: 50%;
-}
-
-.content-about h1 {
+.heading {
   position: absolute;
   font-family: "Inter";
-  font-style: normal;
-  font-size: 120px;
+  font-size: 7.5rem;
   font-weight: 500;
-  height: 40px;
-  width: 650px;
+  padding: 5%;
+  width: 100vw;
+  margin: auto;
   mix-blend-mode: difference;
   color: #e9e9dd;
-  transform: translate(-50%, -50%);
-}
+  margin-left: auto;
+  margin-right: auto;
+ }
 
 .about-description{
   color: #e9e9dd;
-  font-size: 1.5rem;
+  margin-left: 5%;
+  font-size: 1.7vw;
   font-family: "Inter";
-  position: relative;
+  position: absolute;
   letter-spacing: 0.2rem;
-  width: 1000px;
-  height: 100px;
-  left: -480px;
-  top: 200px;
+  width: 90vw;
+  height: 350px;
+  transform: translate(0%, 75%);
+}
+
+@media only screen and (max-width: 850px) {
+  .heading{
+    font-size: 11vw;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    bottom: 75%;
+    padding-bottom: 0%;
+  }
+}
+  @media only screen and (max-width: 900px) {
+    .about-description{
+      font-size: 4vw;
+    }
+}
+
+@media only screen and (min-height: 1000px) {
+  .about-description{
+    font-size: 4vw;
+  }
 }
