@@ -27,6 +27,7 @@
     position: relative;
     height: 100vh;
     width: 100vw;
+    overflow: auto;
 }
 
 .background {
@@ -39,7 +40,7 @@
     background-position: center;
     height: 100%;
     width: 100%;
-    overflow: hidden;
+    overflow: visible;
 }
 
 .image-events {
@@ -58,8 +59,8 @@
 
 .content-events {
     position: relative;
-    height: 201px;
-    width: 609px;
+    height: 20vh;
+    width: 30vw;
     top: 35%;
     left: 50%;
     animation: 2s ease-out 0s 1 fadeIn;
@@ -69,7 +70,7 @@
     position: absolute;
     font-family: 'Inter';
     font-style: normal;
-    font-size: 150px;
+    font-size: 11vw;
     font-weight: 600;
     height: 182px;
     mix-blend-mode: difference;
