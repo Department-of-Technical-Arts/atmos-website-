@@ -8,6 +8,9 @@
     margin-top: 2%;
     display: flex;
     flex-direction: column;
+    background-attachment: no-fixed;
+    
+    
 }
 
 
@@ -15,9 +18,10 @@
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 2.5rem;
+    line-height: 3rem;
     text-align: center;
+    /* position: relative; */
 }
 
 .white {
@@ -26,4 +30,74 @@
 
 .blue {
     color: #379DB4
+}
+
+@media (min-width: 790px) and (max-width:1024px){
+    .nav-heading{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      
+    }
+    .wrapper{
+       
+        margin-right: 75%;
+    }
+   
+}
+@media (min-width: 650px) and (max-width:790px){
+     .nav-heading{
+        font-size: 1.5rem;
+        line-height: 1.8rem;
+      
+    }
+    .wrapper{
+       
+        margin-right: 70%;
+    }
+}
+@media (min-width: 520px) and (max-width:650px){
+    .nav-heading{
+       font-size: 1.2rem;
+       line-height: 1.5rem;
+     
+   }
+   .wrapper{
+      
+       margin-right: 67%;
+   }
+}
+@media (min-width: 460px) and (max-width:520px){
+    .nav-heading{
+       font-size: 1rem;
+       line-height: 1.2rem;
+     
+   }
+   .wrapper{
+      
+       margin-right: 60%;
+   }
+}
+
+
+
+
+@media (min-width: 320px) and (max-width: 460px){
+    .nav-heading{
+        font-size: 1rem;
+        line-height: 1rem;
+    }
+    .wrapper{
+        margin-right: 65%;
+    }
+    
+}
+@media (min-width: 300px) and (max-width: 320px){
+    .nav-heading{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+    .wrapper{
+        margin-right: 63%;
+    }
+    
 }

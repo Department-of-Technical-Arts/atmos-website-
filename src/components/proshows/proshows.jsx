@@ -44,9 +44,9 @@ const ProShows = () => {
     // </div>
     <>
       <div className='background-container'>
-        <div className='background'>
-          <div className="image-events"></div>
-          <div className='content-events'>
+        <div className='background-proshow'>
+          <div className="image-events-proshow"></div>
+          <div className='content-events-proshow'>
             <h1>PROSHOWS</h1>
 
           </div>

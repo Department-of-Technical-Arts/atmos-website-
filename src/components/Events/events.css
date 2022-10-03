@@ -55,6 +55,7 @@
     width: 100%;
     overflow: hidden;
     animation: 1s ease-out 0s 1 zoomIn2;
+    background-attachment: fixed;
 }
 
 .content-events {
@@ -68,11 +69,12 @@
 
 .content-events h1 {
     position: absolute;
+    padding-top: 10vh;
     font-family: 'Inter';
     font-style: normal;
     font-size: 11vw;
     font-weight: 600;
-    height: 182px;
+    height: 40vh;
     mix-blend-mode: difference;
     color: #e9e9dd;
     transform: translate(-50%, -50%);
@@ -85,8 +87,9 @@
     flex-wrap: nowrap;
     width: 100vw;
     top: 60%;
-    justify-content: space-between;
-    padding: 0 10%;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 0 12%;
     flex: 0 1 auto;
 }
 
@@ -96,11 +99,13 @@
     height: 220px;
     width: 180px;
     border-radius: 45px;
+    margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;
     text-transform: uppercase;
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
+    
 }
 
 .hover-cards p {
@@ -112,3 +117,22 @@
     line-height: 27px;
     width: 210px;
 }
+/* .row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+  */
+  /* } */
+  .column {
+    float: left;
+    width: 25%;
+    padding: 10px;
+    /* height: 300px;  */
+  }
+
+@media screen and (max-width: 320px) {
+    .column{
+      width: 100%;
+    }
+  }

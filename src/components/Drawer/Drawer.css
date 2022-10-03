@@ -6,3 +6,40 @@
   margin-left: auto;
   transform: translate(-70%, -100%);
 }
+
+@media (min-width:450px) and (max-width: 1024px){
+ .close-btn{
+  margin-top:2.4rem;
+  margin-right: 0;
+  padding-right: 0;
+  transform: translate(-20%,-100%);
+ }
+ .open-btn{
+  transform: translateX(50%);
+ }
+}
+@media (min-width:300px) and (max-width: 450px){
+  .close-btn{
+   margin-top:2.4rem;
+   margin-right: 0;
+   padding-right: 0;
+   transform: translate(-20%,-100%);
+  }
+  .open-btn{
+   transform: translateX(-13%);
+  }
+ }
+
+ @media (min-width:1080px) and (max-width: 1200px){
+  
+  .open-btn{
+   transform: translateX(-18%);
+  }
+ }
+ @media (min-width:1025px) and (max-width: 1080px){
+ 
+  .open-btn{
+   transform: translateX(-50%);
+  }
+ }
+ 
