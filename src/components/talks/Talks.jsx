@@ -1,3 +1,4 @@
+/*
 import { React, useState } from "react";
 import "./talks.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -50,5 +51,45 @@ const Talks = () => {
     </>
   );
 };
+
+export default Talks;
+*/
+
+import React from 'react' ;
+import "./talks.css";
+
+function Talks() {
+
+
+    return(
+        <>
+            <div className='background-container-talks'>
+                <div className='background-talks'>
+                    <div className="image-talks"></div>
+                    <div className='content-talks'>
+                        <h1>TALKS</h1>
+                    
+                    </div>
+                    <div className='card-container-talks'>
+                        <div className='hover-cards-talks'><p>IDRL</p></div>
+                        <div className='hover-cards-talks'><p>The Genesis</p></div>
+                        <div className='hover-cards-talks'><p>ProdStorm</p></div>
+                        <div className='hover-cards-talks'><p>Case Sensitive</p></div>
+                        <div className='hover-cards-talks'><p>Autocad Competition</p></div>
+                        <div className='hover-cards-talks'><p>Courtroom</p></div>
+                        <div className='hover-cards-talks'><p>Mech Meverick</p></div>
+                        <div className='hover-cards-talks'><p>Robowars</p></div>
+                        <div className='hover-cards-talks'><p>Law Follower</p></div>
+                        <div className='hover-cards-talks'><p>Anatomy Of Murder</p></div>
+                        <div className='hover-cards-talks'><p>Wall Street Business Challenge</p></div>
+                        <div className='hover-cards-talks'><p>Operation Zodiac</p></div>
+                        <div className='hover-cards-talks'><p>Bid Up Vamps</p></div>
+
+                    </div>
+                </div>
+            </div>
+        </>
+    )
+}
 
 export default Talks;

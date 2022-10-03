@@ -11,14 +11,20 @@
   width: 100vw;
 }
 
-@keyframes zoomIn2 {
-  0% {
-    transform: scale(0.5);
-  }
-  100% {
-    transform: scale(1);
-  }
+.background-image-sponsors{
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-image: url("../../assets/anirudh-Xu4Pz7GI9JY-unsplash\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  max-width: 100%;
+  animation: 1s ease-out 0s 1 zoomIn2;
 }
+
 
 .image-gallery-spons {
   z-index: -1;
@@ -39,33 +45,52 @@
   position: absolute;
   height: 201px;
   width: 609px;
-  top: 20%;
-  left: 50%;
+  
+  
 }
 
-
+.pepsico-image{
+  height: 15vh;
+}
 .oursponsors-title {
   text-align: center;
   position: relative;
   font-family: "Inter";
   font-style: normal;
   display: inline-flex;
-  white-space: nowrap;
-  font-size: 90px;
+  
+  
   color: #e9e9dd;
-  transform: translate(-50%, -50%);
+ 
   padding-top: 200px;
   justify-items: center;
+  align-items: center;
   place-items: center;
 }
+.text-spons{
+  text-align: center;
+}
+.heading-text-spons {
+  position: relative;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 80px;
+  font-weight: 600;  
+  color: #e9e9dd;
+  padding-top:6%;
+  text-align: center;
+  justify-items: center;
+  
+  
+}
 .logo-image {
-  height: 100px;
+  height: 10vh;
   width: auto;
   border-radius: 10px;
 }
 .forever-logo {
-  height: 150px;
-  width: 200px;
+  height: 70px;
+  
 }
 .unacademy-logo {
   height: 400px;
@@ -85,11 +110,13 @@
   font-family: "Inter";
   font-style: normal;
   font-size: 50px;
-  font-weight: 600;
-  height: 182px;
+  font-weight: 600;  
   color: #e9e9dd;
-  padding-top: 50px;
-  transform: translate(-50%, -50%);
+  padding-top:6%;
+  text-align: center;
+  justify-items: center;
+  
+  
 }
 
 .cotitle-sponsors {
@@ -161,4 +188,15 @@
   align-content: center;
   align-items: center;
   justify-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .sponsors-title{
+    font-size: 35px;
+    padding :5vh
+  }
+  .oursponsors-title{
+    padding-bottom: 5vh;
+  }
 }

@@ -10,6 +10,7 @@ body {
   position: relative;
   height: 100vh;
   width: 100vw;
+  overflow: auto;
 }
 
 .background-talks {
@@ -22,7 +23,7 @@ body {
   background-position: center;
   height: 100%;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .image-talks {
@@ -37,12 +38,13 @@ body {
   width: 100%;
   overflow: hidden;
   animation: 1s ease-out 0s 1 zoomIn2;
+  background-attachment: fixed;
 }
 
 .content-talks {
   position: relative;
-  height: 201px;
-  width: 609px;
+  height: 20vh;
+  width: 30vw;
   top: 35%;
   left: 50%;
   animation: 2s ease-out 0s 1 fadeIn;
@@ -50,61 +52,68 @@ body {
 
 .content-talks h1 {
   position: absolute;
+  right: -3.5vw;
   font-family: "Inter";
   font-style: normal;
-  font-size: 150px;
+  font-size: 11vw;
   font-weight: 600;
-  height: 182px;
+  height: 20vh;
   mix-blend-mode: difference;
   color: #e9e9dd;
   transform: translate(-50%, -50%);
 }
-.headerContainer {
+
+
+.card-container-talks{
+  position: absolute;
   display: flex;
-  margin-top: 311px;
-  justify-content: center;
-}
-.header {
-  font-family: "Inter", sans-serif;
-
-  font-size: 100px;
-  font-weight: 600;
-  line-height: 182px;
-  letter-spacing: 0em;
-
-  mix-blend-mode: difference;
-
-  color: #e9e9dd;
-
-  /* left: 471px; */
-  /* top: 311px; */
-  border-radius: nullpx;
-}
-.eventsContainer {
-  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  top: 60%;
   justify-content: space-around;
-  margin-bottom: 40px;
+  flex-flow: wrap;
+  padding: 0 12%;
+  flex: 0 1 auto;
 }
-.subHeader {
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 22px;
-  line-height: 27px;
-  /* identical to box height */
 
+.hover-cards-talks {
+  position: relative;
+  background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
+  height: 220px;
+  width: 180px;
+  border-radius: 45px;
+  margin-bottom: 10%;
+  margin-left: 1.5rem;
+  font-family: 'Inter';
   color: #fffffc;
-}
-.sliderContainer {
-  margin-right: 20px;
+  text-transform: uppercase;
+  bottom: 0;
+  animation: 2s ease-out 0s 1 fadeIn;
+  padding-left:10%;
+  margin-right: 1rem;
+  margin-left: 1rem;  
+  
 }
 
-.leftarrow {
+.hover-cards-talks p {
+  font-size: 18px;
   position: absolute;
-  left: 800px;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 27px;
+  width: 210px;
 }
-.rightarrow {
-  position: absolute;
-  left: 1350px;
+ 
+@media screen and (max-width: 500px) {
+  .hover-cards-talks{
+    margin-bottom: 6rem;
+    margin-left:1rem;
+    
+  }
+  .card-container-talks{
+    align-items: center;
+
+  }
 }

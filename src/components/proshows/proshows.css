@@ -82,7 +82,7 @@ color: #FFFFFC;
     width: 100vw;
 }
 
-.background {
+.background-proshow {
     top: 0;
     left: 0;
     background-color: black;
@@ -95,7 +95,7 @@ color: #FFFFFC;
     overflow: hidden;
 }
 
-.image-events {
+.image-events-proshow {
     top: 0;
     left: 0;
     position: absolute;
@@ -118,7 +118,7 @@ color: #FFFFFC;
     animation: 2s ease-out 0s 1 fadeIn;
 }
 
-.content-events h1 {
+.content-events-proshow h1 {
     position: absolute;
     font-family: 'Inter';
     font-style: normal;
@@ -183,7 +183,7 @@ color: #FFFFFC;
     color:#FFFFFC;
 }
 
-.hover-cards {
+.hover-cards-proshow {
     position: relative;
     background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
     height: 220px;

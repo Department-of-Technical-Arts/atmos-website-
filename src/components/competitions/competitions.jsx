@@ -1,64 +1,38 @@
-import {React, useState} from 'react'
-import "./competitions.css"
-import { Swiper, SwiperSlide} from 'swiper/react';
+import React from 'react' ;
+import "./competitions.css";
 
-import placeholder from '../../images/competions/pawel-nolbert-62OK9xwVA0c-unsplash 1.png'
-import Slider from '../slider/Slider'
-import '../slider/slider.css'
+function Competitions() {
 
-const Competitions = () => {
 
-  // THE COMPETITIONS GO HERE ````
-  
-  const competionsNames = ["SPES NOVO","Under Pressure","Nuclear Blues","CaseSensitive","GRAND PRIX MANIA","ESCALADE"]
+    return(
+        <>
+            <div className='background-container-competitions'>
+                <div className='background-competitions'>
+                    <div className="image-competitions"></div>
+                    <div className='content-competitions'>
+                        <h1>COMPETITIONS</h1>
+                    
+                    </div>
+                    <div className='card-container-competitions'>
+                        <div className='hover-cards-competitions'><p>IDRL</p></div>
+                        <div className='hover-cards-competitions'><p>The Genesis</p></div>
+                        <div className='hover-cards-competitions'><p>ProdStorm</p></div>
+                        <div className='hover-cards-competitions'><p>Case Sensitive</p></div>
+                        <div className='hover-cards-competitions'><p>Autocad Competition</p></div>
+                        <div className='hover-cards-competitions'><p>Courtroom</p></div>
+                        <div className='hover-cards-competitions'><p>Mech Meverick</p></div>
+                        <div className='hover-cards-competitions'><p>Robowars</p></div>
+                        <div className='hover-cards-competitions'><p>Law Follower</p></div>
+                        <div className='hover-cards-competitions'><p>Anatomy Of Murder</p></div>
+                        <div className='hover-cards-competitions'><p>Wall Street Business Challenge</p></div>
+                        <div className='hover-cards-competitions'><p>Operation Zodiac</p></div>
+                        <div className='hover-cards-competitions'><p>Bid Up Vamps</p></div>
 
-  const [swiper, setSwiper] = useState(null);
-  const [swiper2, setSwiper2] = useState(null);
-
-  return (
-    <>
-    <div className='background-container'>
-        <div className='background'>
-            <div className="image-events"></div>
-            <div className='content-events'>
-                <h1>COMPETITIONS</h1>
-
+                    </div>
+                </div>
             </div>
-            {/* <div className='card-container'>
-                <a href="/competitions"><div className='hover-cards'><p>Competition</p></div></a>
-                <a href="/workshops"><div className='hover-cards'><p>workshops</p></div></a>
-                <a href="/talks"><div className='hover-cards'><p>talks</p></div></a>
-                <a href="/proshows"><div className='hover-cards'><p>pro-shows</p></div></a>
-            </div> */}
-            <h3 className="subHeader1">PREVIOUS</h3>
-          <button className='swiperButtonPrevPrev' onClick={() => {
-            console.log("prev");
-            swiper.slidePrev()
-            }}></button>
-
-          <div className='card1-container'>
-            <Slider data={competionsNames} time="prev" type="comp" swiper={swiper} setSwiper={setSwiper}/>
-          </div>
-          <button className='swiperButtonPrevNext' onClick={() => swiper.slideNext()}></button>
-          
-
-
-          <h3 className="subHeader2">CURRENT</h3>
-          <button className='swiperButtonCurrPrev' onClick={() => {
-            console.log("prev");
-            swiper2.slidePrev()
-            }}></button>
-         
-          <div className='card2-container' >
-            <Slider data={competionsNames} time="curr"type="comp" swiper={swiper2} setSwiper={setSwiper2}/>
-          </div>
-          <button 
-        className='swiperButtonCurrNext' onClick={() => swiper2.slideNext()}></button>
-       
-        </div>
-    </div>
-</>
-  )
+        </>
+    )
 }
 
-export default Competitions
+export default Competitions;

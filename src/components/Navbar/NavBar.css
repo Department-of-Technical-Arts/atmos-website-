@@ -8,6 +8,9 @@
     margin-top: 2%;
     display: flex;
     flex-direction: column;
+    background-attachment: no-fixed;
+    
+    
 }
 
 
@@ -18,6 +21,7 @@
     font-size: 2.5rem;
     line-height: 3rem;
     text-align: center;
+    /* position: relative; */
 }
 
 .white {
@@ -84,6 +88,16 @@
     }
     .wrapper{
         margin-right: 65%;
+    }
+    
+}
+@media (min-width: 300px) and (max-width: 320px){
+    .nav-heading{
+        font-size: 0.8rem;
+        line-height: 0.9rem;
+    }
+    .wrapper{
+        margin-right: 63%;
     }
     
 }
