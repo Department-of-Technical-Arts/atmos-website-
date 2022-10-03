@@ -95,7 +95,7 @@ color: #FFFFFC;
     overflow: hidden;
 }
 
-.image-events-proshow {
+/* .image-events-proshow {
     top: 0;
     left: 0;
     position: absolute;
@@ -204,7 +204,7 @@ color: #FFFFFC;
     transform: translate(-50%);
     line-height: 27px;
     width: 210px;
-}
+} */
  /* .subHeader{
     text-align:center;
     font-family: 'Inter', sans-serif;
@@ -220,3 +220,86 @@ color: #FFFFFC;
 /* .sliderContainer{
    margin-right:20px
 }   */
+
+.image-proshows {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background-image: url("../../assets/earth-g174993377_1920\ 1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    animation: 1s ease-out 0s 1 zoomIn2;
+    background-attachment: fixed;
+  }
+  
+  .content-proshows {
+    position: relative;
+    height: 20vh;
+    width: 30vw;
+    top: 35%;
+    left: 50%;
+    animation: 2s ease-out 0s 1 fadeIn;
+  }
+  
+  .content-proshows h1 {
+    position: absolute;
+    right: -35.5vw;
+    top: 34vh;
+    font-family: "Inter";
+    font-style: normal;
+    font-size: 11vw;
+    font-weight: 600;
+    height: 20vh;
+    mix-blend-mode: difference;
+    color: #e9e9dd;
+    transform: translate(-50%, -50%);
+  }
+  
+  
+  .card-container-proshows{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    width: 100vw;
+    top: 60%;
+    justify-content: space-around;
+    flex-flow: wrap;
+    padding: 0 12%;
+    flex: 0 1 auto;
+  }
+  
+  .hover-cards-proshows {
+    position: relative;
+    background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
+    height: 220px;
+    width: 180px;
+    border-radius: 45px;
+    margin-bottom: 10%;
+    /* margin-left: 1.5rem; */
+    font-family: 'Inter';
+    color: #fffffc;
+    text-transform: uppercase;
+    bottom: 0;
+    animation: 2s ease-out 0s 1 fadeIn;
+    /* padding-left:10%; */
+    margin-right: 3vw;
+    margin-left: 3vw; 
+    margin-bottom: 18vh; 
+    /* margin: 5% 5%; */
+    
+  }
+  
+  .hover-cards-proshows p {
+    font-size: 18px;
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 27px;
+    width: 210px;
+  }

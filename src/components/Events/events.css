@@ -23,7 +23,7 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
-.background-container {
+.background-container-events {
     position: relative;
     height: 100vh;
     width: 100vw;
@@ -132,7 +132,8 @@
   }
 
 @media screen and (max-width: 320px) {
-    .column{
-      width: 100%;
+    .card-container{
+      margin-bottom: 6rem;
+
     }
   }

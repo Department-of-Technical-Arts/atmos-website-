@@ -6,7 +6,7 @@ function Events() {
 
     return(
         <>
-            <div className='background-container'>
+            <div className='background-container-events'>
                 <div className='background'>
                     <div className="image-events"></div>
                     <div className='content-events'>
