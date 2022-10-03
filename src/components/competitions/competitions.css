@@ -1,109 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
-.card-container-competition-1 {
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    top: 60%;
-    justify-content: flex-start;
-    padding: 0 10%;
-    flex: 0 1 auto;
-    width: 100vw;
-    align-items: flex-start;
-    flex-direction: row;
-    gap: 5%;
+@import url("https://fonts.googleapis.com/css2?family=Croissant+One&display=swap");
+body {
+  min-height: 100%;
+  background-size: cover;
+  background-color: black;
+  /* background-size: auto 100%; */
+  background-repeat: no-repeat;
+}
+.background-container-competitions {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: auto;
 }
 
-.card-container-competition-2 {
-    position: absolute;
-    display: flex;
-    flex-wrap: nowrap;
-    top: 60%;
-    justify-content: flex-end;
-    padding: 0 10%;
-    flex: 0 1 auto;
-    width: 100vw;
-    align-items: flex-end;
-    flex-direction: row;
-    gap: 5%;
+.background-competitions {
+  top: 0;
+  left: 0;
+  background-color: black;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: visible;
 }
 
-.card-container-competition-1 p {
-    position: absolute;
-    font-size: 22px;
-    color: white;
-    top: -25px;
-    font-family: 'Inter';
-    left: 25%;
-    transform: translateX(-75%);
+.image-competitions {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-image: url("../../assets/earth-g174993377_1920\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 zoomIn2;
+  background-attachment: fixed;
 }
 
-.card-container-competition-2 p {
-    position: absolute;
-    font-size: 22px;
-    color: white;
-    top: -25px;
-    font-family: 'Inter';
-    right: 25%;
-    transform: translateX(75%);
+.content-competitions {
+  position: relative;
+  height: 20vh;
+  width: 30vw;
+  top: 35%;
+  left: 50%;
+  animation: 2s ease-out 0s 1 fadeIn;
 }
-.card1-container {
-    position: absolute; 
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: nowrap;
-    width: 50vw;
-    top: 60%;
-    justify-content: space-between;
-    padding: 0% 10%; 
-    flex: 0 1 auto;
+
+.content-competitions h1 {
+  position: absolute;
+  
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 8vw;
+  font-weight: 600;
+  height: 20vh;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  transform: translate(-50%, -50%);
 }
-.card2-container {
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 50vw;
-    top: 60%;
-    left: 50%;
-    justify-content: space-between;
-    padding: 0% 10%;
-    flex: 0 1 auto;
+
+
+.card-container-competitions{
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  top: 60%;
+  justify-content: space-around;
+  flex-flow: wrap;
+  padding: 0 12%;
+  flex: 0 1 auto;
 }
-.subHeader1{
+
+.hover-cards-competitions{
+  position: relative;
+  background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
+  height: 220px;
+  width: 180px;
+  border-radius: 45px;
+  margin-bottom: 10%;
+  margin-left: 1.5rem;
+  font-family: 'Inter';
+  color: #fffffc;
+  text-transform: uppercase;
+  bottom: 0;
+  animation: 2s ease-out 0s 1 fadeIn;
+  padding-left:10%;
+  margin-right: 1rem;
+  margin-left: 1rem;  
+  
+}
+
+.hover-cards-competitions p {
+  font-size: 18px;
+  position: absolute;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 27px;
+  width: 210px;
+}
+ 
+@media screen and (max-width: 500px) {
+  .hover-cards-competitions{
+    margin-bottom: 6rem;
+    margin-left:1rem;
     
-    position: absolute;
-    
-    right: 50%;
-    top: 55%;
-    width: 50%;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color:#FFFFFC;
+  }
+  .card-container-competitions{
+    align-items: center;
 
-}
-
-.subHeader2{
-    position: absolute;
-    
-    left:50%;
-    top: 55%;
-    width: 50%;
-    font-family: 'Inter', sans-serif;
-    font-style: normal;
-    font-weight: 700;
-    font-size: 22px;
-    line-height: 27px;
-    color:#FFFFFC;
-}
-
-.leftarrow{
-    position: absolute;
-    left: 60vw;
-}
-.rightarrow{
-    position: absolute;
-    left: 100vw;
+  }
 }
