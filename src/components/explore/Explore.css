@@ -6,7 +6,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 
-.background-container {
+.background-container-explore {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -22,20 +22,16 @@
   }
 }
 
-.bground {
+.bground-explore {
   top: 0;
   left: 0;
-  /* background-color: black; */
   position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
 }
 
-.image {
+.image-explore {
   z-index: -1;
   top: 0;
   left: 0;
@@ -60,83 +56,74 @@
   }
 }
 
-.content {
+.content-explore {
   position: relative;
-  height: 201px;
-  width: 609px;
-  top: 35%;
-  left: 50%;
   animation: 2s ease-out 0s 1 fadeIn;
 }
 
-.title {
+.title-explore {
   position: absolute;
-  text-align: left;
   font-family: "Inter";
   font-style: normal;
-  height: 182px;
+  height: 40vw;
   /*color: #e9e9dd;*/
   color: white;
+  left: 9vw;
+  top: 24vh;
 }
 
 .big-title {
-  height: 182px;
-  font-size: 130px;
-  min-width: 1000px;
   font-weight: 600;
-  max-width: 1200px;
-  transform: translate(-58%, 2%);
+  font-size: 16vh;
+  margin-top: 12vh;
 }
 
 .small-title {
-  height: 100px;
-  font-size: 85px;
   font-weight: 200;
-  min-width: 700px;
-  max-width: 1000px;
-  transform: translate(-83%, -85%);
+  font-size: 11vh;
 }
 
-.description {
+.description-explore {
   position: relative;
-  height: 400px;
-  width: 600px;
-  top: 38%;
-  left: 0;
+  top: 58vh;
+  left: 10vw;
   animation: 2s ease-out 0s 1 fadeIn;
 }
 
-.desc {
-  transform: translate(25%, -64%);
+.desc-explore {
   text-align: left;
-  font-size: 30px;
-  padding: 5px;
+  width: 43%;
+  font-size: 4vh;
+  padding: 0.6vw;
 }
 
 @keyframes slideInFromL {
   0% {
-    transform: translateX(-300%);
+    transform: translate(-100vw, 1vw);
   }
 
   100% {
-    transform: translateX(-25%);
+    transform: translate(-43vw, 1vw);
   }
 }
 
 .explore-btn {
   background: #15272b;
   opacity: 0.75;
-  border-radius: 25px;
+  border-radius: 3vw;
   border: 0;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 1.8vw;
   color: #b0e1ec;
-  padding: 25px;
+  padding: 2vw;
   text-align: left;
-  transform: translate(-25%, 0);
   cursor: pointer;
   animation: 4s ease-out 0s 1 slideInFromL;
+  transform: translate(-43vw, 1vw);
+}
+.ArrowForward {
+  font-size: 2vw;
+  transform: translateY(18%);
 }
 
 .explore-btn:hover {
@@ -147,7 +134,7 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 
-.background-container1 {
+.background-container-explore1 {
   position: relative;
   height: 100vh;
   width: 100vw;
@@ -163,7 +150,7 @@
   }
 }
 
-.bground1 {
+.bground-explore1 {
   top: 0;
   left: 0;
   /* background-color: black; */
@@ -202,74 +189,172 @@
   }
 }
 
-.content1 {
+.content-explore1 {
   position: relative;
-  height: 201px;
-  width: 609px;
-  top: 35%;
-  left: 50%;
   animation: 1s ease-out 0s 1 fadeOut;
-  opacity: 0;
 }
 
-.title1 {
+.title-explore1 {
   position: absolute;
-  text-align: left;
   font-family: "Inter";
   font-style: normal;
-  height: 182px;
+  height: 40vw;
   /*color: #e9e9dd;*/
   color: white;
+  left: 9vw;
+  top: 24vh;
 }
 
-.big-title {
-  height: 182px;
-  font-size: 130px;
-  min-width: 1000px;
-  font-weight: 600;
-  max-width: 1200px;
-  transform: translate(-58%, 2%);
-}
-
-.small-title {
-  height: 100px;
-  font-size: 85px;
-  font-weight: 200;
-  min-width: 700px;
-  max-width: 1000px;
-  transform: translate(-83%, -85%);
-}
-
-.description1 {
+.description-explore1 {
   position: relative;
-  height: 400px;
-  width: 600px;
-  top: 38%;
-  left: 0;
+  top: 58vh;
+  left: 10vw;
   animation: 1s ease-out 0s 1 fadeOut;
-  opacity: 0;
 }
 
-.desc1 {
-  transform: translate(25%, -64%);
+.desc-explore1 {
   text-align: left;
-  font-size: 30px;
-  padding: 5px;
+  width: 43%;
+  font-size: 4vh;
+  padding: 0.6vw;
 }
 
 .explore-btn1 {
   background: #15272b;
-  opacity: 0.75;
-  border-radius: 25px;
+  opacity: 0;
+  border-radius: 3vw;
   border: 0;
   font-weight: 600;
-  font-size: 25px;
-  line-height: 30px;
+  font-size: 1.8vw;
   color: #b0e1ec;
-  padding: 25px;
+  padding: 2vw;
   text-align: left;
-  transform: translate(-25%, 0);
   cursor: pointer;
   animation: 1s ease-out 0s 1 fadeOut;
-  opacity: 0;
+  transform: translate(-43vw, 1vw);
+}
+
+@media screen and (max-width: 1439px) and (min-width: 480px) {
+  .big-title {
+    font-size: 12vw;
+    margin-top: 6vw;
+  }
+  .small-title {
+    font-size: 7vw;
+  }
+  .content-explore {
+    margin-bottom: -4%;
+  }
+  .description-explore {
+    margin-top: -1%;
+  }
+  .desc-explore {
+    font-size: 2.5vw;
+    width: 55%;
+  }
+  .description-explore1 {
+    margin-top: -1%;
+  }
+  .desc-explore1 {
+    font-size: 2.5vw;
+    width: 55%;
+  }
+  .content-explore1 {
+    margin-bottom: -4%;
+  }
+}
+
+@media screen and (max-width: 500px) and (min-width: 320px) {
+  .background-container-explore {
+    width: 100%;
+  }
+  .bground-explore {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 15%;
+  }
+  .big-title {
+    font-size: 14vw;
+    margin-top: 12vw;
+  }
+  .small-title {
+    font-size: 11vw;
+  }
+  .description-explore {
+    margin-top: -15vh;
+  }
+  .desc-explore {
+    font-size: 5vw;
+    width: 75%;
+  }
+  .background-container-explore1 {
+    width: 100%;
+  }
+  .explore-btn {
+    font-size: 3vw;
+    transform: translate(-40vw, 3vw);
+  }
+  .bground-explore1 {
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding-top: 15%;
+  }
+  .description-explore1 {
+    margin-top: -15vh;
+  }
+  .desc-explore1 {
+    font-size: 5vw;
+    width: 75%;
+  }
+  .explore-btn1 {
+    font-size: 3vw;
+    transform: translate(-40vw, 3vw);
+  }
+  @keyframes slideInFromL {
+    0% {
+      transform: translate(-100vw, 3vw);
+    }
+
+    100% {
+      transform: translate(-40vw, 3vw);
+    }
+  }
+}
+
+@media screen and (max-width: 980px) and (min-width: 480px) and (min-height: 600px) {
+  .big-title {
+    font-size: 12vw;
+    margin-top: 6vw;
+  }
+  .small-title {
+    font-size: 7vw;
+  }
+  .content-explore {
+    margin-bottom: -20vw;
+    margin-top: 12vw;
+  }
+  .description-explore {
+    margin-top: -1%;
+  }
+  .desc-explore {
+    font-size: 2.5vw;
+    width: 55%;
+  }
+  .description-explore1 {
+    margin-top: -1%;
+  }
+  .desc-explore1 {
+    font-size: 2.5vw;
+    width: 55%;
+  }
+  .content-explore1 {
+    margin-bottom: -20vw;
+    margin-top: 12vw;
+  }
 }
