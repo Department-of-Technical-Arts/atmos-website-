@@ -4,6 +4,7 @@ import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "@mui/material";
 import Standout from "../standout/standout";
+import { useScroll } from "framer-motion";
 
 function Landing() {
   const navigate = useNavigate();
@@ -11,6 +12,7 @@ function Landing() {
   var count = 1;
   const elementRef = useRef(null);
   const [leaving, setLeaving] = useState(true);
+  const { scrollYProgress } = useScroll();
 
   useEffect(() => {
     const handleScroll = async (e) => {
@@ -31,17 +33,17 @@ function Landing() {
       console.log(height);
       console.log(vhPixels);
       console.log(elementRef.current?.scrollHeight);
-      //console.log(divElement.offsetHeight);
+      console.log(scrollYProgress.current);
 
-      while (window.scrollY > vhPixels && count > 0) {
+      while (scrollYProgress.current > 0.65 && count > 0) {
         count = 0;
         console.log("fire");
         console.log(height);
-        smoothScroll(window.scrollY);
-        /*window.scrollTo({
+        /*smoothScroll(window.scrollY);*/
+        window.scrollTo({
           top: height,
           behavior: "smooth",
-        });*/
+        });
         {
           await delay(500);
           setLeaving(false);
@@ -63,11 +65,7 @@ function Landing() {
       {leaving ? (
         <div className="landing-container" ref={elementRef}>
           <div className="background-container">
-            <div className="bg">
-              
-              
-              
-            </div>
+            <div className="bg"></div>
             <h1 className="landing-title">ATMOS</h1>
             {/*<Button component={RouterLink} to="/explore" sx={{margin:"500px"}}>Click me</Button>*/}
             {/*<a href="/explore" className="landing-btn">
