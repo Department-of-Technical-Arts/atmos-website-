@@ -138,6 +138,7 @@
 .hover-cards-four {
     position: relative;
     background-image: url(../../assets/pro-show\ cover.JPG);
+    background-size: cover;
     height: 220px;
     width: 180px;
     border-radius: 45px;

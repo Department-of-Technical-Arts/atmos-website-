@@ -224,7 +224,7 @@ color: #FFFFFC;
 .image-proshows {
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
     background-image: url("../../assets/earth-g174993377_1920\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -275,7 +275,9 @@ color: #FFFFFC;
   
   .hover-cards-proshows {
     position: relative;
-    background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
+    background-blend-mode: difference;
+    background-size: cover;
+    background-position: center;
     height: 220px;
     width: 180px;
     border-radius: 45px;

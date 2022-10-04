@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import Events from "./components/Events/events";
 import Gallery from "./components/gallery/gallery";

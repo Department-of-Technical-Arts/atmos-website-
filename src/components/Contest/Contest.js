@@ -1,7 +1,8 @@
 import {React, useState, useEffect} from 'react';
 import {  useParams, useSearchParams } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material';
-
+import competionsImages from '../../images/events-photos/competions-images';
+import workshopsImages from '../../images/events-photos/workshops-images';
 import './Contest.css';
 
 
@@ -13,30 +14,30 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
 
     const params = useParams()
     const competions = {
-        "IDRL":"Earth is on the brink of apocalypse, you have been assigned a mission- SPES NOVO, a new hope for a new planet and a place to start life all over again. From exploration to survival, a lot can change, this space adventure by AD ASTRA succeeded in asserting it.",
-        "The Genesis":"Teams of 2 participated in the fun filled particle simulation game 'Under Pressure' featuring Wordle. This event brought to us by Association of Chemical Engineers tested one's ability to handle situations under pressure in a really innovative way.",
-        "ProdStorm":"Participants of Nuclear Blues found themselves in the shoes of a company personnel hired to treat a river full of pollutants leaking from a mishap struck nuclear plant. This fun filled event brought an opportunity of showcasing basic math, bidding and trading skills for everyone",
-        "CaseSensitive":" A business case competition where participants get a chance to try their hands on a real-life market-related case. It is conducted in three rounds spread across a week with nationwide participation from undergraduate and post-graduate universities",
-        "Courtroom":"The “Grand Prix Mania”, an event held by MEA of BPHC during Orbe Novo was a trivia contest based on Formula one. This quiz offered a perfect track for all the F1 enthusiasts to flaunt their expertise in all that is racing.",
-        "Mech Meverick":"The IEEE of BPHC hosted &quot;Escalade,&quot; a hackathon for programmers and electronics enthusiasts, during Orbe Novo. The major goal of the competition was to assess participants aptitude for problem-solving in order to construct effective communication networks and algorithms. The participants in this event were motivated to innovate and come up with original solutions.",
-        "Robowars":"Popsicle sticks were utilised in “Beam It”, an event held by CEA of BPHC, to test the best of abilities offered by its participants. Popsicle sticks were used to construct bridges, and the winner was chosen based on how strong and durable the design was.",
-        "Law Follower":"The main coding competition held by ATMOS is called CodeDash. The objective of this online programming competition is to encourage participants to use their understanding of algorithms and data structures to solve problems. The main coding event of ATMOS is called CodeDash. It is an online programming competition focused on algorithms and data structures that encourages competitors to use their skills to solve problems.",
+        "IDRL":"IDRL stands for Indian Drone Racing League. They conduct FPV drone racing events across India. They have a roster of over 4000 national and international pilots. Drone Racers fly their drones at more than 140 km/hr through a live video feed sent from the drones directly to the pilot’s goggles",
+        "The Genesis":"An integrated workshop cum competition where we would teach the participants to use a software where there would be designing molecules and then they would also be getting an opportunity to work in a lab and make a such substances which they can take back home as a souvenir",
+        "ProdStorm":"Product Design/Improvement question which will be judged based on user empathy, solutions and deck presentation. We will get an expert panel to judge the participants.",
+        "CaseSensitive":"The Event revolves around Strategy Consulting, Business Problem Solving, Case Study Solving, Marketing etc. The problem statement will be released during the week of submission once the partner is finalised.",
+        "Courtroom":"Recent corporate cases but names will be changed participants will be briefed about the case and they have to take one of the sides as plaintiff or defendant and present that side in front of a judge or jury.",
+        "Mech Meverick":"A fun quizzical event with a twist, the questions asked will have 5-6 different answers, which will be allotted points on the basis of their popularity which will be determined by a sample set consisting of the same answers which will be collected via a survey. Follows the pattern of a reality TV show “Family Feud”.",
+        "Robowars":"Design and build a robust bot with effective offence and defensive mechanisms to defeat other bots and rise to the top of the leaderboard. The number of rounds, type of tournament and (random) match fixtures shall be made after registration of all teams is complete.",
+        "Law Follower":"An offline, one round competition where participants build robots that autonomously follow a set path from start to finish in the shortest time possible. Points are earned for completing the track with the least penalties. Expected to take place for one full day during the fest.",
         "Anatomy Of Murder":"To put an end to your summertime doldrums, PM Division@BHCG and Doremon Den are here. ProdStorm, our product case challenge at ATMOS, is a great way to learn about product management and develop your skills. To help you beat the dullness of the summer, PM Division@BHCG and Doremon Den are here. In ProdStorm, our product case challenge at ATMOS, you can learn more about product management and polish your talents.",
-        "Wall Street Business Challenge":"Are you into web development and design? Test your knowledge in our competition, Fastest Frontend First. This is a two-round event consisting of coding in CSS, HTML and JS. The first round consists of replicating an image provided using CSS and the second round requires the contestants to replicate an entire page",
-        "Operation Zodiac":"Axiom surely challenged our wits and patience with this one. I am pretty sure you have heard of sudoku, these puzzles were based on sudoku but were surely different and far more interesting than the regular sudoku puzzles found in the newspapers.",
-        "Bid Up Vamps":"This showcase of intriguing projects by ARC definitely fuelled our innovative instincts. Students built 7 projects ranging from a Nerf Turret to a ‘Useless Box’ under the guidance of mentors from ARC. The ideas and concepts behind these projects were explained. Techtainment was an excellent opportunity to explore the domain of robotics and for those who are interested in the same.",
+        "Wall Street Business Challenge":"A distinctive case competition that tests your analytical and creative skillsets as well as your business acumen. This thrilling case study challenge is an excellent chance for budding business leaders to prove their entrepreneurial acumen and develop their strategic skill set.",
+        "Operation Zodiac":"Operation Zodiac-Time-Travelling Serial Killer; has commited 4 Murders across the timeline. This has damaged the Space-Time Continuum. You need to find the Timelines of the Murder, Identity of the Victim and Undo it as well as the reveal the Identity of the Killer.",
+        "Bid Up Vamps":"This event is about buying data structures by auction mechanism and solving the challenging questions within a given timeframe by using that particular data structure only.",
     }
     const workshops ={
-        "MACHINE LEARNING WORKSHOPS":"A 2-day online workshop on smart vehicles with certification was offered by Team Vulcan and SAE. This program was intended to teach students about industrial workflow and how electric automobile components work, as well as how concepts are developed, designs are created, and manufacturing processes are carried out.",
-        "STAR GAZING":"Panacea, The Pharmacy Association at BITS Pilani Hyderabad presented it’s (NO) National Symposium, Current Trends in Pharmaceutical Sciences (CTPS), themed Recovery with Resilience, if you are interested in entering the pharmaceutical industry or have a talent for drug discovery or biomedical research in the future but do not know where to start.",
-        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"A fun 3 Day Robotics Workshop was brought to us by the Automation and Robotics Club, BITS Pilani Hyderabad Campus this cultural-tech fest, Orbe Novo'22. With no prerequisites, featuring hands-on experience and a 5-in-1 kit.",
-        "ROBOTICS 101":"MEA hosted Mr. Arvind Goel, MD & CEO at TATA Autocomp, speak at our keynote seminar, EXPERT ENCOUNTER, and share his extraordinary experiences with us. He has been an exemplary worldwide leader for 40 years in the Indian and Chinese automotive sectors.",
-        "PM WORKSHOP":"For all the cybersecurity enthusiasts and curious people out there, Cryptography Workshop was hosted by the CSA, where they explained about all the skills and demonstrations needed, from scratch, to get into the world of exploits and vulnerabilities.",
+        "MACHINE LEARNING WORKSHOPS":"Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data",
+        "STAR GAZING":"To give the General Body a peak into the night sky, and a closer look at the stars and other celestial objects.",
+        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"Somebody participating in this workshop will know Python3 code, handling (slicing, extending, manipulating) databases, widely useful and relevant python3 libraries like matplotlib, pandas, numpy; basic clustering techniques which are a foundation for many AI/ML techniques",
+        "ROBOTICS 101":"ARC-Robotics 101 is a three-day technical workshop conducted by the Automation and Robotics Club. The workshop is based on a physical hands-on kit and has zero prerequisites. The participants will be exposed to the fundamentals of programming, electronics, and design, which make up the foundation of robotics.",
+        "PM WORKSHOP":"A must attend workshop for anyone planning to pursue PM as a career option. It will lay out all requirements for the field, teach fundamentals of the same and choke out a future plan and scope.",
         "CRIME SCENE INVESTIGATION":"SEDS, the aerospace club of BPHC held a 3D Rendering Workshop themed “Your Vision of Martian Society” during Orbe Novo. It gave a fascinating insight into the various facets of 3-D graphic design and piqued the learner’s curiosity.",
-        "IOT WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
-        "HYBRID VEHICLE WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
-        "BLOCKCHAIN WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
-        "ANALYTICS WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
+        "IOT WORKSHOP":"A 2-day hands-on experience workshop on IOT, with takeaway kits included. Participants will be able to work on various projects that involve real world iot applications.",
+        "HYBRID VEHICLE WORKSHOP":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
+        "BLOCKCHAIN WORKSHOP":"n recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
+        "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
     }
 
 
@@ -45,14 +46,15 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
     const [register, setReg] = useState(false)
     useEffect(()=>{
         if (params.type=="comp"){
-        Object.keys(competions).forEach((value,i)=>{
-            if (i==params.id){
-                setTitle(value)
-                setDescript(competions[value])
-
-                
-            }
-        })}
+            Object.keys(competions).forEach((value,i)=>{
+                if (i==params.id){
+                    setTitle(value)
+                    setDescript(competions[value])
+                    
+                    
+                }
+            })
+        }
         else if(params.type=="work"){
             Object.keys(workshops).forEach((value,i)=>{
             if (i==params.id){
@@ -83,7 +85,12 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
     <div className='background'>
         <div className='contest_image'></div>
         <div className='content-left content-full'>
-            <div className='photo'>
+            <div 
+                className='photo' 
+                style={{ 
+                    backgroundImage: `url(${(params.type=="comp" ? competionsImages[params.id] : workshopsImages[params.id])})`
+                }}
+            >
             </div>
             <div className='prize'>
                 <div className='prize-text'>{prize}</div>

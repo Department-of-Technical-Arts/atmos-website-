@@ -2,9 +2,8 @@
 body {
   min-height: 100%;
   background-size: cover;
-  background-color: black;
   /* background-size: auto 100%; */
-  background-repeat: no-repeat;
+  /* background-repeat: no-repeat; */
 }
 .background-container-competitions {
   position: relative;
@@ -16,11 +15,6 @@ body {
 .background-competitions {
   top: 0;
   left: 0;
-  background-color: black;
-  position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100%;
   width: 100%;
   overflow: visible;
@@ -29,7 +23,7 @@ body {
 .image-competitions {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   background-image: url("../../assets/earth-g174993377_1920\ 1.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -79,11 +73,11 @@ body {
 
 .hover-cards-competitions{
   position: relative;
-  background-image: url(../../assets/pawel-nolbert-62OK9xwVA0c-unsplash\ 1.png);
   height: 220px;
   width: 180px;
+  background-size: cover;
+  background-position: center;
   border-radius: 45px;
-  margin-bottom: 30%;
   margin-bottom: 40%;
   margin-left: 1.5rem;
   font-family: 'Inter';

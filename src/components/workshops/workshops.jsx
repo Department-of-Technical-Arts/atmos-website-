@@ -55,6 +55,7 @@
 
 import React from 'react' ;
 import "./workshops.css";
+import workshopsImages from '../../images/events-photos/workshops-images';
 
 function Workshops() {
 
@@ -73,7 +74,9 @@ function Workshops() {
                         {
                             Object.values(workshopNames).map((value,i)=>{
                                 return(
-                                    <a href={`/contest/work/${i}`}><div className='hover-cards-workshops'><p>{value}</p></div></a>
+                                    <a href={`/contest/work/${i}`}><div className='hover-cards-workshops' style={{ 
+                                        backgroundImage: `url(${workshopsImages[i]})`
+                                      }}><p>{value}</p></div></a>
                                 )
                             })
                         }

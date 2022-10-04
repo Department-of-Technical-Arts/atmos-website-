@@ -6,43 +6,43 @@ export default function EventSlider() {
     <div class="image-slider">
       <div class="image-slider-track">
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
-        </div>
-
-        <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
-        </div>
-        <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
-        </div>
-        <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
 
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
           <img src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
 
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
         <div class="slide-standout">
-          <img src={require("./i1-min.jpeg")} />
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
+        </div>
+
+        <div class="slide-standout">
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
+        </div>
+        <div class="slide-standout">
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
+        </div>
+        <div class="slide-standout">
+          <img style={{borderRadius:10}} src={require("./i1-min.jpeg")} />
         </div>
       </div>
     </div>

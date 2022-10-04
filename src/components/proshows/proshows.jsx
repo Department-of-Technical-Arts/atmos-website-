@@ -90,10 +90,10 @@
 
 import React from 'react' ;
 import "./proshows.css";
-
+import proshowsImages from '../../images/events-photos/proshows-images';
 function proshows() {
 
-
+    const proShowsNames = ["Armaan Malik","Nishant Suri","Danny Avila","Aerreo","Sanam","Vivek Singh","Pineapple Express"]
     return(
         <>
             <div className='background-container-proshows'>
@@ -104,12 +104,21 @@ function proshows() {
                     
                     </div>
                     <div className='card-container-proshows'>
-                        <a href="/gallery"><div className='hover-cards-proshows'><p>NISHANT SURI</p></div></a>
+                        {
+                            Object.values(proShowsNames).map((value,i)=>{
+                                return(
+                                    <a href="/gallery"><div className='hover-cards-proshows' style={{ 
+                                        backgroundImage: `url(${proshowsImages[i]})`
+                                      }}><p>{value}</p></div></a>
+                                )
+                            })
+                        }
+                        {/* <div className='hover-cards-proshows'><p>NISHANT SURI</p></div></a>
                         <a href="/gallery"><div className='hover-cards-proshows'><p>DANNY AVILA</p></div></a>
                         <a href="/gallery"><div className='hover-cards-proshows '><p>AERREO</p></div></a>
                         <a href="/gallery"><div className='hover-cards-proshows'><p>SANAM</p></div></a>
                         <a href="/gallery"><div className='hover-cards-proshows'><p>VIVEK SINGH</p></div></a>
-                        <a href="/gallery"><div className='hover-cards-proshows'><p>PINEAPPLE EXPRESS</p></div></a>
+                        <a href="/gallery"><div className='hover-cards-proshows'><p>PINEAPPLE EXPRESS</p></div></a> */}
 
                   
                     </div>

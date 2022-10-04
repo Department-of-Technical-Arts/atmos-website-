@@ -57,9 +57,9 @@ export default Talks;
 
 import React from 'react' ;
 import "./talks.css";
-
+import talksImages from '../../images/events-photos/talks-images';
 function Talks() {
-
+    let talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Waria Hussain","Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha"]
 
     return(
         <>
@@ -71,14 +71,23 @@ function Talks() {
                     
                     </div>
                     <div className='card-container-talks'>
-                        <div className='hover-cards-talks'><p>Nidhi Narwal</p></div>
+                        {
+                          Object.values(talksNames).map((value,i)=>{
+                            return(
+                                <div className='hover-cards-talks' style={{ 
+                                    backgroundImage: `url(${talksImages[i]})`
+                                  }}><p>{value}</p></div>
+                            )
+                        })
+                        }
+                        {/* <div className='hover-cards-talks' ><p>Nidhi Narwal</p></div>
                         <div className='hover-cards-talks'><p>Kiran Bedi</p></div>
                         <div className='hover-cards-talks'><p>Bharat Karnad</p></div>
                         <div className='hover-cards-talks'><p>Warina Hussain</p></div>
                         <div className='hover-cards-talks'><p>Dr. V Anantha Nageswaran</p></div>
                         <div className='hover-cards-talks'><p>Arun Prabhudesai</p></div>
                         <div className='hover-cards-talks'><p>Arvind Goel</p></div>
-                        <div className='hover-cards-talks'><p>Dr. Ravindra Guptha</p></div>
+                        <div className='hover-cards-talks'><p>Dr. Ravindra Guptha</p></div> */}
                     </div>
                 </div>
             </div>

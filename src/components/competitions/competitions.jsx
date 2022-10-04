@@ -1,6 +1,8 @@
 import React from 'react' ;
+import { useEffect } from 'react';
 import "./competitions.css";
-
+// import background from '../../images/events-photos/aerreo_cover.jpg';
+import competionsImages from '../../images/events-photos/competions-images';
 function Competitions() {
     const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps"]
 
@@ -17,7 +19,9 @@ function Competitions() {
                         {
                             Object.values(competionsNames).map((value,i)=>{
                                 return(
-                                    <a href={`/contest/comp/${i}`}><div className='hover-cards-competitions'><p>{value}</p></div></a>
+                                    <a href={`/contest/comp/${i}`}><div className='hover-cards-competitions' style={{ 
+                                        backgroundImage: `url(${competionsImages[i]})`
+                                      }}><p>{value}</p></div></a>
                                 )
                             })
                         }
