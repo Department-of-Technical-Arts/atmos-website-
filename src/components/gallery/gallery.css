@@ -70,5 +70,13 @@
 
 .gallery-grid {
   position: absolute;
-  top: -40%;
+  top: -326px;
+}
+
+@media screen and (max-width: 500px){
+  
+  .gallery-grid {
+    position: relative;
+      top: -1686px;
+  }
 }
