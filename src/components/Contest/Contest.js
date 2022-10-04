@@ -27,14 +27,16 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         "Bid Up Vamps":"This showcase of intriguing projects by ARC definitely fuelled our innovative instincts. Students built 7 projects ranging from a Nerf Turret to a ‘Useless Box’ under the guidance of mentors from ARC. The ideas and concepts behind these projects were explained. Techtainment was an excellent opportunity to explore the domain of robotics and for those who are interested in the same.",
     }
     const workshops ={
-        "Smart Automobile Workshop":"A 2-day online workshop on smart vehicles with certification was offered by Team Vulcan and SAE. This program was intended to teach students about industrial workflow and how electric automobile components work, as well as how concepts are developed, designs are created, and manufacturing processes are carried out.",
-        "Current Trends in pharmaceutical sciences":"Panacea, The Pharmacy Association at BITS Pilani Hyderabad presented it’s (NO) National Symposium, Current Trends in Pharmaceutical Sciences (CTPS), themed Recovery with Resilience, if you are interested in entering the pharmaceutical industry or have a talent for drug discovery or biomedical research in the future but do not know where to start.",
-        "ROBOTICS BOOTCAMP":"A fun 3 Day Robotics Workshop was brought to us by the Automation and Robotics Club, BITS Pilani Hyderabad Campus this cultural-tech fest, Orbe Novo'22. With no prerequisites, featuring hands-on experience and a 5-in-1 kit.",
-        "EXPERT ENCOUNTER":"MEA hosted Mr. Arvind Goel, MD & CEO at TATA Autocomp, speak at our keynote seminar, EXPERT ENCOUNTER, and share his extraordinary experiences with us. He has been an exemplary worldwide leader for 40 years in the Indian and Chinese automotive sectors.",
-        "CRYPTOGRAPHY WORKSHOP":"For all the cybersecurity enthusiasts and curious people out there, Cryptography Workshop was hosted by the CSA, where they explained about all the skills and demonstrations needed, from scratch, to get into the world of exploits and vulnerabilities.",
-        "3D Rendering Workshop":"SEDS, the aerospace club of BPHC held a 3D Rendering Workshop themed “Your Vision of Martian Society” during Orbe Novo. It gave a fascinating insight into the various facets of 3-D graphic design and piqued the learner’s curiosity.",
-        "Quadcopter":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it."
-    
+        "MACHINE LEARNING WORKSHOPS":"A 2-day online workshop on smart vehicles with certification was offered by Team Vulcan and SAE. This program was intended to teach students about industrial workflow and how electric automobile components work, as well as how concepts are developed, designs are created, and manufacturing processes are carried out.",
+        "STAR GAZING":"Panacea, The Pharmacy Association at BITS Pilani Hyderabad presented it’s (NO) National Symposium, Current Trends in Pharmaceutical Sciences (CTPS), themed Recovery with Resilience, if you are interested in entering the pharmaceutical industry or have a talent for drug discovery or biomedical research in the future but do not know where to start.",
+        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"A fun 3 Day Robotics Workshop was brought to us by the Automation and Robotics Club, BITS Pilani Hyderabad Campus this cultural-tech fest, Orbe Novo'22. With no prerequisites, featuring hands-on experience and a 5-in-1 kit.",
+        "ROBOTICS 101":"MEA hosted Mr. Arvind Goel, MD & CEO at TATA Autocomp, speak at our keynote seminar, EXPERT ENCOUNTER, and share his extraordinary experiences with us. He has been an exemplary worldwide leader for 40 years in the Indian and Chinese automotive sectors.",
+        "PM WORKSHOP":"For all the cybersecurity enthusiasts and curious people out there, Cryptography Workshop was hosted by the CSA, where they explained about all the skills and demonstrations needed, from scratch, to get into the world of exploits and vulnerabilities.",
+        "CRIME SCENE INVESTIGATION":"SEDS, the aerospace club of BPHC held a 3D Rendering Workshop themed “Your Vision of Martian Society” during Orbe Novo. It gave a fascinating insight into the various facets of 3-D graphic design and piqued the learner’s curiosity.",
+        "IOT WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
+        "HYBRID VEHICLE WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
+        "BLOCKCHAIN WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
+        "ANALYTICS WORKSHOP":"The Quadcopter work shop conducted by the Phoenix Association and Aeolus was an amazing opportunity for all the drone enthusiasts out there. You not only got to build this exciting quadcopter but also got to take it home. This was such a big hit ,that the organizers had to conduct a 2.0 version of it.",
     }
 
 
@@ -64,6 +66,9 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
 
                 if (numWords > 2) {
                     title.style.fontSize = "6.8vh";
+                }
+                if (numWords > 5) {
+                    title.style.fontSize = "3.8vh";
                 }
             }
         })}
@@ -105,7 +110,6 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                     }
                 })} */}
                 {title_names}
-                
             </div>
             <div className='contest-description'>
                 {description}

@@ -58,6 +58,7 @@ import "./workshops.css";
 
 function Workshops() {
 
+    const workshopNames = ["MACHINE LEARNING WORKSHOPS","STAR GAZING","FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON","ROBOTICS 101","PM WORKSHOP","CRIME SCENE INVESTIGATION","IOT WORKSHOP","HYBRID VEHICLE WORKSHOP","BLOCKCHAIN WORKSHOP","ANALYTICS WORKSHOP"]
 
     return(
         <>
@@ -69,7 +70,14 @@ function Workshops() {
                     
                     </div>
                     <div className='card-container-workshops'>
-                        <div className='hover-cards-workshops'><p>MACHINE LEARNING WORKSHOPS</p></div>
+                        {
+                            Object.values(workshopNames).map((value,i)=>{
+                                return(
+                                    <a href={`/contest/work/${i}`}><div className='hover-cards-workshops'><p>{value}</p></div></a>
+                                )
+                            })
+                        }
+                        {/* <div className='hover-cards-workshops'><p>MACHINE LEARNING WORKSHOPS</p></div>
                         <div className='hover-cards-workshops'><p>STAR GAZING</p></div>
                         <div className='hover-cards-workshops big'><p className='bigname'>FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP</p></div>
                         <div className='hover-cards-workshops'><p>ROBOTICS 101</p></div>
@@ -78,7 +86,7 @@ function Workshops() {
                         <div className='hover-cards-workshops'><p>IOT WORKSHOP</p></div>
                         <div className='hover-cards-workshops'><p>HYBRID VEHICLE WORKSHOP</p></div>
                         <div className='hover-cards-workshops'><p>BLOCKCHAIN WORKSHOP</p></div>
-                        <div className='hover-cards-workshops'><p>ANALYTICS WORKSHOP</p></div>
+                        <div className='hover-cards-workshops'><p>ANALYTICS WORKSHOP</p></div> */}
                   
                     </div>
                 </div>
