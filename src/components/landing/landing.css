@@ -15,47 +15,48 @@
 .bg {
   top: 0;
   left: 0;
-  position: absolute;
-  /*background-color: black;*/
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
   width: 100%;
+  position: fixed;
+  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.bg.landing-title{
+  position: absolute;
 }
 
 .image-landing {
   z-index: -1;
   top: 0;
   left: 0;
-  position: fixed;
-  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  
   height: 100%;
   width: 100%;
 }
-.content {
-  position: relative;
-  height: 201px;
-  width: 609px;
-  top: 35%;
-  left: 50%;
-  bottom: 10%;
-}
+
+
 
 .landing-title {
   position: absolute;
   font-family: "Inter";
   font-style: normal;
-  font-size: 150px;
+  font-size: 10vw;
   font-weight: 600;
   height: 182px;
   mix-blend-mode: difference;
   color: #e9e9dd;
-  transform: translate(-50%, -5%);
+  top:31%;
+  left:31%;
+
+  
 }
+
 
 .arrow {
   position: absolute;
@@ -97,4 +98,58 @@
   height: 100%;
   width: 99%;
   overflow: scroll;
+}
+
+@media screen and (min-width: 320px) and ( max-width:480px) {
+  .landing-title {
+    position: absolute;
+    top:40%;
+    left:6%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25vw;
+    line-height: 91px;
+    color: #E9E9DD;
+    mix-blend-mode: difference;
+  }
+  .bg {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  }
+}
+
+@media screen and (min-width: 480px) and ( max-width:1024px) {
+  .landing-title {
+    position: absolute;
+    top:40%;
+    left:8%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 23vw;
+    line-height: 91px;
+    color: #E9E9DD;
+    mix-blend-mode: difference;
+  }
+  .bg {
+  z-index: -1;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  width: 100vw;
+  }
 }

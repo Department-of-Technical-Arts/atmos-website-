@@ -60,3 +60,15 @@
   transform: translateZ(20px);
   cursor: pointer;
 }
+
+
+@media screen and (min-width: 320px) and ( max-width:480px) {
+  .image-slider {
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    width: 100%;
+  }
+}

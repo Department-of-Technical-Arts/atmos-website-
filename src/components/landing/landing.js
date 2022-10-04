@@ -64,11 +64,11 @@ function Landing() {
         <div className="landing-container" ref={elementRef}>
           <div className="background-container">
             <div className="bg">
-              <div className="image-landing"></div>
-              <div className="content">
-                <h1 className="landing-title">ATMOS</h1>
-              </div>
+              
+              
+              
             </div>
+            <h1 className="landing-title">ATMOS</h1>
             {/*<Button component={RouterLink} to="/explore" sx={{margin:"500px"}}>Click me</Button>*/}
             {/*<a href="/explore" className="landing-btn">
           <IoIosArrowDropdownCircle color="white" size="38" />

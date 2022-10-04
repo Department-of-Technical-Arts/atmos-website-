@@ -4,6 +4,7 @@
   bottom: 200px;
   margin-bottom: 169vh;
   height: 100vh;
+  
 }
 
 .lec {
@@ -54,3 +55,125 @@
   border-radius: 25px;
   color: white;
 }
+
+@media screen and (min-width: 320px) and ( max-width:480px) {
+  .standout-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    bottom: 200px;
+    margin-bottom: 169vh;
+    height: 100vh;
+    
+  }
+  .standout-header {
+    font-size: 10vw;
+    mix-blend-mode: difference;
+    color: #e9e9dd;
+    mix-blend-mode: difference;
+    z-index: -1;
+    
+    }
+
+    .lec {
+      width: 80vw;
+      position: absolute;
+      left: 7vw;
+      transform: translate(2vh, 50vh);
+      align-items: center;
+      z-index: 1;
+    }
+    
+    .eve {
+      width: 80vw;
+      position: absolute;
+      left: 7vw;
+      transform: translate(2vh, 100vh);
+      align-items: center;
+    }
+    
+    .talks {
+      width: 80vw;
+      position: absolute;
+      left: 7vw;
+      transform: translate(2vh, 150vh);
+      align-items: center;
+    }
+    
+    .comp {
+      width: 80vw;
+      position: absolute;
+      left: 7vw;
+      /* top: 70px;   */
+      transform: translate(2vh, 200vh);
+      text-align: center;
+    }
+
+    
+  
+
+  
+ 
+ }
+
+ @media screen and (min-width: 480px) and ( max-width:1024px) {
+  .standout-container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    bottom: 200px;
+    margin-bottom: 169vh;
+    height: 100vh;
+    
+  }
+  .standout-header {
+    font-size: 10vw;
+    mix-blend-mode: difference;
+    color: #e9e9dd;
+    mix-blend-mode: difference;
+    z-index: -1;
+    
+    }
+
+    .lec {
+      width: 70vw;
+      position: absolute;
+      left: 2vw;
+      transform: translate(10vh, 50vh);
+      align-items: center;
+      z-index: 1;
+    }
+    
+    .eve {
+      width: 70vw;
+      position: absolute;
+      left: 2vw;
+      transform: translate(10vh, 100vh);
+      align-items: center;
+    }
+    
+    .talks {
+      width: 70vw;
+      position: absolute;
+      left: 2vw;
+      transform: translate(10vh, 150vh);
+      align-items: center;
+    }
+    
+    .comp {
+      width: 70vw;
+      position: absolute;
+      left: 2vw;
+      /* top: 70px;   */
+      transform: translate(10vh, 200vh);
+      text-align: center;
+    }
+
+    
+  
+
+  
+ 
+ }
+  
+
