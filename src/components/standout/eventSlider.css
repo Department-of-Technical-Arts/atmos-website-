@@ -3,9 +3,12 @@
   width: 30vh;
   display: grid;
   place-items: center;
-  padding-right: 4vh;
+  margin-right: 4vh;
   perspective: 10vh;
-  
+  background-position: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
 }
 
 .slide-standout img {
