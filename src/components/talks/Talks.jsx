@@ -59,7 +59,7 @@ import React from 'react' ;
 import "./talks.css";
 import talksImages from '../../images/events-photos/talks-images';
 function Talks() {
-    let talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Waria Hussain","Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha"]
+    let talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain","Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha"]
 
     return(
         <>
