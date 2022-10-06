@@ -106,6 +106,7 @@
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
     background-size: 100% 100%;
+    transition: transform 0.5s;
 }
 .hover-cards-two {
     position: relative;
@@ -119,11 +120,14 @@
     text-transform: uppercase;
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
-    background-size: 100% 100%;
+    background-size: cover;
+    transition: transform 0.5s;
+    filter: grayscale(100%);
 }
 .hover-cards-three {
     position: relative;
-    background-image: url(../../assets/most-popular-ted-talks.jpg);
+    background-image: url(../../assets/nidhinarwal_cover.jpeg);
+    background-position: center;
     height: 220px;
     width: 180px;
     border-radius: 45px;
@@ -133,12 +137,15 @@
     text-transform: uppercase;
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
-    background-size: 100% 100%;
+    background-size: cover;
+    transition: transform 0.5s;
+    filter: grayscale(60%);
 }
 .hover-cards-four {
     position: relative;
     background-image: url(../../assets/pro-show\ cover.JPG);
     background-size: cover;
+    
     height: 220px;
     width: 180px;
     border-radius: 45px;
@@ -148,7 +155,9 @@
     text-transform: uppercase;
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
-    background-size: 100% 100%;
+    background-size: cover;
+    transition: transform 0.5s;
+    filter: grayscale(80%);
 }
 
 .hover-cards-one p {
@@ -160,6 +169,7 @@
     line-height: 27px;
     width: 210px;
 }
+
 .hover-cards-two p {
     font-size: 18px;
     position: absolute;
@@ -187,6 +197,24 @@
     line-height: 27px;
     width: 210px;
 }
+.hover-cards-one:hover {
+    transform:scale(1.3);
+    z-index: 10;
+    
+}
+.hover-cards-two:hover {
+    transform:scale(1.3);
+    z-index: 10;
+}
+.hover-cards-three:hover {
+    transform:scale(1.3);
+    z-index: 10;
+}
+.hover-cards-four:hover {
+    transform:scale(1.3);
+    z-index: 10;
+    filter: grayscale(0%);
+}
 /* .row{
     display: flex;
     flex-direction: row;
@@ -205,5 +233,43 @@
     .card-container{
       margin-bottom: 6rem;
 
+    }
+  }
+  @media (min-width: 300px) and (max-width:650px){
+    .hover-cards-one{
+        width: 280px;
+        margin-bottom: 30%;
+      }
+      .hover-cards-two{
+        width: 280px;
+        margin-bottom: 30%;
+      }
+      .hover-cards-three{
+        width: 280px;
+        margin-bottom: 30%;
+      }
+      .hover-cards-four{
+        width: 280px;
+        margin-bottom: 30%;
+      }
+      .hover-cards-one:hover {
+        transform:scale(1);
+        z-index: 10;
+        
+    }
+    .hover-cards-two:hover {
+        transform:scale(1);
+        z-index: 10;
+    }
+    .hover-cards-three:hover {
+        transform:scale(1);
+        z-index: 10;
+    }
+    .hover-cards-four:hover {
+        transform:scale(1);
+        z-index: 10;
+    }
+    .image-events {
+        position: fixed;
     }
   }

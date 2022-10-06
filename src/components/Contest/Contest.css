@@ -23,7 +23,7 @@
 }
 
 
-@media (min-width: 300px) and (max-width:650px){
+@media (min-width: 300px) and (max-width:850px){
     .contest_image{
         
         left: 0;
@@ -131,7 +131,6 @@
         font-size: 0.8rem;
         line-height: 4.29vh;
         text-align: center;
-        
     }
 
 
@@ -194,7 +193,7 @@
 
 }
 
-@media (min-width: 650px){
+@media (min-width: 850px){
     .contest_image{
         animation: 1s ease-in-out 0s 1 contestZoomIn;
         background-size: cover;
