@@ -29,7 +29,7 @@ body {
 .image-talks {
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   background-image: url("../../assets/earth-g174993377_1920\ 1.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@ body {
     margin-left:1rem;
     width: 280px;
   }
-  .background-container-talks {
+  .hover-cards-talks:hover {
     transform:scale(1);
   }
   .card-container-talks{

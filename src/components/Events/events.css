@@ -213,7 +213,6 @@
 .hover-cards-four:hover {
     transform:scale(1.3);
     z-index: 10;
-    filter: grayscale(0%);
 }
 /* .row{
     display: flex;
