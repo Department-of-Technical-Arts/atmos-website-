@@ -206,3 +206,16 @@ body {
   }
 } */
 
+@media screen and (max-width: 560px) {
+  .hover-cards-workshops{
+    margin-bottom: 6rem;
+    margin-left:1rem;
+    width: 280px;
+    background-position: top;
+    margin-bottom: 40%;
+  }
+  .hover-cards-workshops:hover {
+      transform:scale(1);
+      z-index: 10;
+    }
+}

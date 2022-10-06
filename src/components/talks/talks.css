@@ -116,7 +116,10 @@ body {
   .hover-cards-talks{
     margin-bottom: 6rem;
     margin-left:1rem;
-    
+    width: 280px;
+  }
+  .background-container-talks {
+    transform:scale(1);
   }
   .card-container-talks{
     align-items: center;

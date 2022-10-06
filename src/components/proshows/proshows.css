@@ -309,3 +309,16 @@ color: #FFFFFC;
     line-height: 27px;
     width: 210px;
   }
+   
+@media screen and (max-width: 560px) {
+    .hover-cards-proshows{
+      margin-bottom: 6rem;
+      margin-left:1rem;
+      width: 280px;
+      background-position: top;
+    }
+    .hover-cards-proshows:hover {
+        transform:scale(1);
+        z-index: 10;
+      }
+  }

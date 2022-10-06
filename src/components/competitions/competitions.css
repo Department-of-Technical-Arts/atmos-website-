@@ -109,6 +109,10 @@ body {
   .hover-cards-competitions{
     margin-bottom: 6rem;
     margin-left:1rem;
+    width: 280px;
+  }
+  .hover-cards-competitions:hover {
+    transform:scale(1);
     
   }
   .card-container-competitions{
