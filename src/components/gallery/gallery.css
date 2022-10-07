@@ -59,9 +59,9 @@
   position: fixed;
   font-family: "Inter";
   font-style: normal;
-  font-size: 10vw;
+  font-size: 9.8vw;
   font-weight: 600;
-  height: 25vh;
+  height: 19vh;
   mix-blend-mode: difference;
   color: #e9e9dd;
   transform: translate(-50%, -50%);
@@ -73,10 +73,66 @@
   top: -326px;
 }
 
-@media screen and (max-width: 500px){
-  
+@media screen and (min-width : 470px) and (max-width: 500px) {
+
   .gallery-grid {
     position: relative;
-      top: -1686px;
+    top: -199%;
+  }
+}
+
+@media screen and (min-width : 440px) and (max-width: 470px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -187%;
+  }
+}
+
+@media screen and (min-width : 410px) and (max-width: 440px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -195%;
+  }
+}
+
+@media screen and (min-width : 380px) and (max-width: 410px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -199%;
+  }
+}
+
+@media screen and (min-width : 370px) and (max-width: 380px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -245%
+  }
+}
+
+@media screen and (min-width : 350px) and (max-width: 370px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -210%
+  }
+}
+
+@media screen and (min-width : 500px) and (max-width: 540px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -31%
+  }
+}
+
+@media screen and (min-width : 270px) and (max-width: 300px) {
+
+  .gallery-grid {
+    position: relative;
+    top: -183%
   }
 }
