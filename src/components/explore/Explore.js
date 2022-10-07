@@ -47,8 +47,8 @@ function Explore() {
         </>
       ) : (
         <div className="background-container-explore">
+          <div className="image-explore"></div>
           <div className="bground-explore">
-            <div className="image-explore"></div>
             <div className="content-explore">
               <h1 className="title-explore small-title">TO EXPLORE</h1>
               <h1 className="title-explore big-title">THE FUTURE</h1>

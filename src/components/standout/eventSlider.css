@@ -5,10 +5,11 @@
   place-items: center;
   margin-right: 4vh;
   perspective: 10vh;
-  background-position: contain;
+  background-position: 0% 0%;
   background-size: cover;
   background-repeat: no-repeat;
   border-radius: 10px;
+  filter: grayscale(100%);
 }
 
 .slide-standout img {
@@ -32,11 +33,11 @@
 
 @keyframes play {
   0% {
-    transform: translateX(0);
+    transform: translateX(calc(-250px * 6));
   }
 
   100% {
-    transform: translateX(calc(-250px * 6));
+    transform: translateX(0);
   }
 }
 
@@ -64,8 +65,7 @@
   cursor: pointer;
 }
 
-
-@media screen and (min-width: 320px) and ( max-width:480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .image-slider {
     display: grid;
     place-items: center;

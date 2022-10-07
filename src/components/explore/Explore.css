@@ -23,27 +23,31 @@
 }
 
 .bground-explore {
-  top: 0;
+  padding-top: 25vmin;
+  padding-left: 13vmin;
   left: 0;
   position: absolute;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
 }
 
 .image-explore {
-  z-index: -1;
+  z-index: -10;
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   animation: 4s ease-out 0s 1 zoomIn, 2s ease-out 0s 1 fadeIn;
   transform: scale(1.5);
   background-image: url("./bg1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -59,70 +63,70 @@
 .content-explore {
   position: relative;
   animation: 2s ease-out 0s 1 fadeIn;
+  text-align: left;
+  left: 20vmin;
 }
 
 .title-explore {
-  position: absolute;
+  position: relative;
   font-family: "Inter";
   font-style: normal;
-  height: 40vw;
   /*color: #e9e9dd;*/
   color: white;
-  left: 9vw;
-  top: 24vh;
 }
 
 .big-title {
-  font-weight: 600;
-  font-size: 16vh;
-  margin-top: 12vh;
+  font-weight: 200;
+  font-size: 14vmin;
 }
 
 .small-title {
   font-weight: 200;
-  font-size: 11vh;
+  font-size: 14vmin;
 }
 
 .description-explore {
   position: relative;
-  top: 58vh;
-  left: 10vw;
   animation: 2s ease-out 0s 1 fadeIn;
+  left: 20vmin;
+  display: flex;
+  flex-direction: column;
 }
 
 .desc-explore {
   text-align: left;
-  width: 43%;
-  font-size: 4vh;
-  padding: 0.6vw;
+  width: 45%;
+  font-size: 4vmin;
+  padding: 0.6vmin;
 }
 
 @keyframes slideInFromL {
   0% {
-    transform: translate(-100vw, 1vw);
+    transform: translateX(-60vmin);
   }
 
   100% {
-    transform: translate(-43vw, 1vw);
+    transform: translateX(0);
   }
 }
 
 .explore-btn {
   background: #15272b;
+  margin-top: 2vmin;
   opacity: 0.75;
-  border-radius: 3vw;
+  border-radius: 3vmin;
   border: 0;
   font-weight: 600;
-  font-size: 1.8vw;
+  font-size: 2.3vmin;
   color: #b0e1ec;
-  padding: 2vw;
+  padding: 2.3vmin;
   text-align: left;
   cursor: pointer;
   animation: 4s ease-out 0s 1 slideInFromL;
-  transform: translate(-43vw, 1vw);
+  width: fit-content;
 }
 .ArrowForward {
-  font-size: 2vw;
+  font-size: 2.5vmin;
   transform: translateY(18%);
 }
 
@@ -151,31 +155,31 @@
 }
 
 .bground-explore1 {
-  top: 0;
+  padding-top: 25vmin;
+  padding-left: 13vmin;
   left: 0;
-  /* background-color: black; */
   position: absolute;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  gap: 2vmin;
 }
 
 .image1 {
-  z-index: -1;
+  z-index: -10;
   top: 0;
   left: 0;
-  position: absolute;
+  position: fixed;
   animation: 2s ease-out 0s 1 zoomIn1;
-  transform: scale(4);
+  transform: scale(1.5);
   background-image: url("./bg1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   overflow: hidden;
 }
 
@@ -192,169 +196,170 @@
 .content-explore1 {
   position: relative;
   animation: 1s ease-out 0s 1 fadeOut;
+  text-align: left;
+  left: 20vmin;
 }
 
 .title-explore1 {
-  position: absolute;
+  position: relative;
   font-family: "Inter";
   font-style: normal;
-  height: 40vw;
   /*color: #e9e9dd;*/
   color: white;
-  left: 9vw;
-  top: 24vh;
 }
 
 .description-explore1 {
   position: relative;
-  top: 58vh;
-  left: 10vw;
   animation: 1s ease-out 0s 1 fadeOut;
+  left: 20vmin;
+  display: flex;
+  flex-direction: column;
 }
 
 .desc-explore1 {
   text-align: left;
-  width: 43%;
-  font-size: 4vh;
-  padding: 0.6vw;
+  width: 45%;
+  font-size: 4vmin;
+  padding: 0.6vmin;
 }
 
 .explore-btn1 {
   background: #15272b;
-  opacity: 0;
-  border-radius: 3vw;
+  margin-top: 2vmin;
+  opacity: 0.75;
+  border-radius: 3vmin;
   border: 0;
   font-weight: 600;
-  font-size: 1.8vw;
+  font-size: 2.3vmin;
   color: #b0e1ec;
-  padding: 2vw;
+  padding: 2.3vmin;
   text-align: left;
   cursor: pointer;
   animation: 1s ease-out 0s 1 fadeOut;
-  transform: translate(-43vw, 1vw);
+  width: fit-content;
 }
 
 @media screen and (max-width: 1439px) and (min-width: 480px) {
-  .big-title {
-    font-size: 12vw;
-    margin-top: 6vw;
+  .bground-explore {
+    padding-left: 3vmin;
+    padding-top: 35vmin;
+    gap: 5vmin;
   }
-  .small-title {
-    font-size: 7vw;
+  .bground-explore1 {
+    padding-left: 3vmin;
+    padding-top: 35vmin;
+    gap: 5vmin;
   }
   .content-explore {
-    margin-bottom: -4%;
+    left: 10vmin;
   }
   .description-explore {
-    margin-top: -1%;
-  }
-  .desc-explore {
-    font-size: 2.5vw;
-    width: 55%;
-  }
-  .description-explore1 {
-    margin-top: -1%;
-  }
-  .desc-explore1 {
-    font-size: 2.5vw;
-    width: 55%;
+    left: 10vmin;
   }
   .content-explore1 {
-    margin-bottom: -4%;
+    left: 10vmin;
+  }
+  .description-explore1 {
+    left: 10vmin;
+  }
+  .big-title {
+    font-size: 12vmin;
+  }
+  .small-title {
+    font-size: 12vmin;
+  }
+  .desc-explore {
+    font-size: 3vmin;
+    width: 75%;
+  }
+  .desc-explore1 {
+    font-size: 3vmin;
+    width: 75%;
   }
 }
 
 @media screen and (max-width: 500px) and (min-width: 320px) {
-  .background-container-explore {
-    width: 100%;
-  }
   .bground-explore {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding-top: 15%;
-  }
-  .big-title {
-    font-size: 14vw;
-    margin-top: 12vw;
-  }
-  .small-title {
-    font-size: 11vw;
-  }
-  .description-explore {
-    margin-top: -15vh;
-  }
-  .desc-explore {
-    font-size: 5vw;
-    width: 75%;
-  }
-  .background-container-explore1 {
-    width: 100%;
-  }
-  .explore-btn {
-    font-size: 3vw;
-    transform: translate(-40vw, 3vw);
+    padding-left: 4vmin;
+    padding-top: 60vmin;
+    gap: 10vmin;
   }
   .bground-explore1 {
-    top: 0;
-    left: 0;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    padding-top: 15%;
+    padding-left: 4vmin;
+    padding-top: 60vmin;
+    gap: 10vmin;
+  }
+  .content-explore {
+    left: 10vmin;
+  }
+  .description-explore {
+    left: 10vmin;
+    gap: 4vmin;
+  }
+  .content-explore1 {
+    left: 10vmin;
   }
   .description-explore1 {
-    margin-top: -15vh;
+    left: 10vmin;
+    gap: 4vmin;
+  }
+  .big-title {
+    font-size: 12vmin;
+  }
+  .small-title {
+    font-size: 12vmin;
+  }
+  .desc-explore {
+    font-size: 5vmin;
+    width: 80%;
   }
   .desc-explore1 {
-    font-size: 5vw;
-    width: 75%;
+    font-size: 5vmin;
+    width: 80%;
+  }
+  .explore-btn {
+    font-size: 3vmin;
   }
   .explore-btn1 {
-    font-size: 3vw;
-    transform: translate(-40vw, 3vw);
-  }
-  @keyframes slideInFromL {
-    0% {
-      transform: translate(-100vw, 3vw);
-    }
-
-    100% {
-      transform: translate(-40vw, 3vw);
-    }
+    font-size: 3vmin;
   }
 }
 
-@media screen and (max-width: 980px) and (min-width: 480px) and (min-height: 600px) {
-  .big-title {
-    font-size: 12vw;
-    margin-top: 6vw;
+@media screen and (min-width: 480px) and (max-height: 700px) {
+  .bground-explore {
+    padding-left: 25vmin;
+    padding-top: 35vmin;
+    gap: 5vmin;
   }
-  .small-title {
-    font-size: 7vw;
+  .bground-explore1 {
+    padding-left: 25vmin;
+    padding-top: 35vmin;
+    gap: 5vmin;
   }
   .content-explore {
-    margin-bottom: -20vw;
-    margin-top: 12vw;
+    left: 10vmin;
   }
   .description-explore {
-    margin-top: -1%;
-  }
-  .desc-explore {
-    font-size: 2.5vw;
-    width: 55%;
-  }
-  .description-explore1 {
-    margin-top: -1%;
-  }
-  .desc-explore1 {
-    font-size: 2.5vw;
-    width: 55%;
+    left: 10vmin;
   }
   .content-explore1 {
-    margin-bottom: -20vw;
-    margin-top: 12vw;
+    left: 10vmin;
+  }
+  .description-explore1 {
+    left: 10vmin;
+  }
+  .big-title {
+    font-size: 15vmin;
+  }
+  .small-title {
+    font-size: 15vmin;
+  }
+  .desc-explore {
+    font-size: 3vmin;
+    width: 75%;
+  }
+  .desc-explore1 {
+    font-size: 3vmin;
+    width: 75%;
   }
 }
