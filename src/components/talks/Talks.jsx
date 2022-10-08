@@ -57,7 +57,7 @@ export default Talks;
 
 import React from 'react' ;
 import "./talks.css";
-import talksImages from '../../images/events-photos/talks-images';
+import talksImages from '../../images/events-photos/talks-images2';
 function Talks() {
     let talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain","Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha"]
 
