@@ -78,6 +78,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size:cover;
+        filter: grayscale(90%);
         border-radius: 50px;   
         
     }
@@ -238,6 +239,7 @@
         background-position: center;
         background-repeat: no-repeat;
         background-size:cover;
+        filter: grayscale(90%);
         border-radius: 50px;   
         
     }

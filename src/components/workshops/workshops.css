@@ -166,6 +166,7 @@ body {
   width: 180px;
   background-size: cover;
   background-position: center;
+  filter: grayscale(100%);
   border-radius: 45px;
   margin-bottom: 55%;
   margin-left: 1.5rem;
@@ -192,6 +193,7 @@ body {
   transform: translate(-50%);
   line-height: 27px;
   width: 210px;
+
 }
 /*  
 @media screen and (max-width: 500px) {
@@ -213,6 +215,7 @@ body {
     width: 280px;
     background-position: top;
     margin-bottom: 40%;
+    filter: grayscale(90%);
   }
   .hover-cards-workshops:hover {
       transform:scale(1);
