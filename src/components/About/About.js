@@ -1,8 +1,17 @@
-import React from "react";
+import {React, useEffect} from "react";
 import "./About.css";
 import NavBar from "../Navbar/NavBar";
 
 function About() {
+
+  useEffect(() => {
+    document.title = "About ATMOS" 
+    return () => {
+        
+    };
+}, []);
+
+
   return (
     <>
           <div className="image-about"></div>

@@ -88,12 +88,20 @@
 
 // export default ProShows
 
-import React from 'react' ;
+import {React, useEffect}from 'react' ;
 import "./proshows.css";
 import proshowsImages from '../../images/events-photos/proshows-images';
-function proshows() {
+function Proshows() {
 
     const proShowsNames = ["Armaan Malik","Nishant Suri","Danny Avila","Aerreo","Sanam","Vivek Singh","Pineapple Express"]
+    
+    useEffect(() => {
+        document.title = "PROSHOWS - ATMOS" 
+        return () => {
+            
+        };
+    }, []);
+
     return(
         <>
             <div className='background-container-proshows'>
@@ -128,5 +136,5 @@ function proshows() {
     )
 }
 
-export default proshows;
+export default Proshows;
 

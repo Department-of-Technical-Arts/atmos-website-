@@ -54,13 +54,19 @@
 // export default Workshops;
 
 import React from 'react' ;
+import { useEffect } from 'react';
 import "./workshops.css";
 import workshopsImages from '../../images/events-photos/workshops-images';
 
 function Workshops() {
 
     const workshopNames = ["MACHINE LEARNING WORKSHOPS","STAR GAZING","FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON","ROBOTICS 101","PM WORKSHOP","CRIME SCENE INVESTIGATION","IOT WORKSHOP","HYBRID VEHICLE WORKSHOP","BLOCKCHAIN WORKSHOP","ANALYTICS WORKSHOP"]
-
+    useEffect(() => {
+        document.title = "WORKSHOPS - ATMOS"
+        return () => {
+            
+        };
+    }, []);
     return(
         <>
             <div className='background-container-workshops'>

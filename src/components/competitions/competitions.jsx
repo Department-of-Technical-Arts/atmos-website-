@@ -6,6 +6,14 @@ import competionsImages from '../../images/events-photos/competions-images';
 function Competitions() {
     const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps"]
 
+    useEffect(() => {
+        document.title = "COMPETITIONS - ATMOS"
+        return () => {
+            
+        };
+    }, []);
+
+
     return(
         <>
             <div className='background-container-competitions'>

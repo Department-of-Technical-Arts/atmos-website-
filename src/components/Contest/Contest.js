@@ -76,7 +76,12 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         })}
 
         setReg(true)
+        
+
     },[])
+    useEffect(()=>{
+        document.title = title_names.toUpperCase() + " - ATMOS"
+    },[title_names])
 
 
 
