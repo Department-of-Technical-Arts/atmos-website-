@@ -3,11 +3,9 @@
   width: 30vh;
   display: grid;
   place-items: center;
+  padding-right: 2vh;
   margin-right: 4vh;
   perspective: 10vh;
-  background-position: 0% 0%;
-  background-size: cover;
-  background-repeat: no-repeat;
   border-radius: 10px;
   filter: grayscale(100%);
 }
@@ -16,6 +14,7 @@
   height: 100%;
   width: 100%;
   transition: transform 1s;
+  object-fit: cover;
 }
 .image-slider {
   display: grid;

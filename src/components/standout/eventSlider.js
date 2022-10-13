@@ -5,9 +5,11 @@ import talksImages from "../../images/events-photos/talks-images";
 import talksImages1 from "../../images/events-photos/talks-images1";
 import proshowsImages from "../../images/events-photos/proshows-images";
 import workshopsImages from "../../images/events-photos/workshops-images";
+import { useNavigate } from "react-router-dom";
 
 export default function EventSlider({ type }) {
   const [images, setImage] = useState([]);
+  const navigate = useNavigate();
   useEffect(() => {
     if (type == "comp") {
       setImage(competionsImages);
@@ -19,18 +21,26 @@ export default function EventSlider({ type }) {
       setImage(workshopsImages);
     }
   }, []);
+
+  function imageClicked() {
+    if (type == "comp") {
+      navigate("/competitions");
+    } else if (type == "talk") {
+      navigate("/talks");
+    } else if (type == "proshow") {
+      navigate("/talks");
+    } else if (type == "work") {
+      navigate("/workshops");
+    }
+  }
+
   return (
     <div class="image-slider">
       <div class="image-slider-track">
         {Object.values(images).map((value, i) => {
           return (
-            <div
-              class="slide-standout"
-              style={{
-                backgroundImage: `url(${images[i]})`,
-              }}
-            >
-              {/* <img style={{borderRadius:10}} src={value} /> */}
+            <div class="slide-standout" onClick={imageClicked}>
+              <img src={`${images[i]}`} />
             </div>
           );
         })}
