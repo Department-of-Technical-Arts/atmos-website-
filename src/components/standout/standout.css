@@ -14,7 +14,6 @@
   transform: translate(25vh, 30vh);
   align-items: center;
   z-index: 1;
-  mix-blend-mode: difference;
 }
 
 .eve {
@@ -23,7 +22,6 @@
   right: 16vw;
   transform: translate(0vh, 60vh);
   align-items: center;
-  mix-blend-mode: difference;
 }
 
 .talks {
@@ -32,7 +30,6 @@
   left: 7vw;
   transform: translate(25vh, 110vh);
   align-items: center;
-  mix-blend-mode: difference;
 }
 
 .comp {
@@ -42,7 +39,6 @@
   /* top: 70px;   */
   transform: translate(0vh, 140vh);
   text-align: center;
-  mix-blend-mode: difference;
 }
 
 .standout-header {
@@ -50,7 +46,6 @@
   mix-blend-mode: difference;
   color: #e9e9dd;
   margin-bottom: 4vh;
-  mix-blend-mode: difference;
   z-index: -1;
 }
 

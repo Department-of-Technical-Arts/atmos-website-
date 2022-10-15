@@ -8,6 +8,10 @@
   perspective: 10vh;
   border-radius: 10px;
   filter: grayscale(100%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s;
 }
 
 .slide-standout img {
@@ -15,12 +19,14 @@
   width: 100%;
   transition: transform 1s;
   object-fit: cover;
+  
 }
 .image-slider {
   display: grid;
   place-items: center;
   position: relative;
-  overflow: hidden;
+  overflow-y: visible;
+  overflow-x: hidden;
   height: 250px;
   width: 100%;
 }
@@ -58,9 +64,16 @@
   right: 0;
   top: 0;
 }
-
-.slide-standout img:hover {
-  transform: translateZ(20px);
+.titles_slider{
+  font-size: larger;
+  mix-blend-mode: luminosity;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-blend-mode: difference;
+  text-transform: uppercase;
+}
+.slide-standout:hover {
+  z-index: 10;
+  transform: scale(1.3);
   cursor: pointer;
 }
 

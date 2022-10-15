@@ -29,11 +29,11 @@ function Landing() {
         }
       };
 
-      console.log("window.scrollY", window.scrollY);
-      console.log(height);
-      console.log(vhPixels);
-      console.log(elementRef.current?.scrollHeight);
-      console.log(scrollYProgress.current);
+      // console.log("window.scrollY", window.scrollY);
+      // console.log(height);
+      // console.log(vhPixels);
+      // console.log(elementRef.current?.scrollHeight);
+      // console.log(scrollYProgress.current);
 
       while (scrollYProgress.current > 0.65 && count > 0) {
         count = 0;
