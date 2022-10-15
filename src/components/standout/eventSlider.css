@@ -12,6 +12,7 @@
   background-size: cover;
   background-repeat: no-repeat;
   transition: transform 0.5s;
+
 }
 
 .slide-standout img {
@@ -70,6 +71,8 @@
   background-color: rgba(0, 0, 0, 0.2);
   background-blend-mode: difference;
   text-transform: uppercase;
+  border-radius: 10px;
+  margin: auto;
 }
 .slide-standout:hover {
   z-index: 10;
