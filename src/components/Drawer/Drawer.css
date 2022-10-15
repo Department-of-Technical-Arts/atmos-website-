@@ -15,7 +15,7 @@
   transform: translate(-20%,-100%);
  }
  .open-btn{
-  transform: translateX(50%);
+  transform: translateX(35%);
  }
 }
 @media (min-width:300px) and (max-width: 450px){
@@ -26,7 +26,7 @@
    transform: translate(-20%,-100%);
   }
   .open-btn{
-   transform: translateX(-13%);
+   transform: translateX(20%);
   }
  }
 
