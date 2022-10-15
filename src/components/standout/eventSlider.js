@@ -58,39 +58,50 @@ export default function EventSlider({ type }) {
   }, []);
 
   function imageClicked() {
-    if (type == "comp") {
-      navigate("/competitions");
-    } else if (type == "talk") {
+     if (type == "talk") {
       navigate("/talks");
     } else if (type == "proshow") {
       navigate("/talks");
-    } else if (type == "work") {
-      navigate("/workshops");
     }
   }
 
   return (
     <div class="image-slider">
       <div class="image-slider-track">
-        {Object.values(images).map((value, i) => {
+        
+        {(type=="comp"||type=="work") && Object.values(images).map((value, i) => {
           return (
+            <a href={`/contest/${type}/${i}`}>
             <div class="slide-standout" style={{ 
               backgroundImage: `url(${images[i]})`
-            }} onClick={imageClicked} onMouseEnter={ (e) => {
+            }} onMouseEnter={ (e) => {
               e.preventDefault();
-              
-              
               document.getElementById(`titles_${i}${type}`).hidden = false;
             }}
             onMouseLeave={(e)=>{
               document.getElementById(`titles_${i}${type}`).hidden = true;
             }}>
-              {/* <img src={`${images[i]}`} /> */}
               <div class="hide" className="titles_slider" hidden id={`titles_${i}${type}`}>{currentSetting[i]}</div>
-              {/* <div>{currentSetting[i]}</div> */}
-            </div>
+            </div></a>
           );
         })}
+        {
+          (type=="proshow"||type=="talk") && Object.values(images).map((value, i) => {
+            return (
+              <div class="slide-standout" style={{ 
+                backgroundImage: `url(${images[i]})`
+              }} onClick={imageClicked} onMouseEnter={ (e) => {
+                e.preventDefault();
+                document.getElementById(`titles_${i}${type}`).hidden = false;
+              }}
+              onMouseLeave={(e)=>{
+                document.getElementById(`titles_${i}${type}`).hidden = true;
+              }}>
+                <div class="hide" className="titles_slider" hidden id={`titles_${i}${type}`}>{currentSetting[i]}</div>
+              </div>
+            );
+          })}
+        
       </div>
     </div>
   );
