@@ -3,6 +3,9 @@ import DrawerComp from "../Drawer/Drawer";
 import {AppBar, Toolbar, useMediaQuery} from "@mui/material";
 import {Link} from "react-router-dom";
 import "./NavBar.css"
+import mainLogo from "../../images/Asset2.png"
+
+
 
 const NavBar = () => {
   const isTablet = useMediaQuery('(max-width:480px)','(max-height:1024px)');
@@ -20,8 +23,9 @@ const NavBar = () => {
     <AppBar sx={{ bgcolor: "transparent" , paddingTop:"15px" }} elevation={0}>
       <Toolbar>
         <a href="/" className="wrapper">
-          <span className="nav-heading white">AROUND</span>
-          <span className="nav-heading blue">FUTURE</span>
+          {/* <span className="nav-heading white">AROUND</span>
+          <span className="nav-heading blue">FUTURE</span> */}
+          <img src={mainLogo} className="logoimg"></img>
         </a>
       <DrawerComp/>
       </Toolbar>
