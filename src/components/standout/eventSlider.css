@@ -67,9 +67,8 @@
 }
 .titles_slider{
   font-size: larger;
-  mix-blend-mode: luminosity;
-  background-color: rgba(0, 0, 0, 0.2);
-  background-blend-mode: difference;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
   text-transform: uppercase;
   border-radius: 10px;
   margin: auto;

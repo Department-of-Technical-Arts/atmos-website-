@@ -40,6 +40,18 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
     }
 
+    const prefest ={
+        "MACHINE LEARNING WORKSHOPS":"Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data",
+        "STAR GAZING":"To give the General Body a peak into the night sky, and a closer look at the stars and other celestial objects.",
+        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"Somebody participating in this workshop will know Python3 code, handling (slicing, extending, manipulating) databases, widely useful and relevant python3 libraries like matplotlib, pandas, numpy; basic clustering techniques which are a foundation for many AI/ML techniques",
+        "ROBOTICS 101":"ARC-Robotics 101 is a three-day technical workshop conducted by the Automation and Robotics Club. The workshop is based on a physical hands-on kit and has zero prerequisites. The participants will be exposed to the fundamentals of programming, electronics, and design, which make up the foundation of robotics.",
+        "PM WORKSHOP":"A must attend workshop for anyone planning to pursue PM as a career option. It will lay out all requirements for the field, teach fundamentals of the same and choke out a future plan and scope.",
+        "CRIME SCENE INVESTIGATION":"A workshop on Crime Scene Investigation",
+        "IOT WORKSHOP":"A 2-day hands-on experience workshop on IOT, with takeaway kits included. Participants will be able to work on various projects that involve real world iot applications.",
+        "HYBRID VEHICLE WORKSHOP":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
+        "BLOCKCHAIN WORKSHOP":"n recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
+        "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
+    }
 
     const [title_names, setTitle] = useState("")
     const [description, setDescript] = useState("")
@@ -72,8 +84,28 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                 if (numWords > 5) {
                     title.style.fontSize = "3.8vh";
                 }
-            }
-        })}
+            }})}
+
+        else if(params.type=="prefest"){
+            Object.keys(prefest).forEach((value,i)=>{
+            if (i==params.id){
+                setTitle(value)
+                setDescript(prefest[value])
+
+                
+                const title = document.getElementById("contest-page-title");
+    
+                var numWords = value.split(' ').length; 
+
+                if (numWords > 2) {
+                    title.style.fontSize = "6.8vh";
+                }
+                if (numWords > 5) {
+                    title.style.fontSize = "3.8vh";
+                }
+            }})
+                
+        }
 
         setReg(true)
         

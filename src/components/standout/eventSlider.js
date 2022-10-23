@@ -38,7 +38,7 @@ export default function EventSlider({ type }) {
         titles.push(true);
       });
       setTitleVisible(titles);
-    } else if (type == "proshow") {
+    } else if (type == "prefest") {
       setImage(talksImages1);
       setCurrentSetting(talksNames1);
       let titles = []
@@ -72,12 +72,18 @@ export default function EventSlider({ type }) {
         {(type=="comp"||type=="work") && Object.values(images).map((value, i) => {
           return (
             <a href={`/contest/${type}/${i}`}>
-            <div class="slide-standout" style={{ 
+            <div 
+            class="slide-standout" 
+            
+            style={{ 
               backgroundImage: `url(${images[i]})`
-            }} onMouseEnter={ (e) => {
+            }} 
+            
+            onMouseEnter={ (e) => {
               e.preventDefault();
               document.getElementById(`titles_${i}${type}`).hidden = false;
             }}
+
             onMouseLeave={(e)=>{
               document.getElementById(`titles_${i}${type}`).hidden = true;
             }}>
@@ -86,19 +92,52 @@ export default function EventSlider({ type }) {
           );
         })}
         {
-          (type=="proshow"||type=="talk") && Object.values(images).map((value, i) => {
+          (type=="talk") && Object.values(images).map((value, i) => {
             return (
-              <div class="slide-standout" style={{ 
+              <div 
+              class="slide-standout" 
+
+              style={{ 
                 backgroundImage: `url(${images[i]})`
-              }} onClick={imageClicked} onMouseEnter={ (e) => {
+              }} 
+
+              onClick={imageClicked} 
+
+              onMouseEnter={ (e) => {
                 e.preventDefault();
                 document.getElementById(`titles_${i}${type}`).hidden = false;
               }}
+
               onMouseLeave={(e)=>{
                 document.getElementById(`titles_${i}${type}`).hidden = true;
               }}>
                 <div class="hide" className="titles_slider" hidden id={`titles_${i}${type}`}>{currentSetting[i]}</div>
               </div>
+            );
+          })}
+        {
+          (type=="prefest") && Object.values(images).map((value, i) => {
+            return (
+              <a href={`/contest/prefest/${i}`}>
+              <div 
+              class="slide-standout" 
+
+              style={{ 
+                backgroundImage: `url(${images[i]})`
+              }} 
+
+              onClick={imageClicked} 
+
+              onMouseEnter={ (e) => {
+                e.preventDefault();
+                document.getElementById(`titles_${i}${type}`).hidden = false;
+              }}
+
+              onMouseLeave={(e)=>{
+                document.getElementById(`titles_${i}${type}`).hidden = true;
+              }}>
+                <div class="hide" className="titles_slider" hidden id={`titles_${i}${type}`}>{currentSetting[i]}</div>
+              </div></a>
             );
           })}
         

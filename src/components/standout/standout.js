@@ -7,9 +7,9 @@ function Standout() {
     <>
       <div className="standout-container">
         <div className="lec">
-          <h1 className="standout-header">LECTURES</h1>
+          <h1 className="standout-header">PRE-FEST EVENTS</h1>
           <p className="standout-desc">
-            <EventSlider type={"proshow"}/>
+            <EventSlider type={"prefest"}/>
           </p>
         </div>
 
