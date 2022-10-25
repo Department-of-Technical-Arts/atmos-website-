@@ -3,7 +3,7 @@ import "./eventSlider.css";
 import competionsImages from "../../images/events-photos/competions-images";
 import talksImages from "../../images/events-photos/talks-images";
 import talksImages1 from "../../images/events-photos/talks-images1";
-import proshowsImages from "../../images/events-photos/proshows-images";
+import prefestImages from "../../images/events-photos/prefest-images";
 import workshopsImages from "../../images/events-photos/workshops-images";
 import { useNavigate } from "react-router-dom";
 
@@ -11,7 +11,7 @@ export default function EventSlider({ type }) {
   const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps"]
   const workshopNames = ["MACHINE LEARNING WORKSHOPS","STAR GAZING","ANALYSING EXOPLANETS USING PYTHON","ROBOTICS 101","PM WORKSHOP","CRIME SCENE INVESTIGATION","IOT WORKSHOP","HYBRID VEHICLE WORKSHOP","BLOCKCHAIN WORKSHOP","ANALYTICS WORKSHOP"]
   const talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain","Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain"]
-  const talksNames1 = ["Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha","Dr V Anantha Nageswaran","Arun Prabhudesai","Arvind Goel","Dr. Ravindra Guptha"]
+  const prefestNames = ["UNDER PRESSURE","IEEE IMAGE-PROCESSING", "CODE DRIFT 2022", "AEROPLANES 101", "AERO QUIZ", "WSC TRADING CHALLENGE", "INTRO TO CONSULTANCY", "CAD WORKSHOP", "QUADCOPTER WORKSHOP", "WHAT IF", "QUANT WORKSHOP", "SUDOSTAR", "ARTHASHASTRA"]
 
 
   const [titleVisible, setTitleVisible] = useState([])
@@ -39,10 +39,10 @@ export default function EventSlider({ type }) {
       });
       setTitleVisible(titles);
     } else if (type == "prefest") {
-      setImage(talksImages1);
-      setCurrentSetting(talksNames1);
+      setImage(prefestImages);
+      setCurrentSetting(prefestNames);
       let titles = []
-      talksNames1.forEach((value,i) =>{
+      prefestNames.forEach((value,i) =>{
         titles.push(true);
       });
       setTitleVisible(titles);

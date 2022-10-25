@@ -9,7 +9,7 @@ function Imagegrid() {
       <div className={`gallery-container w-2 ${i % 2 === 0 ? "h-2" : "h-3"} `}>
         <div class="gallery-item">
           <div class="image-gallery-grid">
-            <img src={require(`${item}`)} alt="" />
+            <img src={item} alt="" />
           </div>
         </div>
       </div>

@@ -2,6 +2,7 @@ import {React, useState, useEffect} from 'react';
 import {  useParams, useSearchParams } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material';
 import competionsImages from '../../images/events-photos/competions-images';
+import prefestImages from '../../images/events-photos/prefest-images';
 import workshopsImages from '../../images/events-photos/workshops-images';
 import './Contest.css';
 
@@ -33,28 +34,38 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"Somebody participating in this workshop will know Python3 code, handling (slicing, extending, manipulating) databases, widely useful and relevant python3 libraries like matplotlib, pandas, numpy; basic clustering techniques which are a foundation for many AI/ML techniques",
         "ROBOTICS 101":"ARC-Robotics 101 is a three-day technical workshop conducted by the Automation and Robotics Club. The workshop is based on a physical hands-on kit and has zero prerequisites. The participants will be exposed to the fundamentals of programming, electronics, and design, which make up the foundation of robotics.",
         "PM WORKSHOP":"A must attend workshop for anyone planning to pursue PM as a career option. It will lay out all requirements for the field, teach fundamentals of the same and choke out a future plan and scope.",
-        "CRIME SCENE INVESTIGATION":"A workshop on Crime Scene Investigation",
+        "CRIME SCENE INVESTIGATION":`A workshop on Crime Scene Investigation.
+        Students will learn about the collection of evidence from the crime scene by solving real-life crime/ murder/theft scenes.
+        Fingerprint collection and analysis.
+        Lie detection test.
+        Implementation of biology, Chemistry, and Physics at the crime scene.
+        Data recovery`,
         "IOT WORKSHOP":"A 2-day hands-on experience workshop on IOT, with takeaway kits included. Participants will be able to work on various projects that involve real world iot applications.",
-        "HYBRID VEHICLE WORKSHOP":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
-        "BLOCKCHAIN WORKSHOP":"n recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
+        "IC Engines Workshop":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
+        "Fundamentals of Cryptocurrency":"In recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
         "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
+        "SCIFARI":`Scifari - A literal Science Safari is your wild adventure into a show of the magic of the cosmos. You get to experience a theatrical depiction of a few of the most mind blowing phenomena blended with humor and drama. Join us in this musical show where we take over your imagination and give you an actual experience of the magic that Science is. You even get to have to try out an experiment or two on your own.        `,
     }
 
     const prefest ={
-        "MACHINE LEARNING WORKSHOPS":"Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data",
-        "STAR GAZING":"To give the General Body a peak into the night sky, and a closer look at the stars and other celestial objects.",
-        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"Somebody participating in this workshop will know Python3 code, handling (slicing, extending, manipulating) databases, widely useful and relevant python3 libraries like matplotlib, pandas, numpy; basic clustering techniques which are a foundation for many AI/ML techniques",
-        "ROBOTICS 101":"ARC-Robotics 101 is a three-day technical workshop conducted by the Automation and Robotics Club. The workshop is based on a physical hands-on kit and has zero prerequisites. The participants will be exposed to the fundamentals of programming, electronics, and design, which make up the foundation of robotics.",
-        "PM WORKSHOP":"A must attend workshop for anyone planning to pursue PM as a career option. It will lay out all requirements for the field, teach fundamentals of the same and choke out a future plan and scope.",
-        "CRIME SCENE INVESTIGATION":"A workshop on Crime Scene Investigation",
-        "IOT WORKSHOP":"A 2-day hands-on experience workshop on IOT, with takeaway kits included. Participants will be able to work on various projects that involve real world iot applications.",
-        "HYBRID VEHICLE WORKSHOP":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
-        "BLOCKCHAIN WORKSHOP":"n recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
-        "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
+        "UNDER PRESSURE":"There will be two players per team. Each team competes against one other team of two people on a table which represents a “system of particles”. Of the two teams on a system, one will be Adders who add particles to the system and the other will be Removers who remove particles from the system.",
+        "IEEE IMAGE-PROCESSING":"Getting acquainted image processing algorithms and understanding its implementation on hardware. Image Processing using FPGAs",
+        "CODE DRIFT 2022":"Online competitive coding competition held on CodeChef platform. It will be a rated contest as per of the Starters series of CodeChef. Each participant will get a set of 7 questions to solve out of a pool of 10 depending on what division they are in (based on rating).",
+        "AEROPLANES 101":"Participants will learn how aeroplanes fly. They will learn the functioning of various components on an aeroplane.",
+        "AERO QUIZ":"2 rounds would be conducted. Round 1 would be online after the aero workshop. Round 2 would be conducted during the fest.",
+        "WSC TRADING CHALLENGE":"WSC Trading Challenge is a Virtual Stock Market based trading competition conducted by The Wall Street Club, BITS Hyderabad. This Paper Trading week-long event allows participants to apply their trading skills like Technical Analysis, Risk Management, Position Sizing, and Market Psychology. Participants get to experience the Stock Market and improve their trading skills; also, they stand to win amazing cash prizes.",
+        "INTRO TO CONSULTANCY":"Students will get to know about the field of consultancy. They will be taught how to approach guesstimates, different cases, do research and analysis based upon a client’s requirements",
+        "CAD WORKSHOP":"CAD (computer-aided design) is the use of computer-based software to aid in design processes. CAD software is frequently used by different types of engineers and designers to create two-dimensional (2-D) drawings or three-dimensional (3-D) models. The workshop aims to teach this skill of CAD to whosoever attends the workshop. Attendants will be taught the basic tools of the CAD software. Basic modelling will be demonstrated followed by a small project. At the end of the workshop a small competition will be organized for which the participants will be given time to submit their designs.",
+        "QUADCOPTER WORKSHOP":"The members of PHoEnix association will be teaching how to build ,assemble and fly a quadcopter. During the workshop they will learn about the components used to build a drone and how they work. The participants need to purchase the kits from the SWD portal. People who are interested can get their drones and Learn to Pilot it.",
+        "WHAT IF":"The event at hand is a team event with preferably 3-5 players (offline mode) and single players (online mode) with we taking the teams through a three-stage contest. The bedrock of this event is how good a person is with thought experiments which is ideally the bedrock of most things “Astra”. We would be posing a team with random and then not-so-random situations based on movie scene settings, and classics, and going all the way up to totally imaginary ones. We would ask them to point out things ranging from what is happening here to flaws and what would happen if…??",
+        "QUANT WORKSHOP":"Quant Workshop by Sai Kumar: Quantitative analysis is the use of mathematical and statistical methods in finance and investment banking.",
+        "SUDOSTAR":"To those of us whose day begins with a cup of warm beverage and a pencil in hand to solve the latest sudoku in the newspaper, Axiom’s Sudostar is the perfect challenge. Discover the classic sudoku in variations you’ve never seen before. If you pride yourself on your problem-solving abilities, put on your thinking cap and try your hands at solving these fascinating mathematical puzzles!",
+        "ARTHASHASTRA":"A finance business time-bound quiz with one or multiple rounds. This is the place where you can show case your finance, trading and economics knowledge, with a thrilling experience of time rush quick thinking and getting to the right answer.",
     }
 
     const [title_names, setTitle] = useState("")
     const [description, setDescript] = useState("")
+    const [images, setImages] = useState([""])
     const [register, setReg] = useState(false)
     useEffect(()=>{
         if (params.type=="comp"){
@@ -62,7 +73,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                 if (i==params.id){
                     setTitle(value)
                     setDescript(competions[value])
-                    
+                    setImages(competionsImages)
                     
                 }
             })
@@ -72,7 +83,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             if (i==params.id){
                 setTitle(value)
                 setDescript(workshops[value])
-
+                setImages(workshopsImages)
                 
                 const title = document.getElementById("contest-page-title");
     
@@ -91,7 +102,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             if (i==params.id){
                 setTitle(value)
                 setDescript(prefest[value])
-
+                setImages(prefestImages)
                 
                 const title = document.getElementById("contest-page-title");
     
@@ -125,7 +136,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             <div 
                 className='photo' 
                 style={{ 
-                    backgroundImage: `url(${(params.type=="comp" ? competionsImages[params.id] : workshopsImages[params.id])})`
+                    backgroundImage: `url(${images[params.id]})`
                 }}
             >
             </div>

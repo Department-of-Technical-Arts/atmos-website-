@@ -9,6 +9,7 @@ const workshopsImages = [
     "/events-photos/hybridvehicle_cover.jpg",
     "/events-photos/blockchain_cover.png",
     "/events-photos/analytics_cover.png",
+    "/events-photos/Scifar_cover.jpg"
 ] 
 
 export default workshopsImages
