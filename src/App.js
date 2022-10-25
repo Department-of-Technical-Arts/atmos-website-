@@ -1,5 +1,6 @@
 import "./App.css";
 import Events from "./components/Events/events";
+import Prefest from "./components/Events/prefest";
 import Gallery from "./components/gallery/gallery";
 import NavBar from "./components/Navbar/NavBar";
 import Explore from "./components/explore/Explore";
@@ -30,6 +31,7 @@ function App() {
             <Route path="competitions" element={<Competitions />} />
             <Route path="workshops" element={<Workshops />} />
             <Route path="proshows" element={<ProShows />} />
+            <Route path="prefest" element={<Prefest />} />
             <Route path="contest/:type/:id" element={<Contest />} />
           </Routes>
         </BrowserRouter>

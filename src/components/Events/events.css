@@ -159,6 +159,24 @@
     transition: transform 0.5s;
     filter: grayscale(80%);
 }
+.hover-cards-five {
+    position: relative;
+    /* background-image: url(/events-photos/cubing-cover.jpeg); */
+    background-size: cover;
+    
+    height: 220px;
+    width: 180px;
+    border-radius: 45px;
+    margin-bottom: 20%;
+    font-family: 'Inter';
+    color: #fffffc;
+    text-transform: uppercase;
+    bottom: 0;
+    animation: 2s ease-out 0s 1 fadeIn;
+    background-size: cover;
+    transition: transform 0.5s;
+    filter: grayscale(80%);
+}
 
 .hover-cards-one p {
     font-size: 18px;
@@ -189,6 +207,15 @@
     width: 210px;
 }
 .hover-cards-four p {
+    font-size: 18px;
+    position: absolute;
+    top: 225px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 27px;
+    width: 210px;
+}
+.hover-cards-five p {
     font-size: 18px;
     position: absolute;
     top: 225px;

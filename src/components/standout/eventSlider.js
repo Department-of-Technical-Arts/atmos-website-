@@ -8,7 +8,7 @@ import workshopsImages from "../../images/events-photos/workshops-images";
 import { useNavigate } from "react-router-dom";
 
 export default function EventSlider({ type }) {
-  const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps"]
+  const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps",  "INNOVATIVE NEXUS", "BINARY BATTLES", "CRUXIPHER", "BITS PLANNING", "GAME OF DRONES", "BITSAT 2.0", "CUBING ATMOSPHERE"]
   const workshopNames = ["MACHINE LEARNING WORKSHOPS","STAR GAZING","ANALYSING EXOPLANETS USING PYTHON","ROBOTICS 101","PM WORKSHOP","CRIME SCENE INVESTIGATION","IOT WORKSHOP","HYBRID VEHICLE WORKSHOP","BLOCKCHAIN WORKSHOP","ANALYTICS WORKSHOP"]
   const talksNames = ["Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain","Nidhi Narwal","Kiran Bedi","Bharat Karnad","Warina Hussain"]
   const prefestNames = ["UNDER PRESSURE","IEEE IMAGE-PROCESSING", "CODE DRIFT 2022", "AEROPLANES 101", "AERO QUIZ", "WSC TRADING CHALLENGE", "INTRO TO CONSULTANCY", "CAD WORKSHOP", "QUADCOPTER WORKSHOP", "WHAT IF", "QUANT WORKSHOP", "SUDOSTAR", "ARTHASHASTRA"]

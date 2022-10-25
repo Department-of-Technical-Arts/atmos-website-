@@ -11,6 +11,14 @@ const competionsImages = [
     "/events-photos/wsbusinesschallenge_cover.jpg",
     "/events-photos/operationzodiac_cover.jpeg",
     "/events-photos/bidupvamps_cover.jpeg",
+    "/events-photos/genesis_cover.jpg",
+    "/events-photos/nexus_cover.png",
+    "/events-photos/binary-cover.jpg",
+    "/events-photos/crux-cover.svg",
+    "/events-photos/planning-cover.jpg",
+    "/events-photos/Game-of-Drones-cover.jpg",
+    "/events-photos/bitsat-cover.jpeg",
+    "/events-photos/cubing-cover.jpeg",
 ] 
 
 export default competionsImages

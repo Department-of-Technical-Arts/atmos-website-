@@ -4,7 +4,7 @@ import "./competitions.css";
 // import background from '../../images/events-photos/aerreo_cover.jpg';
 import competionsImages from '../../images/events-photos/competions-images';
 function Competitions() {
-    const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps"]
+    const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps", "t-RADICAL", "INNOVATIVE NEXUS", "BINARY BATTLES", "CRUXIPHER", "BITS PLANNING", "GAME OF DRONES", "BITSAT 2.0", "CUBING ATMOSPHERE"]
 
     useEffect(() => {
         document.title = "COMPETITIONS - ATMOS"
