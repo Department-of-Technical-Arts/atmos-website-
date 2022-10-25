@@ -1,15 +1,21 @@
 import React from "react";
 import "./imagegrid.css";
 import imagesData from "./imagesList";
+import { LazyLoadImage } from "react-lazy-load-image-component";
+
 
 function Imagegrid() {
   const imageCard = imagesData.map((item) => {
     const i = imagesData.indexOf(item);
     return (
-      <div className={`gallery-container w-2 ${i % 2 === 0 ? "h-2" : "h-3"} `}>
+      <div className={`w-2 ${i % 2 === 0 ? "h-2" : "h-3"} `}>
         <div class="gallery-item">
           <div class="image-gallery-grid">
-            <img src={require(`${item}`)} alt="" />
+          <LazyLoadImage src={require(`${item}`)} 
+            width={330} height={300}
+          
+          />
+          
           </div>
         </div>
       </div>
