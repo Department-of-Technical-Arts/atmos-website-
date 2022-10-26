@@ -2,7 +2,7 @@ import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 import "./landing.css";
 import { IoIosArrowDropdownCircle } from "react-icons/io";
 import { Link, useNavigate } from "react-router-dom";
-import { Button } from "@mui/material";
+import { Button, useMediaQuery, useTheme } from "@mui/material";
 import Standout from "../standout/standout";
 import { useScroll } from "framer-motion";
 
@@ -12,12 +12,18 @@ function Landing() {
   var count = 1;
   const elementRef = useRef(null);
   const [leaving, setLeaving] = useState(true);
+  const [scrolling, setScrolling] = useState(true);
   const { scrollYProgress } = useScroll();
+  let isMobile = window.matchMedia("(max-width: 480px)");
+  let isTouch = window.matchMedia("(max-width: 1024px)");
 
   useEffect(() => {
     const handleScroll = async (e) => {
       const height = elementRef.current?.scrollHeight;
-      const vhPixels = height * 0.85;
+      var vhPixels = height * 0.85;
+      var limit = 0.65;
+      isMobile ? (limit = 0.7) : (limit = 0.65);
+      setScrolling(false);
 
       const smoothScroll = (h) => {
         let i = h || 0;
@@ -35,7 +41,7 @@ function Landing() {
       // console.log(elementRef.current?.scrollHeight);
       // console.log(scrollYProgress.current);
 
-      while (scrollYProgress.current > 0.65 && count > 0) {
+      while (scrollYProgress.current > limit && count > 0) {
         count = 0;
         console.log("fire");
         console.log(height);
@@ -67,6 +73,12 @@ function Landing() {
           <div className="background-container">
             <div className="bg"></div>
             <h1 className="landing-title">ATMOS</h1>
+            <h4 className="dates">25-27 November</h4>
+            {scrolling && (
+              <p className="scroll-text">
+                {isTouch.matches ? "SWIPE UP" : "SCROLL DOWN"}
+              </p>
+            )}
             {/*<Button component={RouterLink} to="/explore" sx={{margin:"500px"}}>Click me</Button>*/}
             {/*<a href="/explore" className="landing-btn">
           <IoIosArrowDropdownCircle color="white" size="38" />

@@ -42,7 +42,7 @@
   position: fixed;
   animation: 4s ease-out 0s 1 zoomIn, 2s ease-out 0s 1 fadeIn;
   transform: scale(1.5);
-  background-image: url("./bg1.png");
+  background-image: url("./bg1-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -174,7 +174,7 @@
   position: fixed;
   animation: 2s ease-out 0s 1 zoomIn1;
   transform: scale(1.5);
-  background-image: url("./bg1.png");
+  background-image: url("./bg1-min.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

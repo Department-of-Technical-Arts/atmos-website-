@@ -55,6 +55,20 @@
   color: white;
 }
 
+.scroll-bottom {
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.6vw;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  left: 44%;
+  animation: blink 2s linear infinite;
+  transform: translate(0vh, 190vh);
+}
+
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .standout-container {
     width: 100vw;
@@ -104,6 +118,10 @@
     /* top: 70px;   */
     transform: translate(2vh, 180vh);
     text-align: center;
+  }
+  .scroll-bottom {
+    font-size: 4vw;
+    transform: translate(-6vh, 225vh);
   }
 }
 
@@ -156,5 +174,9 @@
     /* top: 70px;   */
     transform: translate(10vh, 180vh);
     text-align: center;
+  }
+  .scroll-bottom {
+    font-size: 4vw;
+    transform: translate(-9vh, 225vh);
   }
 }

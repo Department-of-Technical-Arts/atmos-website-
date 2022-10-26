@@ -27,7 +27,7 @@
   background-position: center;
 }
 
-.bg.landing-title{
+.bg.landing-title {
   position: absolute;
 }
 
@@ -35,12 +35,10 @@
   z-index: -1;
   top: 0;
   left: 0;
-  
+
   height: 100%;
   width: 100%;
 }
-
-
 
 .landing-title {
   position: absolute;
@@ -51,12 +49,78 @@
   height: 182px;
   mix-blend-mode: difference;
   color: #e9e9dd;
-  top:31%;
-  left:31%;
-
-  
+  top: 31%;
+  left: 31%;
+}
+.dates {
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 2.6vw;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  top: 51%;
+  left: 39%;
+  text-align: center;
+  background: rgb(149, 149, 145);
+  background: linear-gradient(
+    90deg,
+    rgba(149, 149, 145, 1) 0%,
+    rgba(251, 251, 251, 1) 33%,
+    rgba(255, 255, 255, 1) 50%,
+    rgba(237, 237, 237, 1) 69%,
+    rgba(149, 149, 145, 1) 100%
+  );
+  background-size: 200% auto;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 2s linear infinite;
+  /*-webkit-animation: glow 1.5s ease-in-out infinite alternate;
+  -moz-animation: glow 1.5s ease-in-out infinite alternate;
+  animation: glow 1s ease-out infinite alternate;*/
+}
+@keyframes glow {
+  from {
+    text-shadow: 0 0 0.5vw #f7f7f7, 0 0 1.8vw #f7f7f7;
+  }
+  to {
+    text-shadow: 0 0 1.8vw #f7f7f7, 0 0 2.3vw #f7f7f7;
+  }
+}
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
 }
 
+.scroll-text {
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.6vw;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  bottom: -15%;
+  left: 44%;
+  animation: blink 2s linear infinite;
+}
+@keyframes blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
 .arrow {
   position: absolute;
@@ -96,60 +160,77 @@
   background-repeat: no-repeat;
   background-position: center;
   height: 100%;
-  width: 99%;
+  width: 100%;
   overflow: scroll;
 }
 
-@media screen and (min-width: 320px) and ( max-width:480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   .landing-title {
     position: absolute;
-    top:40%;
-    left:6%;
-    font-family: 'Inter';
+    top: 40%;
+    left: 6%;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 25vw;
     line-height: 91px;
-    color: #E9E9DD;
+    color: #e9e9dd;
     mix-blend-mode: difference;
   }
   .bg {
-  z-index: -1;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .dates {
+    font-size: 6.4vw;
+    left: 27%;
+  }
+  .scroll-text {
+    font-size: 4vw;
+    left: 42%;
   }
 }
 
-@media screen and (min-width: 480px) and ( max-width:1024px) {
+@media screen and (min-width: 480px) and (max-width: 1024px) {
   .landing-title {
     position: absolute;
-    top:40%;
-    left:8%;
-    font-family: 'Inter';
+    top: 40%;
+    left: 8%;
+    font-family: "Inter";
     font-style: normal;
     font-weight: 600;
     font-size: 23vw;
     line-height: 91px;
-    color: #E9E9DD;
+    color: #e9e9dd;
     mix-blend-mode: difference;
   }
   .bg {
-  z-index: -1;
-  top: 0;
-  left: 0;
-  position: fixed;
-  background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  height: 100vh;
-  width: 100vw;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    width: 100vw;
+  }
+  .dates {
+    font-size: 5.8vw;
+    left: 27%;
+  }
+  .scroll-text {
+    font-size: 3.7vw;
+    bottom: -8%;
+    left: 42%;
   }
 }
