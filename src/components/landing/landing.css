@@ -182,7 +182,7 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -190,12 +190,15 @@
     width: 100vw;
   }
   .dates {
-    font-size: 6.4vw;
-    left: 27%;
+    font-size: 7.3vw;
+    left: 22%;
   }
   .scroll-text {
     font-size: 4vw;
     left: 42%;
+  }
+  .image-landing1 {
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
   }
 }
 
@@ -217,7 +220,7 @@
     top: 0;
     left: 0;
     position: fixed;
-    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg);
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -232,5 +235,8 @@
     font-size: 3.7vw;
     bottom: -8%;
     left: 42%;
+  }
+  .image-landing1 {
+    background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
   }
 }
