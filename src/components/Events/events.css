@@ -98,7 +98,7 @@
     background-image: url(../../assets/Algomaniac_dp.jpg);
     height: 220px;
     width: 180px;
-    border-radius: 45px;
+    border-radius: 15px;
     margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;
@@ -113,7 +113,7 @@
     background-image: url(../../assets/codejam_dp.jpg);
     height: 220px;
     width: 180px;
-    border-radius: 45px;
+    border-radius: 15px;
     margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;
@@ -130,7 +130,7 @@
     background-position: center;
     height: 220px;
     width: 180px;
-    border-radius: 45px;
+    border-radius: 15px;
     margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;
@@ -145,10 +145,9 @@
     position: relative;
     background-image: url(../../assets/pro-show\ cover.JPG);
     background-size: cover;
-    
     height: 220px;
     width: 180px;
-    border-radius: 45px;
+    border-radius: 15px;
     margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;
@@ -163,10 +162,9 @@
     position: relative;
     /* background-image: url(/events-photos/cubing-cover.jpeg); */
     background-size: cover;
-    
     height: 220px;
     width: 180px;
-    border-radius: 45px;
+    border-radius: 15px;
     margin-bottom: 20%;
     font-family: 'Inter';
     color: #fffffc;

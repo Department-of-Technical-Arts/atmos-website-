@@ -78,7 +78,7 @@ body {
   background-size: cover;
   background-position: center;
   filter: grayscale(200%);
-  border-radius: 45px;
+  border-radius: 15px;
   margin-bottom: 40%;
   margin-left: 1.5rem;
   font-family: 'Inter';
