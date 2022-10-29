@@ -5,40 +5,74 @@ import competionsImages from '../../images/events-photos/competions-images';
 import prefestImages from '../../images/events-photos/prefest-images';
 import workshopsImages from '../../images/events-photos/workshops-images';
 import './Contest.css';
+import Papa from "papaparse"
 
 
-function Contest({title = "CONTEST", desc = "Participants are invited to the battle of coding. Test your programming and algorithmic skills while competing with the world's best programmers solving the intense and innovative competition coding problems.", prize = "INR 10,000 PRIZE"}) 
-{
+function Contest() {
     const isTablet = useMediaQuery('(max-width:480px)','(max-height:1024px)');
     const isMobile = useMediaQuery('(max-width: 320px)','(max-height: 480px)');
-    useEffect (() => {
-        fetch("https://api.apispreadsheets.com/data/jhsed6mXPEZZBhk8/?query=delete from jhsed6mXPEZZBhk8 where NAME='Robowars'").then((res) => console.log(res.status))
-    }, [])
+    const [name, setName] = useState ({NAME: ""})
 
     const params = useParams()
-    const competions = {
-        "IDRL":"IDRL stands for Indian Drone Racing League. They conduct FPV drone racing events across India. They have a roster of over 4000 national and international pilots. Drone Racers fly their drones at more than 140 km/hr through a live video feed sent from the drones directly to the pilot’s goggles",
-        "The Genesis":"An integrated workshop cum competition where we would teach the participants to use a software where there would be designing molecules and then they would also be getting an opportunity to work in a lab and make a such substances which they can take back home as a souvenir",
-        "ProdStorm":"Product Design/Improvement question which will be judged based on user empathy, solutions and deck presentation. We will get an expert panel to judge the participants.",
-        "CaseSensitive":"The Event revolves around Strategy Consulting, Business Problem Solving, Case Study Solving, Marketing etc. The problem statement will be released during the week of submission once the partner is finalised.",
-        "Courtroom":"Recent corporate cases but names will be changed participants will be briefed about the case and they have to take one of the sides as plaintiff or defendant and present that side in front of a judge or jury.",
-        "Mech Meverick":"A fun quizzical event with a twist, the questions asked will have 5-6 different answers, which will be allotted points on the basis of their popularity which will be determined by a sample set consisting of the same answers which will be collected via a survey. Follows the pattern of a reality TV show “Family Feud”.",
-        "Robowars":"Design and build a robust bot with effective offence and defensive mechanisms to defeat other bots and rise to the top of the leaderboard. The number of rounds, type of tournament and (random) match fixtures shall be made after registration of all teams is complete.",
-        "Law Follower":"An offline, one round competition where participants build robots that autonomously follow a set path from start to finish in the shortest time possible. Points are earned for completing the track with the least penalties. Expected to take place for one full day during the fest.",
-        "Anatomy Of Murder":"Anatomy of Murder is a crime mystery event being organized by Synapsis since several fests. With 2 rounds and cutthroat competition, three teams will solve the mystery and emerge winners. The event is based on forensics, crime and deduction.",
-        "Wall Street Business Challenge":"A distinctive case competition that tests your analytical and creative skillsets as well as your business acumen. This thrilling case study challenge is an excellent chance for budding business leaders to prove their entrepreneurial acumen and develop their strategic skill set.",
-        "Operation Zodiac":"Operation Zodiac-Time-Travelling Serial Killer; has commited 4 Murders across the timeline. This has damaged the Space-Time Continuum. You need to find the Timelines of the Murder, Identity of the Victim and Undo it as well as the reveal the Identity of the Killer.",
-        "Bid Up Vamps":"This event is about buying data structures by auction mechanism and solving the challenging questions within a given timeframe by using that particular data structure only.",
-        "t-RADICAL":"The event revolves around trading of electrons, protons and neutrons to neutralize the charges. The prerequisite knowledge is based completely on the charge of elements and compounds.",
-        "INNOVATIVE NEXUS":"The event tries to inculcate the fun elements of chemistry into exciting games, with ode to the theme at hand for ATMOS. It consists of two rounds with the final round being more complex and is in closer relation to the futuristic ideas for further technological and scientific develpements.",
-        "BINARY BATTLES":"Tournament style short form competitive coding competitions where contestants compete head to head. Participants will compete in teams of up to two members against each other in a bracket style tournament. Each round will consist of a short competitive coding lockout battle (around 3 questions) and the winner will move on in the bracket. Each battle will be 1 hour long and only the first team to solve a problem will get the points for it.", 
-        "CRUXIPHER": "A CTF-style event utilizing knowledge of various computer science disciplines. Teams will compete to answer a series of questions categorized under various domains such as web development, cryptography, knowledge of open source utilities, etc. ", 
-        "BITS PLANNING": "The whole planning needs to be done on AutoCAD. The existing plan of BPHC campus will be displayed throughout the competition and participation need to relocate the existing structures as per their preferences. They can also add some more structures such as Shops, parks , recreational centers etc. But all within the limit of the campus. They need to write a brief report on what changes they did stating their justifications for remapping and new additions (if any) stating its need and requirement.", 
-        "GAME OF DRONES": "Design and build a wireless remote-controlled flying drone to complete the given tasks with highest points possible. There are two rounds and a BONUS round in the competition.", 
-        "BITSAT 2.0":"If the name of the competition has caught your attention, then this event is definitely for you. No, there’s no Physics, Chemistry, or Math here. So relax. The original BITSAT is characterized by more questions and less time, and you should expect the same here; except this time, we shall be dealing with logical reasoning, problem solving, and mild coding. Do you need to know how to code to have a shot at this? It’s not a compulsion. We have way too many questions for you in the bank, so even if you can’t code, you’re most welcome to this competition.  Hoping that you do clear the cutoffs - that are not as likely not be as low as in 2021 - to get the highest paying return", 
-        "CUBING ATMOSPHERE":"There are two kinds of people in this world- those who can solve the Rubik’s cube and those who cannot. If you pride yourself in your ability to solve this classic puzzle and its many fascinating variations, then Cubing ATMOSphere is the perfect platform to showcase your skills. Find your place as a speedcuber as you compete in various events with other talented contestants from across the country!",
-         
-    }
+    useEffect (() => {
+        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+                for (var i = 0; i < results.data.length ; i++) {
+                    if (results.data[i].NAME.toLowerCase() === params.id) {
+                        setName (results.data[i])
+                    }
+                }
+                if (params.type=="comp") {
+                    setTitle(name.NAME)
+                    setDescript(name.DESCRIPTION)
+                    setImages(name.IMAGEURL)
+                }
+                else if(params.type=="work"){
+                    Object.keys(workshops).forEach((value,i)=>{
+                        if (i==params.id){
+                        setTitle(value)
+                        setDescript(workshops[value])
+                        setImages(workshopsImages)
+                const title = document.getElementById("contest-page-title");
+    
+                var numWords = value.split(' ').length; 
+
+                if (numWords > 2) {
+                    title.style.fontSize = "6.8vh";
+                }
+                if (numWords > 5) {
+                    title.style.fontSize = "3.8vh";
+                }
+            }})}
+
+        else if(params.type=="prefest"){
+            Object.keys(prefest).forEach((value,i)=>{
+            if (i==params.id){
+                setTitle(value)
+                setDescript(prefest[value])
+                setImages(prefestImages)
+                
+                const title = document.getElementById("contest-page-title");
+    
+                var numWords = value.split(' ').length; 
+
+                if (numWords > 2) {
+                    title.style.fontSize = "6.8vh";
+                }
+                if (numWords > 5) {
+                    title.style.fontSize = "3.8vh";
+                }
+            }})
+                
+        }
+
+        setReg(true)
+            }
+        })
+    }, [])
+
     const workshops ={
         "MACHINE LEARNING WORKSHOPS":"Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data",
         "STAR GAZING":"To give the General Body a peak into the night sky, and a closer look at the stars and other celestial objects.",
@@ -80,63 +114,13 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
     const [images, setImages] = useState([""])
     const [register, setReg] = useState(false)
     useEffect(()=>{
-        if (params.type=="comp"){
-            Object.keys(competions).forEach((value,i)=>{
-                if (i==params.id){
-                    setTitle(value)
-                    setDescript(competions[value])
-                    setImages(competionsImages)
-                    
-                }
-            })
-        }
-        else if(params.type=="work"){
-            Object.keys(workshops).forEach((value,i)=>{
-            if (i==params.id){
-                setTitle(value)
-                setDescript(workshops[value])
-                setImages(workshopsImages)
-                
-                const title = document.getElementById("contest-page-title");
-    
-                var numWords = value.split(' ').length; 
-
-                if (numWords > 2) {
-                    title.style.fontSize = "6.8vh";
-                }
-                if (numWords > 5) {
-                    title.style.fontSize = "3.8vh";
-                }
-            }})}
-
-        else if(params.type=="prefest"){
-            Object.keys(prefest).forEach((value,i)=>{
-            if (i==params.id){
-                setTitle(value)
-                setDescript(prefest[value])
-                setImages(prefestImages)
-                
-                const title = document.getElementById("contest-page-title");
-    
-                var numWords = value.split(' ').length; 
-
-                if (numWords > 2) {
-                    title.style.fontSize = "6.8vh";
-                }
-                if (numWords > 5) {
-                    title.style.fontSize = "3.8vh";
-                }
-            }})
-                
-        }
-
-        setReg(true)
+        
         
 
     },[])
     useEffect(()=>{
-        document.title = title_names.toUpperCase() + " - ATMOS"
-    },[title_names])
+        document.title = name.NAME.toUpperCase() + " - ATMOS"
+    },[name])
 
 
 
@@ -148,12 +132,12 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
             <div 
                 className='photo' 
                 style={{ 
-                    backgroundImage: `url(${images[params.id]})`
+                    backgroundImage: `url(${name.IMAGEURL})`
                 }}
             >
             </div>
             <div className='prize'>
-                <div className='prize-text'>{prize}</div>
+                <div className='prize-text'>Rs. {name.PRIZEMONEY} INR</div>
             </div>
             <div className='buttons-menu'>
             {register && <div className='button-view'>
@@ -176,10 +160,10 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
                         return(value)
                     }
                 })} */}
-                {title_names}
+                {name.NAME}
             </div>
             <div className='contest-description'>
-                {description}
+                {name.DESCRIPTION}
             </div>
             <div className='socials'>
                 <div className='fb'>

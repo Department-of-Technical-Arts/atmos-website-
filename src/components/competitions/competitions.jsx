@@ -35,9 +35,9 @@ function Competitions() {
                     </div>
                     <div className='card-container-competitions'>
                         {
-                            Object.values(competitionNames).map((eachCompetition, i)=>{
+                            Object.values(competitionNames).map((eachCompetition)=>{
                                 return(
-                                    <a href={`/contest/comp/${i}`}><div className='hover-cards-competitions' style={{ 
+                                    <a href={`/contest/comp/${eachCompetition.NAME.toLowerCase()}`}><div className='hover-cards-competitions' style={{ 
                                         backgroundImage: `url(${eachCompetition.IMAGEURL})`
                                       }}><p>{eachCompetition.NAME}</p></div></a>
                                 )
