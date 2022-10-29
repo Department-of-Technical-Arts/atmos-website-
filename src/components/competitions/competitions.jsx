@@ -1,12 +1,22 @@
-import React from 'react' ;
+import React, { useState } from 'react' ;
 import { useEffect } from 'react';
 import "./competitions.css";
 // import background from '../../images/events-photos/aerreo_cover.jpg';
 import competionsImages from '../../images/events-photos/competions-images';
+import Papa from "papaparse"
+
 function Competitions() {
-    const competionsNames = ["IDRL","The Genesis","ProdStorm","CaseSensitive","Courtroom","Mech Meverick","Robowars","Law Follower","Anatomy Of Murder","Wall Street Business Challenge","Operation Zodiac","Bid Up Vamps", "t-RADICAL", "INNOVATIVE NEXUS", "BINARY BATTLES", "CRUXIPHER", "BITS PLANNING", "GAME OF DRONES", "BITSAT 2.0", "CUBING ATMOSPHERE"]
+    const [competitionNames, setCompetitionNames] = useState([])
 
     useEffect(() => {
+        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+                setCompetitionNames(results.data)
+                console.log(results.data);
+            }
+        })
         document.title = "COMPETITIONS - ATMOS"
         return () => {
             
@@ -25,11 +35,11 @@ function Competitions() {
                     </div>
                     <div className='card-container-competitions'>
                         {
-                            Object.values(competionsNames).map((value,i)=>{
+                            Object.values(competitionNames).map((eachCompetition, i)=>{
                                 return(
                                     <a href={`/contest/comp/${i}`}><div className='hover-cards-competitions' style={{ 
-                                        backgroundImage: `url(${competionsImages[i]})`
-                                      }}><p>{value}</p></div></a>
+                                        backgroundImage: `url(${eachCompetition.IMAGEURL})`
+                                      }}><p>{eachCompetition.NAME}</p></div></a>
                                 )
                             })
                         }
@@ -53,4 +63,4 @@ function Competitions() {
     )
 }
 
-export default Competitions;
+export default  Competitions;

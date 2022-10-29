@@ -11,7 +11,9 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
 {
     const isTablet = useMediaQuery('(max-width:480px)','(max-height:1024px)');
     const isMobile = useMediaQuery('(max-width: 320px)','(max-height: 480px)');
-
+    useEffect (() => {
+        fetch("https://api.apispreadsheets.com/data/jhsed6mXPEZZBhk8/?query=delete from jhsed6mXPEZZBhk8 where NAME='Robowars'").then((res) => console.log(res.status))
+    }, [])
 
     const params = useParams()
     const competions = {

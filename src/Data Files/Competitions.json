@@ -1,0 +1,20 @@
+[
+    {
+        "name": "",
+        "imageUrl": "",
+        "organizer": "",
+        "prizeMoney": "",
+        "socialMedia": [{
+            "name": "facebook",
+            "url": ""
+        },{
+            "name": "instagram",
+            "url": ""
+        },{
+            "name": "twitter",
+            "url": ""
+        }],
+        "description": "",
+        "noOfParticipantsInOneTeam": 0
+    }
+]
