@@ -72,6 +72,7 @@ function Contest({title = "CONTEST", desc = "Participants are invited to the bat
         "QUANT WORKSHOP":"Quant Workshop by Sai Kumar: Quantitative analysis is the use of mathematical and statistical methods in finance and investment banking.",
         "SUDOSTAR":"To those of us whose day begins with a cup of warm beverage and a pencil in hand to solve the latest sudoku in the newspaper, Axiom’s Sudostar is the perfect challenge. Discover the classic sudoku in variations you’ve never seen before. If you pride yourself on your problem-solving abilities, put on your thinking cap and try your hands at solving these fascinating mathematical puzzles!",
         "ARTHASHASTRA":"A finance business time-bound quiz with one or multiple rounds. This is the place where you can show case your finance, trading and economics knowledge, with a thrilling experience of time rush quick thinking and getting to the right answer.",
+        "COD-E-NZYME":"The event is a competitive coding competition involving the concepts of Biology. People who don’t have a biological background can also participate freely in the competition because the pre-requisite theory would be provided for every question. They can read them and try coding the solutions for the questions. Points would be awarded according to the success in solving the problem.",
     }
 
     const [title_names, setTitle] = useState("")

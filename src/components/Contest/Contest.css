@@ -202,6 +202,7 @@
         background-position: center;
         background-image: url('./contestBG.png');
         height: 100%;
+        position: fixed;
         width: 100%;
         z-index: 0;
         
