@@ -24,73 +24,20 @@ function Contest() {
                         setName (results.data[i])
                     }
                 }
-                if (params.type=="comp") {
-                    setTitle(name.NAME)
-                    setDescript(name.DESCRIPTION)
-                    setImages(name.IMAGEURL)
+            }
+        })
+        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+                for (var i = 0; i < results.data.length ; i++) {
+                    if (results.data[i].NAME.toLowerCase() === params.id) {
+                        setName (results.data[i])
+                    }
                 }
-                else if(params.type=="work"){
-                    Object.keys(workshops).forEach((value,i)=>{
-                        if (i==params.id){
-                        setTitle(value)
-                        setDescript(workshops[value])
-                        setImages(workshopsImages)
-                const title = document.getElementById("contest-page-title");
-    
-                var numWords = value.split(' ').length; 
-
-                if (numWords > 2) {
-                    title.style.fontSize = "6.8vh";
-                }
-                if (numWords > 5) {
-                    title.style.fontSize = "3.8vh";
-                }
-            }})}
-
-        else if(params.type=="prefest"){
-            Object.keys(prefest).forEach((value,i)=>{
-            if (i==params.id){
-                setTitle(value)
-                setDescript(prefest[value])
-                setImages(prefestImages)
-                
-                const title = document.getElementById("contest-page-title");
-    
-                var numWords = value.split(' ').length; 
-
-                if (numWords > 2) {
-                    title.style.fontSize = "6.8vh";
-                }
-                if (numWords > 5) {
-                    title.style.fontSize = "3.8vh";
-                }
-            }})
-                
-        }
-
-        setReg(true)
             }
         })
     }, [])
-
-    const workshops ={
-        "MACHINE LEARNING WORKSHOPS":"Machine learning is a type of artificial intelligence (AI) that provides computers with the ability to learn without being explicitly programmed. Machine learning focuses on the development of computer programs that can change when exposed to new data",
-        "STAR GAZING":"To give the General Body a peak into the night sky, and a closer look at the stars and other celestial objects.",
-        "FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON: AN EXTENSIVE WORKSHOP":"Somebody participating in this workshop will know Python3 code, handling (slicing, extending, manipulating) databases, widely useful and relevant python3 libraries like matplotlib, pandas, numpy; basic clustering techniques which are a foundation for many AI/ML techniques",
-        "ROBOTICS 101":"ARC-Robotics 101 is a three-day technical workshop conducted by the Automation and Robotics Club. The workshop is based on a physical hands-on kit and has zero prerequisites. The participants will be exposed to the fundamentals of programming, electronics, and design, which make up the foundation of robotics.",
-        "PM WORKSHOP":"A must attend workshop for anyone planning to pursue PM as a career option. It will lay out all requirements for the field, teach fundamentals of the same and choke out a future plan and scope.",
-        "CRIME SCENE INVESTIGATION":`A workshop on Crime Scene Investigation.
-        Students will learn about the collection of evidence from the crime scene by solving real-life crime/ murder/theft scenes.
-        Fingerprint collection and analysis.
-        Lie detection test.
-        Implementation of biology, Chemistry, and Physics at the crime scene.
-        Data recovery`,
-        "IOT WORKSHOP":"A 2-day hands-on experience workshop on IOT, with takeaway kits included. Participants will be able to work on various projects that involve real world iot applications.",
-        "IC Engines Workshop":"The objective of the workshop is to enhance one’s knowhow about how an Internal Combustion engine works. The attendee will get to know about the intricacies and details involved in the operation of an engine and its components. The dismantling and the associated assembly of the engine will enable the attendee to observe the mechanisms working inside.",
-        "Fundamentals of Cryptocurrency":"In recent years, blockchain technology has taken over the world, introducing a vast number of cryptocurrencies into the market to choose for investment. In our talk on the “Fundamentals of Cryptocurrency,” BlockSoc brings you a detailed workshop on differentiating between cryptocurrencies with true potential and deceptive ones",
-        "ANALYTICS WORKSHOP":"Business analytics is about giving insights that can facilitate strategic decisions and actions that improve the overall performance of the business.",
-        "SCIFARI":`Scifari - A literal Science Safari is your wild adventure into a show of the magic of the cosmos. You get to experience a theatrical depiction of a few of the most mind blowing phenomena blended with humor and drama. Join us in this musical show where we take over your imagination and give you an actual experience of the magic that Science is. You even get to have to try out an experiment or two on your own.        `,
-    }
 
     const prefest ={
         "UNDER PRESSURE":"There will be two players per team. Each team competes against one other team of two people on a table which represents a “system of particles”. Of the two teams on a system, one will be Adders who add particles to the system and the other will be Removers who remove particles from the system.",
@@ -115,7 +62,45 @@ function Contest() {
     const [register, setReg] = useState(false)
     useEffect(()=>{
         
-        
+        if (params.type=="comp") {
+            setTitle(name.NAME)
+            setDescript(name.DESCRIPTION)
+            setImages(name.IMAGEURL)
+        }
+        else if(params.type=="work"){
+            setTitle(name.NAME)
+            setDescript(name.DESCRIPTION)
+            setImages(name.IMAGEURL)
+        }
+        const title = document.getElementById("contest-page-title");
+        var numWords = name.NAME.split(' ').length; 
+        if (numWords > 2) {
+            title.style.fontSize = "6.8vh";
+        }
+        if (numWords > 5) {
+            title.style.fontSize = "3.8vh";
+        }
+            else if(params.type=="prefest"){
+            Object.keys(prefest).forEach((value,i)=>{
+            if (i==params.id){
+                setTitle(value)
+                setDescript(prefest[value])
+                setImages(prefestImages)
+                
+                const title = document.getElementById("contest-page-title");
+    
+                var numWords = value.split(' ').length; 
+
+                if (numWords > 2) {
+                    title.style.fontSize = "6.8vh";
+                }
+                if (numWords > 5) {
+                    title.style.fontSize = "3.8vh";
+                }
+            }})
+                
+        }
+        setReg(true)
 
     },[])
     useEffect(()=>{

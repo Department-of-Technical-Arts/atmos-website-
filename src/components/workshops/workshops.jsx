@@ -53,20 +53,30 @@
 
 // export default Workshops;
 
-import React from 'react' ;
+import React, { useState } from 'react' ;
 import { useEffect } from 'react';
 import "./workshops.css";
 import workshopsImages from '../../images/events-photos/workshops-images';
+import Papa from "papaparse"
 
 function Workshops() {
 
-    const workshopNames = ["MACHINE LEARNING WORKSHOPS","STAR GAZING","FINDING,CLASSIFYING AND ANALYSING EXOPLANETS USING PYTHON","ROBOTICS 101","PM WORKSHOP","CRIME SCENE INVESTIGATION","IOT WORKSHOP","IC Engines Workshop","Fundamentals of Cryptocurrency","ANALYTICS WORKSHOP", "SCIFARI"]
+    const [workshop, setWorkshop] = useState ([])
     useEffect(() => {
+        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTbwA6Nvy_YMR6psLNstZpoNM6vOOfO7TGEjiyrNHfGqkK_okk-3FraMri13nxR_x4V1l5alSQmQ8Co/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+                setWorkshop(results.data)
+                console.log(results.data);
+            }
+        })
         document.title = "WORKSHOPS - ATMOS"
         return () => {
             
         };
     }, []);
+
     return(
         <>
             <div className='background-container-workshops'>
@@ -78,11 +88,11 @@ function Workshops() {
                     </div>
                     <div className='card-container-workshops'>
                         {
-                            Object.values(workshopNames).map((value,i)=>{
+                            workshop.map((value)=>{
                                 return(
-                                    <a href={`/contest/work/${i}`}><div className='hover-cards-workshops' style={{ 
-                                        backgroundImage: `url(${workshopsImages[i]})`
-                                      }}><p>{value}</p></div></a>
+                                    <a href={`/contest/work/${value.NAME.toLowerCase()}`}><div className='hover-cards-workshops' style={{ 
+                                        backgroundImage: `url(${value.IMAGEURL})`
+                                      }}><p>{value.NAME}</p></div></a>
                                 )
                             })
                         }
