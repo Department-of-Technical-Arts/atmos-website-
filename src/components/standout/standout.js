@@ -1,10 +1,10 @@
-import React, { useLayoutEffect, useRef } from "react";
-import "./standout.css";
-import EventSlider from "./eventSlider";
+import React from "react";
+import "./Standout.css";
+import EventSlider from "./EventSlider";
 
-function Standout() {
+const Standout = () => {
   return (
-    <>
+    <div>
       <div className="standout-container">
         <div className="lec">
           <h1 className="standout-header">PRE-FEST</h1>
@@ -35,7 +35,7 @@ function Standout() {
         </div>
         <p className="scroll-bottom">SCROLL TO EXPLORE</p>
       </div>
-    </>
+    </div>
   );
 }
 

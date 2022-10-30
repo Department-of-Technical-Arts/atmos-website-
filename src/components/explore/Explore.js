@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-import {} from "@mui/material";
 import "./Explore.css";
 import { IoIosArrowForward } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-function Explore() {
+const Explore = () => {
   const navigate = useNavigate();
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
@@ -16,9 +15,9 @@ function Explore() {
 
   const [click, isClicked] = useState(false);
   return (
-    <>
+    <div>
       {click ? (
-        <>
+        <div>
           <div className="background-container-explore1">
             <div className="bground-explore1">
               <div className="image1"></div>
@@ -44,7 +43,7 @@ function Explore() {
               </div>
             </div>
           </div>
-        </>
+        </div>
       ) : (
         <div className="background-container-explore">
           <div className="image-explore"></div>
@@ -67,7 +66,7 @@ function Explore() {
           </div>
         </div>
       )}
-    </>
+    </div>
   );
 }
 

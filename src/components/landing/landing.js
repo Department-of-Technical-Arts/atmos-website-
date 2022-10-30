@@ -1,12 +1,10 @@
-import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
-import "./landing.css";
-import { IoIosArrowDropdownCircle } from "react-icons/io";
-import { Link, useNavigate } from "react-router-dom";
-import { Button, useMediaQuery, useTheme } from "@mui/material";
-import Standout from "../standout/standout";
+import React, { useEffect, useRef, useState } from "react";
+import "./Landing.css";
+import { useNavigate } from "react-router-dom";
+import Standout from "../Standout/Standout";
 import { useScroll } from "framer-motion";
 
-function Landing() {
+const Landing = () => {
   const navigate = useNavigate();
   const delay = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
   var count = 1;
@@ -20,11 +18,9 @@ function Landing() {
   useEffect(() => {
     const handleScroll = async (e) => {
       const height = elementRef.current?.scrollHeight;
-      var vhPixels = height * 0.85;
       var limit = 0.65;
       isMobile ? (limit = 0.7) : (limit = 0.65);
       setScrolling(false);
-
       const smoothScroll = (h) => {
         let i = h || 0;
         if (i < height) {
@@ -34,18 +30,8 @@ function Landing() {
           }, 10);
         }
       };
-
-      // console.log("window.scrollY", window.scrollY);
-      // console.log(height);
-      // console.log(vhPixels);
-      // console.log(elementRef.current?.scrollHeight);
-      // console.log(scrollYProgress.current);
-
       while (scrollYProgress.current > limit && count > 0) {
         count = 0;
-        console.log("fire");
-        console.log(height);
-        /*smoothScroll(window.scrollY);*/
         window.scrollTo({
           top: height,
           behavior: "smooth",
@@ -67,7 +53,7 @@ function Landing() {
   }, []);
 
   return (
-    <>
+    <div>
       {leaving ? (
         <div className="landing-container" ref={elementRef}>
           <div className="background-container">
@@ -79,19 +65,15 @@ function Landing() {
                 {isTouch.matches ? "SWIPE UP" : "SCROLL DOWN"}
               </p>
             )}
-            {/*<Button component={RouterLink} to="/explore" sx={{margin:"500px"}}>Click me</Button>*/}
-            {/*<a href="/explore" className="landing-btn">
-          <IoIosArrowDropdownCircle color="white" size="38" />
-  </a>*/}
           </div>
           <Standout />
         </div>
       ) : (
-        <>
+        <div>
           <div className="image-landing1"></div>
-        </>
+        </div>
       )}
-    </>
+    </div>
   );
 }
 

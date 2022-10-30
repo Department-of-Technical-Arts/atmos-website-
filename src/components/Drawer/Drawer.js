@@ -1,21 +1,14 @@
-import React, { useEffect, useState } from "react";
-import { Drawer, IconButton, ListItemIcon,useMediaQuery } from "@mui/material";
-import {
-  List,
-  ListItemButton,
-  ListItem,
-  ListItemText,
-  Button,
-} from "@mui/material";
+import React, { useState } from "react";
+import { Drawer,useMediaQuery } from "@mui/material";
+import { List, ListItemButton, ListItem, ListItemText, Button } from "@mui/material";
 import "./Drawer.css";
 import { IoMenu, IoClose } from "react-icons/io5";
-import { NavLink, Switch } from "react-router-dom";
 
 const DrawerComp = () => {
+
   const isTablet = useMediaQuery('(max-width:1024px)','(max-width:1024px)');
   const isMobile = useMediaQuery('(max-width: 480px)','(max-width: 480px)'); 
-  console.log(isTablet)
-  console.log(isMobile)
+
   let fontSize,itemTextSize,marginTop;
 
   if(isTablet && !isMobile){
@@ -28,7 +21,7 @@ const DrawerComp = () => {
     itemTextSize= "1rem";
     marginTop = "120%";
   }
-  else{
+  else {
     fontSize=36;
     itemTextSize= 26;
     marginTop="45%";
@@ -36,7 +29,7 @@ const DrawerComp = () => {
 
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <div>
       <Drawer
         open={open}
         anchor="right"
@@ -103,12 +96,10 @@ const DrawerComp = () => {
       </Drawer>
       <div className="open-btn">
       <Button onClick={() => setOpen(!open)}>
-        {/*{open ? "": "Icon"}*/}
         {open ? "" : <IoMenu color="white" fontSize={36} />}
       </Button>
       </div>
-      
-    </>
+    </div>
   );
 };
 

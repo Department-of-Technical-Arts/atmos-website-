@@ -11,9 +11,8 @@
         "@testing-library/user-event": "^13.5.0",
         "dotenv": "^16.0.3",
         "fa-icons": "^0.2.0",
+        "firebase": "^8.2.0",
         "framer-motion": "^7.5.1",
-        "install": "^0.13.0",
-        "npm": "^8.19.2",
         "papaparse": "^5.3.2",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
@@ -29,12 +28,6 @@
         "build": "react-scripts build",
         "test": "react-scripts test",
         "eject": "react-scripts eject"
-    },
-    "eslintConfig": {
-        "extends": [
-            "react-app",
-            "react-app/jest"
-        ]
     },
     "browserslist": {
         "production": [

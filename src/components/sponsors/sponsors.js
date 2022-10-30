@@ -1,32 +1,28 @@
 import React from "react";
-import "../sponsors/imagegridSpons.css";
-import "../sponsors/spons.css"
-function Imagegrid() {
-  return (
-    <>
-   <div className="background-image-sponsors"></div>
-   <div className="heading-text-spons">
-              <h1 className="sponsors-title" >Our Previous Sponsors</h1>
-    </div>
+import "./ImagegridSpons.css";
+import "./Sponsors.css"
 
+const Imagegrid = () => {
+  return (
+    <div>
+      <div className="background-image-sponsors"></div>
+      <div className="heading-text-spons">
+        <h1 className="sponsors-title" >Our Previous Sponsors</h1>
+      </div>
     <div className="text-spons">
       <h1 className="sponsors-title">Title Sponsor</h1>
     </div>
-      <div class="container-grid-1-item">
-      
-        <div class="spons-container w-6 h-1">
-          <div class="spons-item">
-            <img src="/pepsicoLogo.png" alt="" className="pepsico-image" />
-          </div>
+    <div class="container-grid-1-item">      
+      <div class="spons-container w-6 h-1">
+        <div class="spons-item">
+          <img src="/pepsicoLogo.png" alt="" className="pepsico-image" />
         </div>
       </div>
-
-     
-      <div className="text-spons">
+    </div> 
+    <div className="text-spons">
       <h1 className="sponsors-title">Co-Title Sponsors</h1>
     </div>
-      <div class="container-grid-spons">
-        
+    <div class="container-grid-spons">  
         <div class="spons-container w-1 h-1">
           <div class="sponsspons-item">
             <img src="/ongcLogo.jpg" alt="" class="logo-image" />
@@ -51,8 +47,6 @@ function Imagegrid() {
       <div className="text-spons">
       <h1 className="sponsors-title">Associate Sponsors</h1>
     </div>
-      
-
       <div class="container-grid-spons">
         
         <div class="spons-container w-1 h-1">
@@ -221,7 +215,7 @@ function Imagegrid() {
     
    
     
-    </>
+    </div>
   );
 }
 

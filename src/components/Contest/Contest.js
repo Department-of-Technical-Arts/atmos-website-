@@ -1,19 +1,17 @@
 import {React, useState, useEffect} from 'react';
-import {  useParams, useSearchParams } from 'react-router-dom'
+import {  useParams } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material';
-import competionsImages from '../../images/events-photos/competions-images';
 import prefestImages from '../../images/events-photos/prefest-images';
-import workshopsImages from '../../images/events-photos/workshops-images';
 import './Contest.css';
 import Papa from "papaparse"
 
 
-function Contest() {
+const Contest = () => {
     const isTablet = useMediaQuery('(max-width:480px)','(max-height:1024px)');
     const isMobile = useMediaQuery('(max-width: 320px)','(max-height: 480px)');
     const [name, setName] = useState ({NAME: ""})
-
     const params = useParams()
+    
     useEffect (() => {
         Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
             download: true,
@@ -60,7 +58,7 @@ function Contest() {
     const [description, setDescript] = useState("")
     const [images, setImages] = useState([""])
     const [register, setReg] = useState(false)
-    useEffect(()=>{
+    useEffect(() => {
         
         if (params.type=="comp") {
             setTitle(name.NAME)
@@ -98,19 +96,14 @@ function Contest() {
                     title.style.fontSize = "3.8vh";
                 }
             }})
-                
         }
         setReg(true)
-
     },[])
-    useEffect(()=>{
+    useEffect(() => {
         document.title = name.NAME.toUpperCase() + " - ATMOS"
     },[name])
 
-
-
     return (
-
     <div className='background'>
         <div className='contest_image'></div>
         <div className='content-left content-full'>
@@ -125,7 +118,8 @@ function Contest() {
                 <div className='prize-text'>Rs. {name.PRIZEMONEY} INR</div>
             </div>
             <div className='buttons-menu'>
-            {register && <div className='button-view'>
+                {register && 
+                <div className='button-view'>
                     <button className='button'>
                         REGISTER
                     </button>
@@ -139,12 +133,6 @@ function Contest() {
         </div>
         <div className='content-right content-full'>
             <div id="contest-page-title" className='contest-title'>
-                {/* {(params.type=="comp") && Object.keys(competions).map((value,i)=>{
-                    console.log(competions)
-                    if (i==params.id) {
-                        return(value)
-                    }
-                })} */}
                 {name.NAME}
             </div>
             <div className='contest-description'>
@@ -160,7 +148,6 @@ function Contest() {
             </div>
         </div>
     </div>
-    
     );
 }
 
