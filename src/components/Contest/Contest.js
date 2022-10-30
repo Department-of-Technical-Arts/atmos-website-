@@ -4,6 +4,7 @@ import { useMediaQuery } from '@mui/material';
 import prefestImages from '../../images/events-photos/prefest-images';
 import './Contest.css';
 import Papa from "papaparse"
+import { useSelector } from 'react-redux';
 
 
 const Contest = () => {
@@ -13,13 +14,16 @@ const Contest = () => {
     const params = useParams()
     
     useEffect (() => {
+        console.log(params.id);
         Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
             download: true,
             header: true,
             complete: (results) => {
                 for (var i = 0; i < results.data.length ; i++) {
                     if (results.data[i].NAME.toLowerCase() === params.id) {
+                        console.log(params.id);
                         setName (results.data[i])
+                        console.log(results.data[i]);
                     }
                 }
             }
@@ -30,7 +34,9 @@ const Contest = () => {
             complete: (results) => {
                 for (var i = 0; i < results.data.length ; i++) {
                     if (results.data[i].NAME.toLowerCase() === params.id) {
+                        console.log(params.id);
                         setName (results.data[i])
+                        console.log(results.data[i])
                     }
                 }
             }
@@ -117,21 +123,21 @@ const Contest = () => {
             <div className='prize'>
                 <div className='prize-text'>Rs. {name.PRIZEMONEY} INR</div>
             </div>
-            {/* <div className='buttons-menu'>
-                {register && 
+            <div className='buttons-menu'>
+                {/* {register && 
                 <div className='button-view'>
                     <button  className='button'>
                         <a style={{textDecoration:"none", color:"white"}} href={`/contest/${params.type}/${params.id}/register`}>
                             REGISTER
                         </a>
                     </button>
-                </div>}
-                <div className='button-view'>
+                </div>} */}
+                {/* <div className='button-view'>
                     <button className='button'>
                         EXPLORE
                     </button>
-                </div>
-            </div> */}
+                </div> */}
+            </div>
         </div>
         <div className='content-right content-full'>
             <div id="contest-page-title" className='contest-title'>

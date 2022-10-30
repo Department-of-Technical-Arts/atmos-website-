@@ -14,4 +14,9 @@ firebase.initializeApp(firebaseConfig)
 
 export const firestore = firebase.firestore()
 
+export const sheetLinks = {
+  "competitions": "",
+  "workshops": ""
+}
+
 export default firebase

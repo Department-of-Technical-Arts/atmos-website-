@@ -1,6 +1,7 @@
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
 import { firestore } from "../config"
+import Papa from "papaparse"
 
 
 const RegistrationForm = () => {
@@ -10,6 +11,17 @@ const RegistrationForm = () => {
         contactNumber: 0,
         college: "",
         year: 0
+    })
+
+    useEffect (() => {
+        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
+            download: true,
+            header: true,
+            complete: (results) => {
+                setCompetitionNames(results.data)
+                console.log(results.data);
+            }
+        })
     })
     const params = useParams()
     const submitHandler = () => {
