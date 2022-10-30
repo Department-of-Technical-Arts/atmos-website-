@@ -117,7 +117,7 @@ const Contest = () => {
             <div className='prize'>
                 <div className='prize-text'>Rs. {name.PRIZEMONEY} INR</div>
             </div>
-            <div className='buttons-menu'>
+            {/* <div className='buttons-menu'>
                 {register && 
                 <div className='button-view'>
                     <button  className='button'>
@@ -131,7 +131,7 @@ const Contest = () => {
                         EXPLORE
                     </button>
                 </div>
-            </div>
+            </div> */}
         </div>
         <div className='content-right content-full'>
             <div id="contest-page-title" className='contest-title'>
