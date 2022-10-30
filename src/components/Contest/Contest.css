@@ -176,19 +176,16 @@
         
         height: 100%;
         width: 10%;
-        background-image: url('./fb.png');
         background-repeat: no-repeat;
     }
     .tw{
         height: 100%;
         width: 10%;
-        background-image: url('./ig.png');
         background-repeat: no-repeat;
     }
     .ig{
         height: 100%;
         width: 10%;
-        background-image: url('./tw.png');
         background-repeat: no-repeat;
     }
 
@@ -342,7 +339,6 @@
         height: 10%;
         width: 5%;
         margin: 20px;
-        background-image: url('./fb.png');
         background-repeat: no-repeat;
     }
     .tw{
@@ -350,7 +346,6 @@
         height: 10%;
         width: 5%;
         margin: 20px;
-        background-image: url('./tw.png');
         background-repeat: no-repeat;
     }
     .ig{
@@ -358,7 +353,6 @@
         height: 10%;
         width: 5%;
         margin: 20px;
-        background-image: url('./ig.png');
         background-repeat: no-repeat;
     }
 

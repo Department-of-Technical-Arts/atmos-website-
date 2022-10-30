@@ -14,8 +14,33 @@ import Workshops from "./components/Workshops/Workshops";
 import ProShows from "./components/Proshows/Proshows";
 import Contest from "./components/Contest/Contest";
 import RegistrationForm from "./components/RegistrationForm";
+import { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import Papa from "papaparse"
+import { Actions } from "./redux";
 
 const App = () => {
+
+  const dispatch = useDispatch ()
+  useEffect (() => {
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vQDM_B5Mbm4oE1Xn9e_lCYAS5eIWJi-Q-lCbsNsAcLPI-vxasaFAI0NeJQNfU8Mlvx2dXKZpvt99yS_/pub?output=csv", {
+      download: true,
+      header: true,
+      complete: (results) => {
+          dispatch(Actions.initializeCompetitions(results.data))
+      }
+    })
+
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTbwA6Nvy_YMR6psLNstZpoNM6vOOfO7TGEjiyrNHfGqkK_okk-3FraMri13nxR_x4V1l5alSQmQ8Co/pub?output=csv", {
+      download: true,
+      header: true,
+      complete: (results) => {
+        dispatch(Actions.initializeWorkshops(results.data))
+      }
+    })
+
+
+  }, [])
   return (
     <div>
       <div className="App">
@@ -25,7 +50,7 @@ const App = () => {
             <Route path="/" element={<Landing />} />
             <Route path="explore" element={<Explore />} />
             <Route path="events" element={<Events />} />
-            <Route path="gallery" /*/:type/:id/*/ element={<Gallery />} />
+            <Route path="gallery" element={<Gallery />} />
             <Route path="sponsors" element={<Sponsors />} />
             <Route path="about" element={<About />} />
             <Route path="talks" element={<Talks />} />
