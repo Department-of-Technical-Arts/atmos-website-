@@ -120,8 +120,10 @@ const Contest = () => {
             <div className='buttons-menu'>
                 {register && 
                 <div className='button-view'>
-                    <button className='button'>
-                        REGISTER
+                    <button  className='button'>
+                        <a style={{textDecoration:"none", color:"white"}} href={`/contest/${params.type}/${params.id}/register`}>
+                            REGISTER
+                        </a>
                     </button>
                 </div>}
                 <div className='button-view'>
@@ -139,12 +141,9 @@ const Contest = () => {
                 {name.DESCRIPTION}
             </div>
             <div className='socials'>
-                <div className='fb'>
-                </div>
-                <div className='tw'>
-                </div>
-                <div className='ig'>
-                </div>
+                {name.FACEBOOKLINK !== "" && <a className='fb' href={name.FACEBOOKLINK} target="_blank"></a>}
+                {name.INSTAGRAMLINK !== "" && <a className='ig' href={name.INSTAGRAMLINK} target="_blank"></a>}
+                {name.TWITTERLINK !== "" && <a className='tw' href={name.TWITTERLINK} target="_blank"></a>}
             </div>
         </div>
     </div>
