@@ -1,6 +1,7 @@
 import React  from 'react' ;
 import { useEffect } from 'react';
 import "./Workshops.css";
+import { urlEndpoint } from '../../config';
 import { useSelector } from 'react-redux';
 
 const Workshops = () => {
@@ -22,7 +23,7 @@ const Workshops = () => {
                             workshops.map((eachWorkshop)=>{
                                 return(
                                     <a key={eachWorkshop.NAME} href={`/contest/work/${eachWorkshop.NAME.toLowerCase()}`}><div className='hover-cards-workshops' style={{ 
-                                        backgroundImage: `url(${eachWorkshop.IMAGEURL})`
+                                        backgroundImage: `url(${urlEndpoint}${eachWorkshop.IMAGEURL})`
                                       }}><p>{eachWorkshop.NAME}</p></div></a>
                                 )
                             })

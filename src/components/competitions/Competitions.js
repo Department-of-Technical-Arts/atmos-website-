@@ -2,12 +2,14 @@ import React, { useState } from 'react' ;
 import { useEffect } from 'react';
 import "./Competitions.css";
 import { useSelector } from 'react-redux';
+import { urlEndpoint } from "../../config";
 
 const Competitions = () => {
     const {competitions} = useSelector ((state) => state.displayData)
     useEffect(() => {
         document.title = "COMPETITIONS - ATMOS"
     }, []);
+    console.log();
 
     return(
         <div>
@@ -22,7 +24,7 @@ const Competitions = () => {
                             competitions.map((eachCompetition)=>{
                                 return(
                                     <a key={eachCompetition.NAME} href={`/contest/comp/${eachCompetition.NAME.toLowerCase()}`}>
-                                        <div className='hover-cards-competitions' style={{ backgroundImage: `url(${eachCompetition.IMAGEURL})`}}>
+                                        <div className='hover-cards-competitions' style={{ backgroundImage: `url(${urlEndpoint}${eachCompetition.IMAGEURL})`}}>
                                             <p>{eachCompetition.NAME}</p>
                                         </div>
                                     </a>

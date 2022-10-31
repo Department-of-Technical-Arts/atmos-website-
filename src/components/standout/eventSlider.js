@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./EventSlider.css";
 import { useNavigate } from "react-router-dom";
+import { urlEndpoint } from "../../config";
 
 const EventSlider = ({ type, data }) => {
  
@@ -23,7 +24,7 @@ const EventSlider = ({ type, data }) => {
             <div 
             className="slide-standout" 
             style={{ 
-              backgroundImage: `url(${data.IMAGEURL})`
+              backgroundImage: `url(${urlEndpoint}${value.IMAGEURL})`
             }} 
             
             onMouseEnter={ (e) => {
@@ -44,7 +45,7 @@ const EventSlider = ({ type, data }) => {
               className="slide-standout" 
 
               style={{ 
-                backgroundImage: `url(${data.IMAGEURL})`
+                backgroundImage: `url(${urlEndpoint}${data.IMAGEURL})`
               }} 
 
               onClick={imageClicked} 
@@ -68,7 +69,7 @@ const EventSlider = ({ type, data }) => {
               className="slide-standout" 
 
               style={{ 
-                backgroundImage: `url(${data.IMAGEURL})`
+                backgroundImage: `url(${urlEndpoint}${value.IMAGEURL})`
               }} 
 
               onClick={imageClicked} 

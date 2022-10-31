@@ -3,7 +3,7 @@ import {  useParams } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material';
 import prefestImages from '../../images/events-photos/prefest-images';
 import './Contest.css';
-import Papa from "papaparse"
+import { urlEndpoint } from "../../config";
 import { useSelector } from 'react-redux';
 
 
@@ -90,7 +90,7 @@ const Contest = () => {
             <div 
                 className='photo' 
                 style={{ 
-                    backgroundImage: `url(${name.IMAGEURL})`
+                    backgroundImage: `url(${urlEndpoint}${name.IMAGEURL})`
                 }}
             >
             </div>
