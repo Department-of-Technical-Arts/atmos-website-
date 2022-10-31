@@ -1,27 +1,10 @@
 import React, { useState, useEffect } from "react";
 import "./EventSlider.css";
-import CompetitionImages from "../../Data Files/Competitions.json"
-import WorkshopImages from "../../Data Files/Workshops.json"
 import { useNavigate } from "react-router-dom";
 
 const EventSlider = ({ type, data }) => {
-
-  const [images, setImages] = useState ([]) 
+ 
   const navigate = useNavigate();
-  useEffect(() => {
-    if (type == "competition") {
-      setImages(CompetitionImages);
-    } 
-    else if (type == "talk") {
-      
-    } 
-    else if (type == "prefest") {
-      
-    } 
-    else if (type == "workshop") {
-      setImages(WorkshopImages);
-    }
-  }, []);
 
   function imageClicked() {
      if (type == "talk") {
@@ -40,7 +23,7 @@ const EventSlider = ({ type, data }) => {
             <div 
             className="slide-standout" 
             style={{ 
-              backgroundImage: `url(${images[i]})`
+              backgroundImage: `url(${data.IMAGEURL})`
             }} 
             
             onMouseEnter={ (e) => {
@@ -61,7 +44,7 @@ const EventSlider = ({ type, data }) => {
               className="slide-standout" 
 
               style={{ 
-                backgroundImage: `url(${images[i]})`
+                backgroundImage: `url(${data.IMAGEURL})`
               }} 
 
               onClick={imageClicked} 
@@ -85,7 +68,7 @@ const EventSlider = ({ type, data }) => {
               className="slide-standout" 
 
               style={{ 
-                backgroundImage: `url(${images[i]})`
+                backgroundImage: `url(${data.IMAGEURL})`
               }} 
 
               onClick={imageClicked} 

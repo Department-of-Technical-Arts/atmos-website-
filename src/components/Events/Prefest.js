@@ -1,11 +1,10 @@
 import React from 'react' ;
 import { useEffect } from 'react';
 import "./Prefest.css";
-import prefestImages from '../../images/events-photos/prefest-images';
+import { useSelector } from 'react-redux';
 
 const Prefest = () => {
-    const prefestNames = ["UNDER PRESSURE","IEEE IMAGE-PROCESSING", "CODE DRIFT 2022", "AEROPLANES 101", "AERO QUIZ", "WSC TRADING CHALLENGE", "INTRO TO CONSULTANCY", "CAD WORKSHOP", "QUADCOPTER WORKSHOP", "WHAT IF", "QUANT WORKSHOP", "SUDOSTAR", "ARTHASHASTRA", "COD-E-NZYME"]
-
+    const {prefest} = useSelector ((state) => state.displayData)
     useEffect(() => {
         document.title = "PRE-FEST - ATMOS"
     }, []);
@@ -20,11 +19,11 @@ const Prefest = () => {
                     </div>
                     <div className='card-container-prefest'>
                         {
-                            Object.values(prefestNames).map((value,i)=>{
+                            prefest.map((eachPrefest)=>{
                                 return(
-                                    <a href={`/contest/prefest/${i}`}><div className='hover-cards-prefest' style={{ 
-                                        backgroundImage: `url(${prefestImages[i]})`
-                                      }}><p>{value}</p></div></a>
+                                    <a href={`/contest/prefest/${eachPrefest.NAME.toLowerCase()}`}><div className='hover-cards-prefest' style={{ 
+                                        backgroundImage: `url(${eachPrefest.IMAGEURL})`
+                                      }}><p>{eachPrefest.NAME}</p></div></a>
                                 )
                             })
                         }

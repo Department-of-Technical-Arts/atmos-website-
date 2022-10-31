@@ -1,5 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
 
+.fa {
+  margin: 20px;
+  font-size: 25px;
+  padding: 5px;
+  border-radius: 50%;
+  width: 40px;
+  text-align: center;
+  text-decoration: none;
+  color: #FFFFFF;
+  height: 40px;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
 
 @keyframes contestZoomIn {
     0% {
@@ -172,22 +187,6 @@
         justify-content: space-evenly;
         align-items: flex-end;
     }
-    .fb{
-        
-        height: 100%;
-        width: 10%;
-        background-repeat: no-repeat;
-    }
-    .tw{
-        height: 100%;
-        width: 10%;
-        background-repeat: no-repeat;
-    }
-    .ig{
-        height: 100%;
-        width: 10%;
-        background-repeat: no-repeat;
-    }
 
 }
 
@@ -333,27 +332,6 @@
         height: 90vh;
         display: flex;
         justify-content: center;
-    }
-    .fb{
-        cursor: pointer;
-        height: 10%;
-        width: 5%;
-        margin: 20px;
-        background-repeat: no-repeat;
-    }
-    .tw{
-        cursor: pointer;
-        height: 10%;
-        width: 5%;
-        margin: 20px;
-        background-repeat: no-repeat;
-    }
-    .ig{
-        cursor: pointer;
-        height: 10%;
-        width: 5%;
-        margin: 20px;
-        background-repeat: no-repeat;
     }
 
 }

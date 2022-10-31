@@ -39,6 +39,22 @@ const App = () => {
       }
     })
 
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSDPINaf2CxbAiYXoaT1G9tEXFZKUHVW9qYG9tucZMTdztvGPQIzI80sPGzRyZRtA4nMyfVWcXsS_BZ/pub?output=csv", {
+      download: true,
+      header: true,
+      complete: (results) => {
+        dispatch(Actions.initializePreFest(results.data))
+      }
+    })
+
+    Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vSVt-nPXHT6ciUPC3NkanTXylF6Hb9UlPhSNsdxz_HdaRgyiYa6wQ3esMNYGgvrlltDMrcfwLQES1sX/pub?output=csv", {
+      download: true,
+      header: true,
+      complete: (results) => {
+        dispatch(Actions.initializeTalks(results.data))
+      }
+    })
+
 
   }, [])
   return (

@@ -1,7 +1,6 @@
 import React, { useState } from 'react' ;
 import { useEffect } from 'react';
 import "./Competitions.css";
-import CompetitionsImages from "../../Data Files/Competitions.json"
 import { useSelector } from 'react-redux';
 
 const Competitions = () => {
@@ -20,10 +19,10 @@ const Competitions = () => {
                     </div>
                     <div className='card-container-competitions'>
                         {
-                            competitions.map((eachCompetition, index)=>{
+                            competitions.map((eachCompetition)=>{
                                 return(
                                     <a key={eachCompetition.NAME} href={`/contest/comp/${eachCompetition.NAME.toLowerCase()}`}>
-                                        <div className='hover-cards-competitions' style={{ backgroundImage: `url(${CompetitionsImages[index]})`}}>
+                                        <div className='hover-cards-competitions' style={{ backgroundImage: `url(${eachCompetition.IMAGEURL})`}}>
                                             <p>{eachCompetition.NAME}</p>
                                         </div>
                                     </a>

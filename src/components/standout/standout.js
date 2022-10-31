@@ -4,14 +4,14 @@ import EventSlider from "./EventSlider";
 import { useSelector } from "react-redux";
 
 const Standout = () => {
-  const {competitions, workshops} = useSelector ((state) => state.displayData)
+  const {competitions, workshops, prefest, talks} = useSelector ((state) => state.displayData)
   return (
     <div>
       <div className="standout-container">
         <div className="lec">
           <h1 className="standout-header">PRE-FEST</h1>
           <div className="standout-desc">
-            <EventSlider type={"prefest"} data={[]} />
+            <EventSlider type={"prefest"} data={prefest} />
           </div>
         </div>
 
@@ -25,7 +25,7 @@ const Standout = () => {
         <div className="talks">
           <h1 className="standout-header">TALKS</h1>
           <div className="standout-desc">
-            <EventSlider type={"talk"} data={[]} />
+            <EventSlider type={"talk"} data={talks} />
           </div>
         </div>
 

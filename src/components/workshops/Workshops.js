@@ -1,19 +1,11 @@
-import React, { useState } from 'react' ;
+import React  from 'react' ;
 import { useEffect } from 'react';
 import "./Workshops.css";
-import Papa from "papaparse"
+import { useSelector } from 'react-redux';
 
 const Workshops = () => {
-    const [workshop, setWorkshop] = useState ([])
+    const {workshops} = useSelector ((state) => state.displayData)
     useEffect(() => {
-        Papa.parse("https://docs.google.com/spreadsheets/d/e/2PACX-1vTbwA6Nvy_YMR6psLNstZpoNM6vOOfO7TGEjiyrNHfGqkK_okk-3FraMri13nxR_x4V1l5alSQmQ8Co/pub?output=csv", {
-            download: true,
-            header: true,
-            complete: (results) => {
-                setWorkshop(results.data)
-                console.log(results.data);
-            }
-        })
         document.title = "WORKSHOPS - ATMOS"
     }, []);
 
@@ -27,11 +19,11 @@ const Workshops = () => {
                     </div>
                     <div className='card-container-workshops'>
                         {
-                            workshop.map((value)=>{
+                            workshops.map((eachWorkshop)=>{
                                 return(
-                                    <a href={`/contest/work/${value.NAME.toLowerCase()}`}><div className='hover-cards-workshops' style={{ 
-                                        backgroundImage: `url(${value.IMAGEURL})`
-                                      }}><p>{value.NAME}</p></div></a>
+                                    <a key={eachWorkshop.NAME} href={`/contest/work/${eachWorkshop.NAME.toLowerCase()}`}><div className='hover-cards-workshops' style={{ 
+                                        backgroundImage: `url(${eachWorkshop.IMAGEURL})`
+                                      }}><p>{eachWorkshop.NAME}</p></div></a>
                                 )
                             })
                         }
