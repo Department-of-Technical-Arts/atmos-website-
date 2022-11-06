@@ -20,6 +20,7 @@ const Contest = () => {
             competitions.map((eachCompetition) => {
                 if (eachCompetition.NAME.toLowerCase() === params.id) {
                     dispatch (Actions.initializeSelectedEvent(eachCompetition))
+                    console.log(selectedEvent);
                 }
             })
         }

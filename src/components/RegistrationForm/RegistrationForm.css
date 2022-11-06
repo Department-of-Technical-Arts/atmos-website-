@@ -1,0 +1,98 @@
+.register-title {
+  font-family: "Inter";
+  font-size: 9vmin;
+  font-weight: 600;
+  width: 100%;
+  color: #e9e9dd;
+}
+
+.register-form {
+  margin-top: 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2vw;
+}
+
+.form-input {
+  font-family: "Inter";
+  width: 45%;
+  padding: 0.9vw;
+  border-radius: 0.5vw;
+  background: none;
+  border-bottom: 0.1vw solid #e9e9dd;
+  color: white;
+  transition: 0.5s;
+}
+
+.form-input:focus {
+  border: 0.1vw solid #e9e9dd;
+  box-shadow: 0.5vw 0.5vw 2vw -1vw white;
+  outline: none;
+}
+
+.form-btn {
+  font-family: "Inter";
+  font-size: 1vw;
+  width: 7%;
+  align-items: center;
+  padding: 0.7%;
+  border-radius: 0.7vw;
+  background: none;
+  color: #e9e9dd;
+  outline: none;
+  border: none;
+  border-bottom: 0.1vw solid #e9e9dd;
+}
+
+.form-btn:hover {
+  background-color: #e9e9dd;
+  cursor: pointer;
+  color: black;
+}
+
+@media screen and (min-width: 320px) and (max-width: 500px) {
+  .register-title {
+    font-size: 7vmin;
+    padding-top: 15vmin;
+  }
+  .register-form {
+    margin-top: 10vmin;
+    gap: 5vmin;
+  }
+  .form-input {
+    width: 58%;
+    padding: 1.4vw;
+    font-size: 3vmin;
+  }
+  .form-btn {
+    width: 15%;
+    font-size: 2.2vmin;
+    padding: 1.4%;
+    border-radius: 1.5vw;
+    margin-top: 8vw;
+  }
+}
+
+@media screen and (min-width: 480px) and (max-width: 1024px) {
+  .register-title {
+    font-size: 7vmin;
+    padding-top: 15vmin;
+  }
+  .register-form {
+    margin-top: 10vmin;
+    gap: 5vmin;
+  }
+  .form-input {
+    width: 55%;
+    padding: 1.4vmin;
+    font-size: 2.5vmin;
+  }
+  .form-btn {
+    width: 17vmin;
+    font-size: 2.2vmin;
+    padding: 1.4vmin;
+    border-radius: 1.5vw;
+    margin-top: 8vw;
+  }
+}

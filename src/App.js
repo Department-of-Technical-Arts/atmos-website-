@@ -13,7 +13,7 @@ import Competitions from "./components/Competitions/Competitions";
 import Workshops from "./components/Workshops/Workshops";
 import ProShows from "./components/Proshows/Proshows";
 import Contest from "./components/Contest/Contest";
-import RegistrationForm from "./components/RegistrationForm";
+import RegistrationForm from "./components/RegistrationForm/RegistrationForm";
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Papa from "papaparse"
