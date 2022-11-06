@@ -25,9 +25,7 @@ const RegistrationForm = () => {
     })
     const params = useParams()
     const submitHandler = () => {
-        firestore.collection(params.id).doc().set({
-            form
-        }).then(() => console.log("Success")).catch(err => console.log(err.message))
+        firestore.collection(params.id).doc().set(  form).then(() => console.log("Success")).catch(err => console.log(err.message))
     }
     return (
         <div style={{marginTop: "100px", color:"white"}}>

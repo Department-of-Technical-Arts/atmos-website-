@@ -5,7 +5,8 @@ const initialState = {
     competitions: [],
     workshops: [],
     prefest: [],
-    talks: []
+    talks: [],
+    selectedEvent: {}
 }
 
 export const Slice = createSlice({
@@ -23,6 +24,9 @@ export const Slice = createSlice({
         },
         initializePreFest: (state, action) => {
             state.prefest = action.payload
+        },
+        initializeSelectedEvent: (state, action) => {
+            state.selectedEvent = action.payload
         }
     }
 })
