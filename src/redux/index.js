@@ -6,7 +6,7 @@ const initialState = {
     workshops: [],
     prefest: [],
     talks: [],
-    selectedEvent: null
+    selectedEvent: {}
 }
 
 export const Slice = createSlice({

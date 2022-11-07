@@ -88,12 +88,12 @@ const Contest = () => {
             <div 
                 className='photo' 
                 style={{ 
-                    backgroundImage: `url(${urlEndpoint}${selectedEvent.IMAGEURL})`
+                    backgroundImage: `url(${urlEndpoint}${selectedEvent?.IMAGEURL})`
                 }}
             >
             </div>
             {selectedEvent.PRIZEMONEY && <div className='prize'>
-                <div className='prize-text'>Rs. {selectedEvent.PRIZEMONEY} INR</div>
+                <div className='prize-text'>Rs. {selectedEvent?.PRIZEMONEY} INR</div>
             </div>}
             <div className='buttons-menu'>
                 {register && 
@@ -113,15 +113,15 @@ const Contest = () => {
         </div>
         <div className='content-right content-full'>
             <div id="contest-page-title" className='contest-title'>
-                {selectedEvent.NAME}
+                {selectedEvent?.NAME}
             </div>
             <div className='contest-description'>
-                {selectedEvent.DESCRIPTION}
+                {selectedEvent?.DESCRIPTION}
             </div>
             <div className='socials'>
-                {selectedEvent.FACEBOOKLINK !== "" &&  <a className='fa fa-facebook' href={selectedEvent.FACEBOOKLINK} target="_blank"></a>}
-                {selectedEvent.INSTAGRAMLINK !== "" && <a className='fa fa-instagram' href={selectedEvent.INSTAGRAMLINK} target="_blank"></a>}
-                {selectedEvent.TWITTERLINK !== "" && <a className='fa fa-twitter' href={selectedEvent.TWITTERLINK} target="_blank"></a>}
+                {selectedEvent?.FACEBOOKLINK !== "" &&  <a className='fa fa-facebook' href={selectedEvent.FACEBOOKLINK} target="_blank"></a>}
+                {selectedEvent?.INSTAGRAMLINK !== "" && <a className='fa fa-instagram' href={selectedEvent.INSTAGRAMLINK} target="_blank"></a>}
+                {selectedEvent?.TWITTERLINK !== "" && <a className='fa fa-twitter' href={selectedEvent.TWITTERLINK} target="_blank"></a>}
             </div>
         </div>
     </div>
