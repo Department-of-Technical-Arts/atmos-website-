@@ -99,7 +99,7 @@ const Contest = () => {
                 {register && 
                 <div className='button-view'>
                     <button  className='button'>
-                        {params.type === "work" ? <a style={{textDecoration:"none", color:"white"}} href={selectedEvent?.D2CLINK}>
+                        {params.type === "work" ? <a target="_blank" style={{textDecoration:"none", color:"white"}} href={selectedEvent?.D2CLINK}>
                             REGISTER
                         </a> :
                         <a style={{textDecoration:"none", color:"white"}} href={`/contest/${params.type}/${params.id}/register`}>

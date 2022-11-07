@@ -168,7 +168,6 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   border: 1px solid white;
-  filter: grayscale(100%);
   border-radius: 15px;
   margin-bottom: 55%;
   margin-left: 1.5rem;
