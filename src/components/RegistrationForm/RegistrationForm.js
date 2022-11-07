@@ -13,10 +13,14 @@ const RegistrationForm = () => {
 
   const [numberOfParticipants, setParticipants] = useState (0)
   const [currentParticipant, setCurrentParticipant] = useState(0)
+  const [currentEvent, setCurrentEvent] = useState ({})
   const [allParticipants, setAllParticipantsData] = useState ([])
 
   const params = useParams();
-  const { selectedEvent } = useSelector ((state) => state.displayData)
+
+  useEffect (() => {
+    setCurrentEvent(JSON.parse(localStorage.getItem("event")));
+  }, [])
   const submitHandler = () => {
     firestore
       .collection(params.id)
@@ -87,11 +91,11 @@ const RegistrationForm = () => {
       <div>
         <select onChange={setParticipantNumber} value={numberOfParticipants} className="form-input">
           <option>SELECT NUMBER OF PARTICIPANTS</option>
-          <option value={1}> 1 </option>
-          <option value={2}> 2 </option>
-          <option value={3}> 3 </option>
-          <option value={4}> 4 </option>
-          <option value={5}> 5 </option>
+          {currentEvent.MINPARTICIPANTS <= "1" && currentEvent.MAXPARTICIPANTS >= "1" && <option value={1}> 1 </option>}
+          {currentEvent.MINPARTICIPANTS <= "2" && currentEvent.MAXPARTICIPANTS >= "2" && <option value={2}> 2 </option>}
+          {currentEvent.MINPARTICIPANTS <= "3" && currentEvent.MAXPARTICIPANTS >= "3" && <option value={3}> 3 </option>}
+          {currentEvent.MINPARTICIPANTS <= "4" && currentEvent.MAXPARTICIPANTS >= "4" && <option value={4}> 4 </option>}
+          {currentEvent.MINPARTICIPANTS <= "5" && currentEvent.MAXPARTICIPANTS >= "5" && <option value={5}> 5 </option>}
         </select>
         {numberOfParticipants !== 0 && <div className="register-form">
             <h3>PARTICIPANT {currentParticipant + 1}</h3>
