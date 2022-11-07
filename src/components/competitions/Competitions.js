@@ -22,13 +22,14 @@ const Competitions = () => {
                     <div className='card-container-competitions'>
                         {
                             competitions.map((eachCompetition)=>{
-                                return(
-                                    <a key={eachCompetition.NAME} href={`/contest/comp/${eachCompetition.NAME.toLowerCase()}`}>
-                                        <div className='hover-cards-competitions' style={{ backgroundImage: `url(${urlEndpoint}${eachCompetition.IMAGEURL})`}}>
-                                            <p>{eachCompetition.NAME}</p>
-                                        </div>
-                                    </a>
-                                )
+                                if (eachCompetition.IMAGEURL)
+                                    return(
+                                        <a key={eachCompetition.NAME} href={`/contest/comp/${eachCompetition.NAME.toLowerCase()}`}>
+                                            <div className='hover-cards-competitions' style={{ backgroundImage: `url(${urlEndpoint}${eachCompetition.IMAGEURL})`}}>
+                                                <p>{eachCompetition.NAME}</p>
+                                            </div>
+                                        </a>
+                                    )
                             })
                         }
                     </div>

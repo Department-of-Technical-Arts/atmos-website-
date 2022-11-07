@@ -21,6 +21,7 @@ const Workshops = () => {
                     <div className='card-container-workshops'>
                         {
                             workshops.map((eachWorkshop)=>{
+                                if (eachWorkshop.IMAGEURL)
                                 return(
                                     <a key={eachWorkshop.NAME} href={`/contest/work/${eachWorkshop.NAME.toLowerCase()}`}><div className='hover-cards-workshops' style={{ 
                                         backgroundImage: `url(${urlEndpoint}${eachWorkshop.IMAGEURL})`

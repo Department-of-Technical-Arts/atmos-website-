@@ -6,7 +6,7 @@ import "./RegistrationForm.css";
 
 const RegistrationForm = () => {
   const [name, setName] = useState("");
-  const [contactNumber, setContactNumber] = useState(0)
+  const [contactNumber, setContactNumber] = useState("")
   const [college, setCollege] = useState ("")
   const [year, setYear] = useState ("")
   const [email, setEmail] = useState ("")
@@ -37,7 +37,7 @@ const RegistrationForm = () => {
       email: "",
       year: "",
       college: "",
-      contactNumber: 0
+      contactNumber: ""
     })
     setAllParticipantsData(temporary)
   }

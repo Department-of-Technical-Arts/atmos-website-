@@ -162,10 +162,12 @@ body {
 
 .hover-cards-workshops {
   position: relative;
-  height: 220px;
-  width: 180px;
-  background-size: cover;
+  height: 200px;
+  width: 250px;
+  background-size:contain;
   background-position: center;
+  background-repeat: no-repeat;
+  border: 1px solid white;
   filter: grayscale(100%);
   border-radius: 15px;
   margin-bottom: 55%;

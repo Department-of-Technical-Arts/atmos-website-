@@ -16,13 +16,17 @@
 
 .form-input {
   font-family: "Inter";
-  width: 45%;
+  width: 300px;
   padding: 0.9vw;
   border-radius: 0.5vw;
   background: none;
   border-bottom: 0.1vw solid #e9e9dd;
   color: white;
   transition: 0.5s;
+  background-color: white;
+  color: black;
+  outline: none;
+  border: none;
 }
 
 .form-input:focus {
@@ -32,23 +36,30 @@
 }
 
 .form-btn {
-  font-family: "Inter";
-  font-size: 1vw;
-  width: 7%;
+  margin: 15px;
   align-items: center;
-  padding: 0.7%;
-  border-radius: 0.7vw;
-  background: none;
-  color: #e9e9dd;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px,rgba(18, 18, 18, .1) 0 6px 20px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
   outline: none;
-  border: none;
-  border-bottom: 0.1vw solid #e9e9dd;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s,-webkit-box-shadow .2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
 .form-btn:hover {
-  background-color: #e9e9dd;
-  cursor: pointer;
-  color: black;
+  box-shadow: #FFF 0 0 0 3px, transparent 0 0 0 0;
+  background-color: black;
+  color: white;
 }
 
 @media screen and (min-width: 320px) and (max-width: 500px) {

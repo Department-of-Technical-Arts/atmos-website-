@@ -104,11 +104,13 @@ const Contest = () => {
                         </a>
                     </button>
                 </div>}
-                {/* <div className='button-view'>
+                <div className='button-view'>
                     <button className='button'>
-                        EXPLORE
+                        <a target="_blank" style={{textDecoration:"none", color:"white"}} href={selectedEvent?.EXPLORE}>
+                            EXPLORE
+                        </a>
                     </button>
-                </div> */}
+                </div>
             </div>
         </div>
         <div className='content-right content-full'>
