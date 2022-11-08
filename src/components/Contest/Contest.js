@@ -109,6 +109,7 @@ const Contest = () => {
                         
                     </button>
                 </div>}
+                {selectedEvent.EXPLORE && 
                 <div className='button-view'>
                     <button className='button'>
                         <a target="_blank" style={{textDecoration:"none", color:"white"}} href={selectedEvent?.EXPLORE}>
@@ -116,6 +117,7 @@ const Contest = () => {
                         </a>
                     </button>
                 </div>
+                }
             </div>
         </div>
         <div className='content-right content-full'>
