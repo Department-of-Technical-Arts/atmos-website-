@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { useParams } from "react-router-dom";
 import { firestore } from "../../config";
+import firebase from "../../config";
 import "./RegistrationForm.css";
 
 const RegistrationForm = () => {
@@ -22,10 +23,11 @@ const RegistrationForm = () => {
     setCurrentEvent(JSON.parse(localStorage.getItem("event")));
   }, [])
   const submitHandler = () => {
+    onSaveHandler()
     firestore
       .collection(params.id)
       .doc()
-      .set({allParticipants})
+      .set({allParticipants, createdAt: firebase.firestore.FieldValue.serverTimestamp()})
       .then(() => alert("Success"))
       .catch((err) => console.log(err.message));
   };
