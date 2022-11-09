@@ -162,6 +162,18 @@
   width: 100%;
   overflow: scroll;
 }
+.countdown {
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 1.6vw;
+  font-weight: 600;
+  height: 182px;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  bottom: 0%;
+  left: 44%;
+}
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   .landing-title {

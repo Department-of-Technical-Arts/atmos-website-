@@ -15,7 +15,25 @@ const Landing = () => {
   let isMobile = window.matchMedia("(max-width: 480px)");
   let isTouch = window.matchMedia("(max-width: 1024px)");
 
+  const [days, setDays] = useState("");
+  const [hours, setHours] = useState("");
+  const [minutes, setMins] = useState("");
+  const [seconds, setSeconds] = useState("");
+
   useEffect(() => {
+    const interval = setInterval(() => {
+      var deadline = new Date("Nov 25, 2022 0:00:00").getTime();
+      var now = new Date().getTime();
+      var distance = deadline - now;
+      setDays(Math.floor(distance / (1000 * 60 * 60 * 24)));
+      setHours(
+        Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      );
+      setMins(Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)));
+      setSeconds(Math.floor((distance % (1000 * 60)) / 1000));
+      console.log(seconds);
+    }, 1000);
+
     const handleScroll = async (e) => {
       const height = elementRef.current?.scrollHeight;
       var limit = 0.65;
@@ -48,6 +66,7 @@ const Landing = () => {
     window.addEventListener("scroll", handleScroll);
 
     return () => {
+      clearInterval(interval);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
@@ -65,6 +84,7 @@ const Landing = () => {
                 {isTouch.matches ? "SWIPE UP" : "SCROLL DOWN"}
               </p>
             )}
+            {/*<h4 className="countdown">{`${days}d : ${hours}h : ${minutes}m`}</h4>*/}
           </div>
           <Standout />
         </div>
@@ -75,6 +95,6 @@ const Landing = () => {
       )}
     </div>
   );
-}
+};
 
 export default Landing;
