@@ -60,7 +60,6 @@ const RegistrationForm = () => {
 
   const onSaveHandler = () => {
     let temporary = allParticipants
-    setCurrentParticipant(currentParticipant + 1)
     let object = {
       name: name,
       year: year,
@@ -70,11 +69,13 @@ const RegistrationForm = () => {
     }
     temporary[currentParticipant] = object
     setAllParticipantsData(temporary)
-    setName(allParticipants[currentParticipant + 1].name)
-    setCollege(allParticipants[currentParticipant + 1].college)
-    setContactNumber(allParticipants[currentParticipant + 1].contactNumber)
-    setYear(allParticipants[currentParticipant + 1].year)
-    setEmail(allParticipants[currentParticipant + 1].email)
+    setName("")
+    setCollege("")
+    setContactNumber("")
+    setYear("")
+    setEmail("")
+    if ((currentParticipant + 1) < numberOfParticipants)
+      setCurrentParticipant(currentParticipant + 1)
   }
 
   const onBackHandler = () => {
