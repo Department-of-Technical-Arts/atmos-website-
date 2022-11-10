@@ -122,7 +122,6 @@
     animation: 2s ease-out 0s 1 fadeIn;
     background-size: cover;
     transition: transform 0.5s;
-    filter: grayscale(100%);
 }
 .hover-cards-three {
     position: relative;
@@ -139,7 +138,6 @@
     animation: 2s ease-out 0s 1 fadeIn;
     background-size: cover;
     transition: transform 0.5s;
-    filter: grayscale(60%);
 }
 .hover-cards-four {
     position: relative;
@@ -156,7 +154,6 @@
     animation: 2s ease-out 0s 1 fadeIn;
     background-size: cover;
     transition: transform 0.5s;
-    filter: grayscale(80%);
 }
 .hover-cards-five {
     position: relative;
@@ -173,7 +170,6 @@
     animation: 2s ease-out 0s 1 fadeIn;
     background-size: cover;
     transition: transform 0.5s;
-    filter: grayscale(80%);
 }
 
 .hover-cards-one p {

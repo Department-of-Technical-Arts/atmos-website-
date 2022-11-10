@@ -216,7 +216,6 @@ body {
     width: 280px;
     background-position: top;
     margin-bottom: 40%;
-    filter: grayscale(90%);
   }
   .hover-cards-workshops:hover {
       transform:scale(1);
