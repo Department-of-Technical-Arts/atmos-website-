@@ -81,9 +81,11 @@ body {
   z-index: 1;
   position: relative;
   background-position: center;
-  background-size: cover;
-  height: 220px;
-  width: 180px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 200px;
+  width: 350px;
+  border: 1px solid white;
   border-radius: 15px;
   margin-bottom: 10%;
   margin-left: 1.5rem;

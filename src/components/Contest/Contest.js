@@ -31,6 +31,13 @@ const Contest = () => {
                 }
             })
         }
+        if (params.type === "prefest") {
+            prefest.map((eachPrefest) => {
+                if (eachPrefest.NAME.toLowerCase() === params.id) {
+                    dispatch (Actions.initializeSelectedEvent(eachPrefest))
+                }
+            })
+        }
     }, [competitions, workshops])
 
     const [title_names, setTitle] = useState("")

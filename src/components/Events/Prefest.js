@@ -2,6 +2,7 @@ import React from 'react' ;
 import { useEffect } from 'react';
 import "./Prefest.css";
 import { useSelector } from 'react-redux';
+import {urlEndpoint} from "../../config"
 
 const Prefest = () => {
     const {prefest} = useSelector ((state) => state.displayData)
@@ -20,9 +21,10 @@ const Prefest = () => {
                     <div className='card-container-prefest'>
                         {
                             prefest.map((eachPrefest)=>{
+                                if (eachPrefest.IMAGEURL)
                                 return(
                                     <a href={`/contest/prefest/${eachPrefest.NAME.toLowerCase()}`}><div className='hover-cards-prefest' style={{ 
-                                        backgroundImage: `url(${eachPrefest.IMAGEURL})`
+                                        backgroundImage: `url(${urlEndpoint}${eachPrefest.IMAGEURL})`
                                       }}><p>{eachPrefest.NAME}</p></div></a>
                                 )
                             })

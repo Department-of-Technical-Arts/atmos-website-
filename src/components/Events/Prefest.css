@@ -73,11 +73,11 @@ body {
 
 .hover-cards-prefest{
   position: relative;
-  height: 220px;
-  width: 180px;
-  background-size: cover;
+  height: 200px;
+  width: 250px;
+  background-size: contain;
   background-position: center;
-  filter: grayscale(200%);
+  background-repeat: no-repeat;
   border-radius: 15px;
   margin-bottom: 40%;
   margin-left: 1.5rem;
@@ -90,6 +90,7 @@ body {
   margin-right: 1rem;
   margin-left: 1rem;  
   transition: transform 0.5s;
+  border: 1px solid white;
 }
 .hover-cards-prefest:hover {
   transform:scale(1.3);
