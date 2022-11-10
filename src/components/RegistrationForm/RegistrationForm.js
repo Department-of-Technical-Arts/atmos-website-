@@ -11,7 +11,7 @@ const RegistrationForm = () => {
   const [college, setCollege] = useState ("")
   const [year, setYear] = useState ("")
   const [email, setEmail] = useState ("")
-  const [alert, setAlert] = useState ("")
+  const [Alert, setAlert] = useState ("")
 
   const [numberOfParticipants, setParticipants] = useState (0)
   const [currentParticipant, setCurrentParticipant] = useState(0)
@@ -62,6 +62,8 @@ const RegistrationForm = () => {
   const testValidation = () => {
     if (name === "" || college === "" || year === "" || email === "" || contactNumber === "")
       return false
+    if (contactNumber.length !== 10)
+      return false
     else return true
   }
 
@@ -76,7 +78,7 @@ const RegistrationForm = () => {
     }
     if (!testValidation ())
     {
-      setAlert ("Please fill all the options")
+      setAlert ("Please fill all the fields. Please fill valid entries")
       setTimeout (() =>{
         setAlert("")
       }, 3000)
@@ -124,7 +126,7 @@ const RegistrationForm = () => {
             <input required onChange={onChange} name="year" value={year} placeholder="Year" className="form-input" />
           </div>}
         <div>
-          {alert}
+          {Alert}
         </div>
         <div style={{display:"flex", justifyContent:"center"}}>
         {currentParticipant > 0 && <button onClick={onBackHandler} className="form-btn">
