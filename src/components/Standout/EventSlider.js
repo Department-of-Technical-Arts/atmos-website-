@@ -19,6 +19,7 @@ const EventSlider = ({ type, data }) => {
     <div className="image-slider">
       <div className="image-slider-track">
         {(type == "competition" || type == "workshop") && data.map((value, i) => {
+          if (value.IMAGEURL)
           return (
             <a href={`/contest/${type}/${value.NAME}`} key={i} >
             <div 
