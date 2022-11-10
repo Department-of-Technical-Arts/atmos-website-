@@ -139,7 +139,7 @@ body {
 
 @media screen and (max-width: 500px) {
   .hover-cards-talks {
-    margin-bottom: 6rem;
+    margin-bottom: 8rem;
     margin-left: 1rem;
     width: 280px;
   }
@@ -148,5 +148,11 @@ body {
   }
   .card-container-talks {
     align-items: center;
+  }
+  .talks-container {
+    gap: 20vw;
+  }
+  .talks-heading {
+    font-size: 8vmin;
   }
 }
