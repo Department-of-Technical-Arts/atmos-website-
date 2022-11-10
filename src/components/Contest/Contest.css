@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 
 .fa {
   margin: 20px;
@@ -8,7 +8,7 @@
   width: 40px;
   text-align: center;
   text-decoration: none;
-  color: #FFFFFF;
+  color: #ffffff;
   height: 40px;
 }
 
@@ -17,323 +17,317 @@
 }
 
 @keyframes contestZoomIn {
-    0% {
-        transform: scale(0.85);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.25);
+  }
 }
 @keyframes contestTitleZoomIn {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.background {
+  height: 100vh;
+  width: 100vw;
+}
+
+@media (min-width: 300px) and (max-width: 850px) {
+  .contest_image {
+    left: 0;
+    top: 0;
+    animation: 1s ease-in-out 0s 1 contestZoomIn;
+    background-size: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("./contestBG-1.png");
+    transform: scale(1.25);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 0;
+    overflow: visible;
+  }
+  .content-full {
+    left: auto;
+    right: auto;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+  }
+  .content-left {
+    z-index: 10;
+    margin-top: 10vh;
+    height: 60vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+  .content-right {
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .photo {
+    z-index: 10;
+    margin-top: 10vh;
+    width: 70%;
+    margin-bottom: 5vh;
+    border-radius: 3vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+    border-radius: 50px;
+  }
+  .prize {
+    margin-bottom: 3vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+
+    background: rgba(0, 0, 0, 0.71);
+    border-radius: 50px;
+  }
+  .prize-text {
+    z-index: 1;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vh;
+    line-height: 4.29vh;
+    text-align: center;
+    color: #ffffff;
+  }
+  .buttons-menu {
+    z-index: 10;
+    height: 10vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* align-content: center;
+        justify-items:flex-start; */
+  }
+  .button-view {
+    width: 40%;
+    cursor: pointer;
+    border-radius: 3vw;
+    background: rgba(255, 255, 255, 0.2);
+    margin: auto;
+    margin-bottom: 2vh;
+  }
+  .button {
+    border: none;
+    background: none;
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 0.8rem;
+    line-height: 4.29vh;
+    text-align: center;
+  }
+
+  .contest-title {
+    animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    margin-top: 5vh;
+    font-size: 5vh;
+    line-height: 9.4vh;
+    text-transform: uppercase;
+    margin-bottom: 5vh;
+    color: #e9e9dd;
+    mix-blend-mode: difference;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .contest-description {
+    margin: auto;
+    width: 90%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5vh;
+    line-height: 3vh;
+    text-align: center;
+    mix-blend-mode: difference;
+    color: #ffffff;
+    text-overflow: ellipsis;
+  }
+  .socials {
+    z-index: 100;
+    padding-top: 10vh;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+  }
+}
+
+@media (min-width: 850px) {
+  .contest_image {
+    animation: 1s ease-in-out 0s 1 contestZoomIn;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("./contestBG-1.png");
+    transform: scale(1.5);
+    height: 100%;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+  }
+  @keyframes contestZoomIn {
     0% {
-        transform: scale(1);
+      transform: scale(1);
     }
     100% {
-        transform: scale(1);
+      transform: scale(1.5);
     }
-}
-.background{
-    height: 100vh;
-    width: 100vw;
-}
+  }
 
+  .content-left {
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    height: 70vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
 
-@media (min-width: 300px) and (max-width:850px){
-    .contest_image{
-        
-        left: 0;
-        top: 0;
-        animation: 1s ease-in-out 0s 1 contestZoomIn;
-        background-size: cover;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('./contestBG.png');
-        height: 100%;
-        width: 100%;
-        position:fixed;
-        z-index: 0;
-        overflow: visible;
-    }
-    .content-full{
-        
-        left: auto;
-        right: auto;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
-    .content-left{
-        z-index: 10;
-        margin-top: 10vh;
-        height: 60vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: visible;
-    }
-    .content-right{ 
-        height: 80vh;
-        width: 100vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        overflow: visible;
-    }
+    align-items: center;
+  }
+  .content-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 80vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-    .photo{
-        z-index: 10;
-        margin-top: 10vh;
-        width: 70%;
-        margin-bottom: 5vh;
-        border-radius: 3vw;
-        height: 100vh;
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:contain;
-        border: 1px solid white;
-        border-radius: 50px;   
-        
-    }
-    .prize{
-        
-        margin-bottom: 3vh;
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        height: 10vh;
-        
-        background: rgba(0, 0, 0, 0.71);
-        border-radius: 50px;
-    }
-    .prize-text{
-        z-index: 1;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3.5vh;
-        line-height: 4.29vh;
-        text-align: center;
-        color: #FFFFFF;
-    }
-    .buttons-menu{
-        z-index: 10;
-        height: 10vh;
-        width: 90vw;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        /* align-content: center;
+  .photo {
+    width: 80%;
+    margin-bottom: 5vh;
+    border-radius: 3vw;
+    height: 35vh;
+    background-image: url("./image\ 1-2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border: 1px solid white;
+    border-radius: 50px;
+  }
+  .prize {
+    margin-bottom: 1vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 10vh;
+
+    background: rgba(0, 0, 0, 0.71);
+    border-radius: 50px;
+  }
+  .prize-text {
+    z-index: 1;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vh;
+    line-height: 4.29vh;
+    text-align: center;
+    color: #ffffff;
+  }
+  .buttons-menu {
+    height: 10vh;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+
+    /* align-content: center;
         justify-items:flex-start; */
-    }
-    .button-view{
-        width: 40%;
-        cursor: pointer;
-        border-radius: 3vw;
-        background: rgba(255, 255, 255, 0.2);
-        margin: auto;
-        margin-bottom: 2vh;
-    }
-    .button{
-        border: none;
-        background: none;
-        color: white;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 0.8rem;
-        line-height: 4.29vh;
-        text-align: center;
-    }
+  }
+  .button-view {
+    margin-left: auto;
+    display: flex;
+    margin: auto;
+    width: 40%;
+    cursor: pointer;
+    height: 6vh;
+    background: rgba(0, 0, 0, 0.88);
+    border-radius: 50px;
+  }
+  .button {
+    margin: auto;
+    background: none;
+    place-self: center;
+    border: none;
+    color: white;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 3.5vh;
+    line-height: 4.29vh;
+    text-align: center;
+    cursor: pointer;
+  }
 
-
-
-    .contest-title{
-        animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        margin-top: 5vh;
-        font-size: 5vh;
-        line-height: 9.4vh;
-        text-transform: uppercase;
-        margin-bottom: 5vh;
-        color: #E9E9DD;
-        mix-blend-mode: difference;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .contest-description{
-        margin: auto;
-        width: 90%;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2.5vh;
-        line-height: 3vh;
-        text-align: center;
-        mix-blend-mode: difference;
-        color: #FFFFFF;
-        text-overflow: ellipsis;
-    }
-    .socials{
-        z-index: 100;
-        padding-top: 10vh;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: flex-end;
-    }
-
-}
-
-@media (min-width: 850px){
-    .contest_image{
-        animation: 1s ease-in-out 0s 1 contestZoomIn;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-image: url('./contestBG.png');
-        height: 100%;
-        position: fixed;
-        width: 100%;
-        z-index: 0;
-        
-    }
-    
-    .content-left{
-        z-index: 10;
-        position: absolute;
-        bottom: 0;
-        height: 70vh;
-        width: 50vw;
-        display: flex;
-        flex-direction: column;
-        
-        align-items: center;
-    }
-    .content-right{
-        position: absolute;
-        right: 0;
-        bottom: 0;
-        height: 80vh;
-        width: 50vw;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-    }
-
-    .photo{
-        width: 80%;
-        margin-bottom: 5vh;
-        border-radius: 3vw;
-        height: 35vh;
-        background-image: url('./image\ 1-2.png');
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size:contain;
-        border: 1px solid white;
-        border-radius: 50px;   
-        
-    }
-    .prize{
-        
-        margin-bottom: 1vh;
-        
-        display: flex;
-        align-items: center;
-        justify-content: space-around;
-        width: 100%;
-        height: 10vh;
-        
-        background: rgba(0, 0, 0, 0.71);
-        border-radius: 50px;
-    }
-    .prize-text{
-        z-index: 1;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3.5vh;
-        line-height: 4.29vh;
-        text-align: center;
-        color: #FFFFFF;
-        
-    }
-    .buttons-menu{
-        height: 10vh;
-        width: 80%;
-        display: flex;
-        flex-direction: row;
-        
-        /* align-content: center;
-        justify-items:flex-start; */
-    }
-    .button-view{
-        margin-left: auto;
-        display: flex;
-        margin: auto;
-        width: 40%;
-        cursor: pointer;
-        height: 6vh;
-        background: rgba(0, 0, 0, 0.88);
-        border-radius: 50px;
-    }
-    .button{
-        margin: auto;
-        background: none;
-        place-self: center;
-        border: none;
-        color: white;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 3.5vh;
-        line-height: 4.29vh;
-        text-align: center;
-        cursor: pointer;   
-    }
-
-
-
-    .contest-title{
-        animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
-        height: 30vh;
-        padding-top: 80px;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 7.8vh;
-        line-height: 9.4vh;
-        text-transform: uppercase;
-        margin-bottom: 7vh;
-        color: #E9E9DD;
-        mix-blend-mode: difference;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    }
-    .contest-description{
-        width: 75%;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 600;
-        font-size: 2.5vh;
-        line-height: 3vh;
-        text-align: center;
-        mix-blend-mode:exclusion;
-        color: #FFFFFF;
-        text-overflow: ellipsis;
-    }
-    .socials{
-        z-index: 100;
-        width: 100%;
-        height: 90vh;
-        display: flex;
-        justify-content: center;
-    }
-
+  .contest-title {
+    animation: 1s ease-in-out 0s 1 contestTitleZoomIn;
+    height: 30vh;
+    padding-top: 80px;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 7.8vh;
+    line-height: 9.4vh;
+    text-transform: uppercase;
+    margin-bottom: 7vh;
+    color: #e9e9dd;
+    mix-blend-mode: difference;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .contest-description {
+    width: 75%;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 2.5vh;
+    line-height: 3vh;
+    text-align: center;
+    mix-blend-mode: exclusion;
+    color: #ffffff;
+    text-overflow: ellipsis;
+  }
+  .socials {
+    z-index: 100;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+  }
 }
