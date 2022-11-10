@@ -11,6 +11,7 @@ const RegistrationForm = () => {
   const [college, setCollege] = useState ("")
   const [year, setYear] = useState ("")
   const [email, setEmail] = useState ("")
+  const [alert, setAlert] = useState ("")
 
   const [numberOfParticipants, setParticipants] = useState (0)
   const [currentParticipant, setCurrentParticipant] = useState(0)
@@ -58,6 +59,12 @@ const RegistrationForm = () => {
       setCollege (value)
   }
 
+  const testValidation = () => {
+    if (name === "" || college === "" || year === "" || email === "" || contactNumber === "")
+      return false
+    else return true
+  }
+
   const onSaveHandler = () => {
     let temporary = allParticipants
     let object = {
@@ -66,6 +73,14 @@ const RegistrationForm = () => {
       email: email,
       college: college,
       contactNumber: contactNumber
+    }
+    if (!testValidation ())
+    {
+      setAlert ("Please fill all the options")
+      setTimeout (() =>{
+        setAlert("")
+      }, 3000)
+      return
     }
     temporary[currentParticipant] = object
     setAllParticipantsData(temporary)
@@ -108,6 +123,10 @@ const RegistrationForm = () => {
             <input required onChange={onChange} name="college" value={college} placeholder="College" className="form-input" type="text" />
             <input required onChange={onChange} name="year" value={year} placeholder="Year" className="form-input" />
           </div>}
+        <div>
+          {alert}
+        </div>
+        <div style={{display:"flex", justifyContent:"center"}}>
         {currentParticipant > 0 && <button onClick={onBackHandler} className="form-btn">
           BACK
         </button>}
@@ -122,6 +141,7 @@ const RegistrationForm = () => {
           }
         </div>
         }
+        </div>
       </div>
     </div>
   );
