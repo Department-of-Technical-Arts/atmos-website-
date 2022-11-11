@@ -43,6 +43,7 @@ const RegistrationForm = () => {
       contactNumber: ""
     })
     setAllParticipantsData(temporary)
+    setCurrentParticipant(0)
   }
 
   const onChange = (event) => {
