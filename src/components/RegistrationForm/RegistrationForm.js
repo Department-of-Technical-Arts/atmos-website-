@@ -216,7 +216,7 @@ const RegistrationForm = () => {
       )}
       {success && (
         <div className="submit-success">
-          FORM SUBMITTED
+          FORM SUBMITTED! You will be contacted soon !
           <IoIosCheckmarkCircle />
         </div>
       )}

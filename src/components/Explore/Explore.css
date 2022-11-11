@@ -126,6 +126,7 @@
   width: fit-content;
 }
 .ArrowForward {
+  margin-top: -8px;
   font-size: 2.5vmin;
   transform: translateY(18%);
 }
