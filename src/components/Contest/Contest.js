@@ -26,6 +26,7 @@ const Contest = () => {
         }
         if (params.type === "work") {
             workshops.map((eachWorkshop) => {
+                console.log(eachWorkshop);
                 if (eachWorkshop.NAME.toLowerCase() === params.id) {
                     dispatch (Actions.initializeSelectedEvent(eachWorkshop))
                 }
@@ -40,21 +41,8 @@ const Contest = () => {
         }
     }, [competitions, workshops])
 
-    const [title_names, setTitle] = useState("")
-    const [description, setDescript] = useState("")
-    const [images, setImages] = useState([""])
     const [register, setReg] = useState(false)
     useEffect(() => {
-        if (params.type=="comp") {
-            setTitle(selectedEvent.NAME)
-            setDescript(selectedEvent.DESCRIPTION)
-            setImages(selectedEvent.IMAGEURL)
-        }
-        else if(params.type=="work"){
-            setTitle(selectedEvent.NAME)
-            setDescript(selectedEvent.DESCRIPTION)
-            setImages(selectedEvent.IMAGEURL)
-        }
         const title = document.getElementById("contest-page-title");
         var numWords = selectedEvent?.NAME?.split(' ').length; 
         if (numWords > 2) {
@@ -66,9 +54,6 @@ const Contest = () => {
             else if(params.type=="prefest"){
             Object.keys(prefest).forEach((value,i)=>{
             if (i==params.id){
-                setTitle(value)
-                setDescript(prefest[value])
-                setImages(prefestImages)
                 
                 const title = document.getElementById("contest-page-title");
     

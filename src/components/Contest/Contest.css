@@ -84,7 +84,7 @@
   .photo {
     z-index: 10;
     margin-top: 10vh;
-    width: 70%;
+    width: 60%;
     margin-bottom: 5vh;
     border-radius: 3vw;
     height: 100vh;
@@ -229,7 +229,7 @@
   }
 
   .photo {
-    width: 80%;
+    width: 60%;
     margin-bottom: 5vh;
     border-radius: 3vw;
     height: 35vh;
