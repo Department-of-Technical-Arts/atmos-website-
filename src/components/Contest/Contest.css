@@ -16,6 +16,16 @@
   opacity: 0.7;
 }
 
+.spinner {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+  color: white;
+  margin-top: 300px;
+}
+
 @keyframes contestZoomIn {
   0% {
     transform: scale(1);

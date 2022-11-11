@@ -10,6 +10,7 @@
         "@testing-library/jest-dom": "^5.16.5",
         "@testing-library/react": "^13.4.0",
         "@testing-library/user-event": "^13.5.0",
+        "bootstrap": "^5.2.2",
         "dotenv": "^16.0.3",
         "fa-icons": "^0.2.0",
         "firebase": "^8.2.0",
@@ -23,6 +24,7 @@
         "react-redux": "^8.0.4",
         "react-router-dom": "^6.4.0",
         "react-scripts": "^5.0.1",
+        "reactstrap": "^9.1.5",
         "swiper": "^8.4.2",
         "web-vitals": "^2.1.4"
     },

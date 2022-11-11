@@ -5,12 +5,14 @@ import prefestImages from '../../images/events-photos/prefest-images';
 import './Contest.css';
 import { Actions } from "../../redux/index"
 import { urlEndpoint } from "../../config";
+import { Spinner } from "reactstrap"
 import { useDispatch, useSelector } from 'react-redux';
 
 
 const Contest = () => {
     const isTablet = useMediaQuery('(max-width:480px)','(max-height:1024px)');
     const isMobile = useMediaQuery('(max-width: 320px)','(max-height: 480px)');
+    const [loader, setLoader] = useState(true)
     const {competitions, workshops, prefest, selectedEvent} = useSelector((state) => state.displayData)
     const params = useParams()
     const dispatch = useDispatch ()
@@ -21,14 +23,15 @@ const Contest = () => {
                 if (eachCompetition.NAME.toLowerCase() === params.id) {
                     dispatch (Actions.initializeSelectedEvent(eachCompetition))
                     localStorage.setItem("event", JSON.stringify(eachCompetition))
+                    setLoader(false)
                 }
             })
         }
         if (params.type === "work") {
             workshops.map((eachWorkshop) => {
-                console.log(eachWorkshop);
                 if (eachWorkshop.NAME.toLowerCase() === params.id) {
                     dispatch (Actions.initializeSelectedEvent(eachWorkshop))
+                    setLoader(false)
                 }
             })
         }
@@ -36,6 +39,7 @@ const Contest = () => {
             prefest.map((eachPrefest) => {
                 if (eachPrefest.NAME.toLowerCase() === params.id) {
                     dispatch (Actions.initializeSelectedEvent(eachPrefest))
+                    setLoader(false)
                 }
             })
         }
@@ -75,6 +79,8 @@ const Contest = () => {
 
     return (
     <div className='background'>
+        {loader ?<div className='spinner'> <Spinner color='light' type='grow' /> LOADING ....</div> :
+        <div>
         <div className='contest_image'></div>
         <div className='content-left content-full'>
             <div 
@@ -125,6 +131,8 @@ const Contest = () => {
                 {selectedEvent?.TWITTERLINK !== "" && <a className='fa fa-twitter' href={selectedEvent.TWITTERLINK} target="_blank"></a>}
             </div>
         </div>
+        </div>  
+    }
     </div>
     );
 }
