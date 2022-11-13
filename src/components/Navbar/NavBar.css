@@ -55,6 +55,9 @@
     }
 }
 @media (min-width: 520px) and (max-width:650px){
+    .appbar {
+        background-color: black;
+    }
     .nav-heading{
        font-size: 1.2rem;
        line-height: 1.5rem;
@@ -66,6 +69,9 @@
    }
 }
 @media (min-width: 460px) and (max-width:520px){
+    .appbar {
+        background-color: black;
+    }
     .nav-heading{
        font-size: 1rem;
        line-height: 1.2rem;
@@ -81,6 +87,9 @@
 
 
 @media (min-width: 320px) and (max-width: 460px){
+    .appbar {
+        background-color: black;
+    }
     .nav-heading{
         font-size: 1rem;
         line-height: 1rem;
@@ -91,6 +100,9 @@
     
 }
 @media (min-width: 300px) and (max-width: 320px){
+    .appbar {
+        background-color: black;
+    }
     .nav-heading{
         font-size: 0.8rem;
         line-height: 0.9rem;

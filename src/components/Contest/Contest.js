@@ -91,7 +91,7 @@ const Contest = () => {
             >
             </div>
             {selectedEvent.PRIZEMONEY && <div className='prize'>
-                <div className='prize-text'>Rs. {selectedEvent?.PRIZEMONEY}</div>
+                <div className='prize-text'>Rs. {selectedEvent?.PRIZEMONEY} </div>
             </div>}
             <div className='buttons-menu'>
                 {register && 

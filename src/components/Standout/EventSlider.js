@@ -41,6 +41,7 @@ const EventSlider = ({ type, data }) => {
           );
         })}
         {(type=="talk") && data.map((value, i) => {
+            if (value.IMAGEURL)
             return (
               <div  key={i}
               className="slide-standout" 

@@ -19,8 +19,7 @@ const NavBar = () => {
   }
   return (
     <div className="appbar">
-  
-    <AppBar sx={{ bgcolor: "transparent" , paddingTop:"15px" }} elevation={0}>
+    <AppBar className="appbar" sx={{ bgcolor: "transparent" }} elevation={0}>
       <Toolbar>
         <a href="/" className="wrapper">
           <img src={mainLogo} className="logoimg"></img>
