@@ -100,7 +100,7 @@ const Contest = () => {
                         {params.type === "work" ? <a target="_blank" style={{textDecoration:"none", color:"white"}} href={selectedEvent?.D2CLINK}>
                             REGISTER
                         </a> :
-                        <a style={{textDecoration:"none", color:"white"}} href={selectedEvent?.REGISTER === "TRUE" ? `/contest/${params.type}/${params.id}/register`: selectedEvent?.REGISTER}>
+                        <a style={{textDecoration:"none", color:"white"}} href={selectedEvent?.IMAGEURL === "idrl.png" ? "https://droneracingindia.com/events/0332d1d5-bdbc-4071-b019-4cf77826aca1" : `/contest/${params.type}/${params.id}/register` || selectedEvent?.IMAGEURL === "techexpo.jpg" ? "https://forms.gle/vAti7NeitgDGnJKy8" : `/contest/${params.type}/${params.id}/register`}>
                             REGISTER
                         </a>
                         }
