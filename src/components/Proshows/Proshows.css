@@ -52,47 +52,47 @@ color: #FFFFFC;
    margin-right:20px
 } */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 @keyframes fadeIn {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 @keyframes zoomIn2 {
-    0% {
-        transform: scale(0.5);
-    }
-    100% {
-        transform: scale(1);
-    }
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@600&display=swap");
 .background-container {
-    position: relative;
-    height: 100vh;
-    width: 100vw;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
 }
 
 .background-proshow {
-    top: 0;
-    left: 0;
-    background-color: black;
-    position: absolute;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
+  top: 0;
+  left: 0;
+  background-color: black;
+  position: absolute;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* .image-events-proshow {
@@ -205,7 +205,7 @@ color: #FFFFFC;
     line-height: 27px;
     width: 210px;
 } */
- /* .subHeader{
+/* .subHeader{
     text-align:center;
     font-family: 'Inter', sans-serif;
 font-style: normal;
@@ -222,103 +222,120 @@ color: #FFFFFC;
 }   */
 
 .image-proshows {
-    top: 0;
-    left: 0;
-    position: fixed;
-    background-image: url("../../assets/earth-g174993377_1920\ 1.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-    animation: 1s ease-out 0s 1 zoomIn2;
-    background-attachment: fixed;
-  }
-  
-  .content-proshows {
-    position: relative;
-    height: 20vh;
-    width: 30vw;
-    top: 35%;
-    left: 50%;
-    animation: 2s ease-out 0s 1 fadeIn;
-  }
-  
-  .content-proshows h1 {
-    position: absolute;
-    right: -35.5vw;
-    top: 34vh;
-    font-family: "Inter";
-    font-style: normal;
-    font-size: 11vw;
-    font-weight: 600;
-    height: 20vh;
-    mix-blend-mode: difference;
-    color: #e9e9dd;
-    transform: translate(-50%, -50%);
-  }
-  
-  
-  .card-container-proshows{
-    position: absolute;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    width: 100vw;
-    top: 60%;
-    justify-content: space-around;
-    flex-flow: wrap;
-    padding: 0 12%;
-    flex: 0 1 auto;
-  }
-  
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-image: url("../../assets/earth-g174993377_1920\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  animation: 1s ease-out 0s 1 zoomIn2;
+  background-attachment: fixed;
+}
+
+.content-proshows {
+  position: relative;
+  height: 20vh;
+  width: 30vw;
+  top: 35%;
+  left: 50%;
+  animation: 2s ease-out 0s 1 fadeIn;
+}
+
+.content-proshows h1 {
+  position: absolute;
+  right: -35.5vw;
+  top: 34vh;
+  font-family: "Inter";
+  font-style: normal;
+  font-size: 11vw;
+  font-weight: 600;
+  height: 20vh;
+  mix-blend-mode: difference;
+  color: #e9e9dd;
+  transform: translate(-50%, -50%);
+}
+
+.card-container-proshows {
+  position: absolute;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 7vw;
+  top: 55%;
+}
+.prev-proshows {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  width: 100vw;
+  top: 60%;
+  justify-content: space-around;
+  flex-flow: wrap;
+  padding: 0 12%;
+  flex: 0 1 auto;
+}
+.proshows-heading {
+  font-size: 6vmin;
+  font-weight: 600;
+  width: 100%;
+  color: #e9e9dd;
+  margin-bottom: -4%;
+}
+
+.hover-cards-proshows {
+  position: relative;
+  background-blend-mode: difference;
+  background-size: cover;
+  background-position: center;
+  height: 220px;
+  width: 180px;
+  border-radius: 15px;
+  margin-bottom: 10%;
+  /* margin-left: 1.5rem; */
+  font-family: "Inter";
+  color: #fffffc;
+  text-transform: uppercase;
+  bottom: 0;
+  animation: 2s ease-out 0s 1 fadeIn;
+  /* padding-left:10%; */
+  margin-right: 3vw;
+  margin-left: 3vw;
+  margin-bottom: 18vh;
+  /* margin: 5% 5%; */
+  transition: transform 0.3s;
+}
+.hover-cards-proshows:hover {
+  transform: scale(1.3);
+  z-index: 10;
+}
+
+.hover-cards-proshows p {
+  font-size: 18px;
+  position: absolute;
+  top: 225px;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 27px;
+  width: 210px;
+}
+
+@media screen and (max-width: 560px) {
   .hover-cards-proshows {
-    position: relative;
-    background-blend-mode: difference;
-    background-size: cover;
-    background-position: center;
-    height: 220px;
-    width: 180px;
-    border-radius: 15px;
-    margin-bottom: 10%;
-    /* margin-left: 1.5rem; */
-    font-family: 'Inter';
-    color: #fffffc;
-    text-transform: uppercase;
-    bottom: 0;
-    animation: 2s ease-out 0s 1 fadeIn;
-    /* padding-left:10%; */
-    margin-right: 3vw;
-    margin-left: 3vw; 
-    margin-bottom: 18vh; 
-    /* margin: 5% 5%; */
-    transition: transform 0.3s;
+    margin-bottom: 6rem;
+    margin-left: 1rem;
+    width: 280px;
+    background-position: top;
   }
   .hover-cards-proshows:hover {
-    transform:scale(1.3);
+    transform: scale(1);
     z-index: 10;
   }
-  
-  .hover-cards-proshows p {
-    font-size: 18px;
-    position: absolute;
-    top: 225px;
-    left: 50%;
-    transform: translate(-50%);
-    line-height: 27px;
-    width: 210px;
+  .proshows-heading {
+    font-size: 7vmin;
+    margin-bottom: 2%;
   }
-   
-@media screen and (max-width: 560px) {
-    .hover-cards-proshows{
-      margin-bottom: 6rem;
-      margin-left:1rem;
-      width: 280px;
-      background-position: top;
-    }
-    .hover-cards-proshows:hover {
-        transform:scale(1);
-        z-index: 10;
-      }
-  }
+}
