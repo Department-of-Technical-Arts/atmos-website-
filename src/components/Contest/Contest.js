@@ -1,5 +1,5 @@
 import { React, useState, useEffect } from 'react';
-import {  useParams } from 'react-router-dom'
+import {  useParams, useNavigate } from 'react-router-dom'
 import { useMediaQuery } from '@mui/material';
 import prefestImages from '../../images/events-photos/prefest-images';
 import './Contest.css';
@@ -17,7 +17,9 @@ const Contest = () => {
     const [register, setReg] = useState(false)
     const params = useParams()
     const dispatch = useDispatch ()
-    
+    const navigate = useNavigate();
+    let unavailableNumber = 0;
+
     useEffect (() => {
         if (params.type === "comp") {
             competitions.map((eachCompetition) => {
@@ -27,7 +29,10 @@ const Contest = () => {
                     setLoader(false)
                 }
             })
-        }
+            const possiblyEmptySet = competitions.filter((eachCompetition)=>eachCompetition.NAME.toLowerCase() === params.id);
+            console.log(possiblyEmptySet)
+            
+        }   
         if (params.type === "work") {
             workshops.map((eachWorkshop) => {
                 if (eachWorkshop.NAME.toLowerCase() === params.id) {
@@ -44,8 +49,15 @@ const Contest = () => {
                 }
             })
         }
+
+        setTimeout(()=>{
+            if(document.title=="undefined - ATMOS"){
+            navigate("/404")}
+        }, "5000")
+        
     }, [competitions, workshops])
     useEffect(() => {
+        
         const title = document.getElementById("contest-page-title");
         var numWords = selectedEvent?.NAME?.split(' ').length; 
         if (numWords > 2) {
@@ -74,8 +86,9 @@ const Contest = () => {
     },[])
     useEffect(() => {
         document.title = selectedEvent?.NAME?.toUpperCase() + " - ATMOS"
+        
     },[selectedEvent])
-
+    
     return (
     <div className='background'>
         {loader ?<div className='spinner'> <Spinner color='light' type='grow' /> LOADING ....</div> :

@@ -18,6 +18,7 @@ import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import Papa from "papaparse"
 import { Actions } from "./redux";
+import P404page from "./components/Contest/404page";
 
 const App = () => {
 
@@ -74,8 +75,10 @@ const App = () => {
             <Route path="workshops" element={<Workshops />} />
             <Route path="proshows" element={<ProShows />} />
             <Route path="prefest" element={<Prefest />} />
+            <Route path="404" element={<P404page />} />
             <Route path="contest/:type/:id" element={<Contest />} />
             <Route path="contest/:type/:id/register" element = {<RegistrationForm />} />
+            <Route path="*" element={<P404page />} />
           </Routes>
         </BrowserRouter>
       </div>

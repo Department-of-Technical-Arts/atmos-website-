@@ -18,7 +18,7 @@ const Standout = () => {
         <div className="eve">
           <h1 className="standout-header">WORKSHOPS</h1>
           <div className="standout-desc">
-            <EventSlider type="workshop" data={workshops} />
+            <EventSlider type="work" data={workshops} />
           </div>
         </div>
 
@@ -32,7 +32,7 @@ const Standout = () => {
         <div className="comp">
           <h1 className="standout-header">COMPETITIONS</h1>
           <div className="standout-desc">
-            <EventSlider type="competition" data={competitions} />
+            <EventSlider type="comp" data={competitions} />
           </div>
         </div>
         <div className="scroll-bottom">SCROLL TO EXPLORE</div>
