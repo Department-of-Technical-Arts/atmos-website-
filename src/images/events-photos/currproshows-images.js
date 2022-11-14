@@ -1,5 +1,6 @@
-const proshowsImages = [
-  "/events-photos/pro-show_cover.JPG",
+
+const currProshowsImages = [
+  "/events-photos/Arjun-cover.png",
   "/events-photos/nishantsuri_cover.JPG",
   "/events-photos/dannyavila_cover.jpg",
   "/events-photos/aerreo_cover.jpg",
@@ -9,5 +10,4 @@ const proshowsImages = [
 ];
 
 
-export default proshowsImages;
-
+export default currProshowsImages;

@@ -1,8 +1,13 @@
 import { React, useEffect } from "react";
 import "./Proshows.css";
 import proshowsImages from "../../images/events-photos/proshows-images";
+import currProshowsImages from "../../images/events-photos/currproshows-images";
 
 const Proshows = () => {
+  const currProShowsNames = [
+    "Arjun Kanungo",
+    
+  ];
   const proShowsNames = [
     "Armaan Malik",
     "Nishant Suri",
@@ -25,6 +30,23 @@ const Proshows = () => {
             <h1>PROSHOWS</h1>
           </div>
           <div className="card-container-proshows">
+          <h4 className="proshows-heading">ATMOS '22 PROSHOWS</h4>
+            <div className="prev-proshows">
+              {Object.values(currProShowsNames).map((value, i) => {
+                return (
+                  <a href="/gallery">
+                    <div
+                      className="hover-cards-proshows"
+                      style={{
+                        backgroundImage: `url(${currProshowsImages[i]})`,
+                      }}
+                    >
+                      <p>{value}</p>
+                    </div>
+                  </a>
+                );
+              })}
+            </div>
             <h4 className="proshows-heading">PREVIOUS PROSHOWS</h4>
             <div className="prev-proshows">
               {Object.values(proShowsNames).map((value, i) => {
