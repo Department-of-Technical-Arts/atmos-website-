@@ -279,6 +279,7 @@ color: #FFFFFC;
   flex: 0 1 auto;
 }
 .proshows-heading {
+  mix-blend-mode: difference;
   font-size: 6vmin;
   font-weight: 600;
   width: 100%;
@@ -322,6 +323,16 @@ color: #FFFFFC;
   transform: translate(-50%);
   line-height: 27px;
   width: 210px;
+}
+.date{
+  font-size: 40px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+  line-height: 27px;
+  width: 210px;
+  mix-blend-mode: difference;
 }
 
 @media screen and (max-width: 560px) {

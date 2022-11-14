@@ -18,8 +18,11 @@ const Proshows = () => {
     "Vivek Singh",
     "Pineapple Express",
   ];
+  const proshowDates = ["27 NOV"]
+  const proshowLinks = ["https://www.instagram.com/p/Ck8U7YRv05l/?igshid=YmMyMTA2M2Y="]
   useEffect(() => {
     document.title = "PROSHOWS - ATMOS";
+    
   }, []);
 
   return (
@@ -35,14 +38,23 @@ const Proshows = () => {
             <div className="prev-proshows">
               {Object.values(currProShowsNames).map((value, i) => {
                 return (
-                  <a href="/gallery">
+                  <a onMouseEnter={ (e) => {
+                    e.preventDefault();
+                    document.getElementById(`titles_${i}`).hidden = false;
+                  }}
+      
+                  onMouseLeave={(e)=>{
+                    document.getElementById(`titles_${i}`).hidden = true;
+                  }} href={proshowLinks[i]}>
                     <div
                       className="hover-cards-proshows"
                       style={{
                         backgroundImage: `url(${currProshowsImages[i]})`,
                       }}
                     >
+                      <div hidden id={`titles_${i}`} className="date">{proshowDates[i]}</div>
                       <p>{value}</p>
+                      
                     </div>
                   </a>
                 );
