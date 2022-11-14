@@ -26,7 +26,9 @@ const RegistrationForm = () => {
     setCurrentEvent(JSON.parse(localStorage.getItem("event")));
   }, []);
   const submitHandler = () => {
-    onSaveHandler();
+    const status = onSaveHandler();
+    if (!status)
+      return
     firestore
       .collection(params.id)
       .doc()
@@ -87,7 +89,7 @@ const RegistrationForm = () => {
       setTimeout(() => {
         setAlert("");
       }, 3000);
-      return;
+      return false;
     }
     temporary[currentParticipant] = object;
     setAllParticipantsData(temporary);

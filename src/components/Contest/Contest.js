@@ -14,6 +14,7 @@ const Contest = () => {
     const isMobile = useMediaQuery('(max-width: 320px)','(max-height: 480px)');
     const [loader, setLoader] = useState(true)
     const {competitions, workshops, prefest, selectedEvent} = useSelector((state) => state.displayData)
+    const [register, setReg] = useState(false)
     const params = useParams()
     const dispatch = useDispatch ()
     
@@ -44,8 +45,6 @@ const Contest = () => {
             })
         }
     }, [competitions, workshops])
-
-    const [register, setReg] = useState(false)
     useEffect(() => {
         const title = document.getElementById("contest-page-title");
         var numWords = selectedEvent?.NAME?.split(' ').length; 
