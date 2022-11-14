@@ -58,6 +58,7 @@ body {
 }
 
 .card-container-competitions {
+  
   position: absolute;
   display: flex;
   flex-direction: row;
@@ -71,6 +72,7 @@ body {
 }
 
 .hover-cards-competitions {
+  background-color: black;
   position: relative;
   height: 200px;
   width: 250px;

@@ -92,6 +92,7 @@
   }
 
   .photo {
+    background-color: black;
     z-index: 10;
     margin-top: 10vh;
     width: 60%;

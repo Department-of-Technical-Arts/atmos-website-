@@ -161,6 +161,7 @@ body {
 }
 
 .hover-cards-workshops {
+  background-color: black;
   position: relative;
   height: 200px;
   width: 250px;

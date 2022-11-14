@@ -101,6 +101,7 @@ body {
 }
 
 .hover-cards-talks {
+  background-color: black;
   z-index: 1;
   position: relative;
   background-position: center;
