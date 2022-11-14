@@ -2,6 +2,7 @@ import { React, useEffect } from "react";
 import "./Proshows.css";
 import proshowsImages from "../../images/events-photos/proshows-images";
 import currProshowsImages from "../../images/events-photos/currproshows-images";
+import CurrentProshows from "../../CurrentProshow/Currentproshow";
 
 const Proshows = () => {
   const currProShowsNames = [
