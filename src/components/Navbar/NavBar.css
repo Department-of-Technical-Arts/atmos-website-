@@ -1,118 +1,132 @@
 .navbar {
-    position: initial;
+  position: initial;
 }
 
 .wrapper {
-    margin-right: 80%;
-    margin-left: 2%;
-    margin-top: 2%;
-    display: flex;
-    flex-direction: column;
-    background-attachment: no-fixed;
-    
-    
+  margin-right: 80%;
+  margin-left: 2%;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+  background-attachment: no-fixed;
 }
 
 .nav-heading {
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 2.5rem;
-    line-height: 3rem;
-    text-align: center;
-    /* position: relative; */
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  text-align: center;
+  /* position: relative; */
 }
 
 .white {
-    color: white
+  color: white;
 }
 
 .blue {
-    color: #379DB4
+  color: #379db4;
 }
 
-@media (min-width: 790px) and (max-width:1024px){
-    .nav-heading{
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-      
-    }
-    .wrapper{
-       
-        margin-right: 73%;
-    }
-   
+@media (min-width: 790px) and (max-width: 1024px) {
+  .nav-heading {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  .wrapper {
+    margin-right: 73%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
-@media (min-width: 650px) and (max-width:790px){
-     .nav-heading{
-        font-size: 1.5rem;
-        line-height: 1.8rem;
-      
-    }
-    .wrapper{
-       
-        margin-right: 62%;
-    }
+@media (min-width: 650px) and (max-width: 790px) {
+  .nav-heading {
+    font-size: 1.5rem;
+    line-height: 1.8rem;
+  }
+  .wrapper {
+    margin-right: 62%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
-@media (min-width: 520px) and (max-width:650px){
-    .appbar {
-        background-color: black;
-    }
-    .nav-heading{
-       font-size: 1.2rem;
-       line-height: 1.5rem;
-     
-   }
-   .wrapper{
-      
-       margin-right: 65%;
-   }
+@media (min-width: 520px) and (max-width: 650px) {
+  .appbar {
+    background-color: black;
+  }
+  .nav-heading {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+  .wrapper {
+    margin-right: 65%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
-@media (min-width: 460px) and (max-width:520px){
-    .appbar {
-        background-color: black;
-    }
-    .nav-heading{
-       font-size: 1rem;
-       line-height: 1.2rem;
-     
-   }
-   .wrapper{
-      
-       margin-right: 58%;
-   }
+@media (min-width: 460px) and (max-width: 520px) {
+  .appbar {
+    background-color: black;
+  }
+  .nav-heading {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  .wrapper {
+    margin-right: 58%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
 
-
-
-
-@media (min-width: 320px) and (max-width: 460px){
-    .appbar {
-        background-color: black;
-    }
-    .nav-heading{
-        font-size: 1rem;
-        line-height: 1rem;
-    }
-    .wrapper{
-        margin-right: 55%;
-    }
-    
+@media (min-width: 320px) and (max-width: 460px) {
+  .appbar {
+    background-color: black;
+  }
+  .nav-heading {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+  .wrapper {
+    margin-right: 55%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
-@media (min-width: 300px) and (max-width: 320px){
-    .appbar {
-        background-color: black;
-    }
-    .nav-heading{
-        font-size: 0.8rem;
-        line-height: 0.9rem;
-    }
-    .wrapper{
-        margin-right: 63%;
-    }
-    
+@media (min-width: 300px) and (max-width: 320px) {
+  .appbar {
+    background-color: black;
+  }
+  .nav-heading {
+    font-size: 0.8rem;
+    line-height: 0.9rem;
+  }
+  .wrapper {
+    margin-right: 63%;
+  }
+  .appbar {
+    background: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash.jpg) no-repeat
+      center fixed;
+    background-size: cover;
+  }
 }
-.logoimg{
-    width: 100%;
-    height: 50%;
+.logoimg {
+  width: 100%;
+  height: 50%;
 }
