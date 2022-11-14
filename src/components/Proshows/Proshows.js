@@ -1,6 +1,7 @@
 import { React, useEffect } from "react";
 import "./Proshows.css";
 import proshowsImages from "../../images/events-photos/proshows-images";
+import CurrentProshows from "../../CurrentProshow/Currentproshow";
 
 const Proshows = () => {
   const proShowsNames = [
@@ -25,6 +26,7 @@ const Proshows = () => {
             <h1>PROSHOWS</h1>
           </div>
           <div className="card-container-proshows">
+            <CurrentProshows /> 
             <h4 className="proshows-heading">PREVIOUS PROSHOWS</h4>
             <div className="prev-proshows">
               {Object.values(proShowsNames).map((value, i) => {
