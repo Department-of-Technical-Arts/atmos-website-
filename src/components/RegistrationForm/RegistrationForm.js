@@ -100,6 +100,7 @@ const RegistrationForm = () => {
     setEmail("");
     if (currentParticipant + 1 < numberOfParticipants)
       setCurrentParticipant(currentParticipant + 1);
+    return true
   };
 
   const onBackHandler = () => {
