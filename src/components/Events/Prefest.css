@@ -106,7 +106,7 @@ body {
   line-height: 27px;
   width: 210px;
   mix-blend-mode: difference;
-  z-index: -2;
+  
 }
  
 @media screen and (max-width: 500px) {
