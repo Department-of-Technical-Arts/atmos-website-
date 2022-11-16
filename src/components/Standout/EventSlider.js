@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { urlEndpoint } from "../../config";
 
 const EventSlider = ({ type, data }) => {
- 
+
   const navigate = useNavigate();
 
   function imageClicked() {
