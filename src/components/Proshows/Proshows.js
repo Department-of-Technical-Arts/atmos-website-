@@ -19,7 +19,7 @@ const Proshows = () => {
     "Pineapple Express",
   ];
   const proshowDates = ["27 NOV"]
-  const proshowLinks = ["https://www.instagram.com/p/Ck8U7YRv05l/?igshid=YmMyMTA2M2Y="]
+  const proshowLinks = ["https://www.instagram.com/p/Ck3qZFlhHXp/"]
   useEffect(() => {
     document.title = "PROSHOWS - ATMOS";
     

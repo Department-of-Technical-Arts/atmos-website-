@@ -53,7 +53,7 @@ const Contest = () => {
         setTimeout(()=>{
             if(document.title=="undefined - ATMOS"){
             navigate("/404")}
-        }, "5000")
+        }, "20000")
         
     }, [competitions, workshops])
     useEffect(() => {
