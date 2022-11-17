@@ -40,6 +40,26 @@ const EventSlider = ({ type, data }) => {
             </div></a>
           );
         })}
+        {(type=="talk") && 
+          <div  key={100}
+          className="slide-standout" 
+
+           
+
+          onClick={imageClicked} 
+
+          onMouseEnter={ (e) => {
+            e.preventDefault();
+            document.getElementById(`titles_null}`).hidden = false;
+          }}
+
+          onMouseLeave={(e)=>{
+            document.getElementById(`titles_null`).hidden = true;
+          }}>
+            <div className="hide titles_slider" hidden id={`titles_null`}></div>
+          </div>
+        }
+        
         {(type=="talk") && data.map((value, i) => {
             if (value.IMAGEURL)
             return (
@@ -64,6 +84,7 @@ const EventSlider = ({ type, data }) => {
               </div>
             );
           })}
+          
         {(type=="prefest") && data.map((value, i) => {
             return (
               <a href={`/contest/prefest/${i}`} key={i}>

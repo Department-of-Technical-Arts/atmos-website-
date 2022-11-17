@@ -35,6 +35,7 @@ function Talks() {
               {talks.map((eachTalk) => {
                 if (eachTalk.IMAGEURL)
                   return (
+                    <a href={eachTalk.LINK}>
                     <div
                       key={eachTalk.NAME}
                       className="hover-cards-talks"
@@ -44,6 +45,7 @@ function Talks() {
                     >
                       <p>{eachTalk.NAME}</p>
                     </div>
+                    </a>
                   );
               })}
             </div>
@@ -52,6 +54,7 @@ function Talks() {
               <div className="prev-talks">
                 {talksNames.map((prevTalk, index) => {
                   return (
+                    <a>
                     <div
                       key={prevTalk}
                       className="hover-cards-talks"
@@ -60,7 +63,7 @@ function Talks() {
                       }}
                     >
                       <p>{prevTalk}</p>
-                    </div>
+                    </div></a>
                   );
                 })}
               </div>
