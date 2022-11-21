@@ -120,6 +120,47 @@
     opacity: 0;
   }
 }
+@keyframes blinkA {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.passes-btn {
+  animation: blinkA 2s linear infinite;
+  left: 42%;
+  top: 60%;
+  position: absolute;
+  align-items: center;
+  background-color: #e9e9dd;
+  border-radius: 12px;
+  box-shadow: transparent 0 0 0 3px, rgba(18, 18, 18, 0.1) 0 6px 20px;
+  cursor: pointer;
+  font-size: 1.2vw;
+  font-weight: 700;
+  outline: none;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  white-space: nowrap;
+  border: 0;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.passes-btn:hover {
+  box-shadow: #fff 0 0 0 3px, transparent 0 0 0 0;
+  background-color: black;
+  color: white;
+}
 
 .arrow {
   position: absolute;
@@ -211,6 +252,12 @@
   .image-landing1 {
     background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
   }
+  .passes-btn {
+    font-size: 3vw;
+    border-radius: 1.5vw;
+    top: 58%;
+    left: 32%;
+  }
 }
 
 @media screen and (min-width: 480px) and (max-width: 1024px) {
@@ -249,5 +296,14 @@
   }
   .image-landing1 {
     background-image: url(../../assets/aman-pal-1c2iHG5_MgE-unsplash-1.jpg);
+  }
+  .passes-btn {
+    width: 26vw;
+    font-size: 2.2vw;
+    padding: 1.4vw;
+    border-radius: 1.5vw;
+    margin-top: 8vw;
+    left: 36%;
+    top: 53%;
   }
 }
