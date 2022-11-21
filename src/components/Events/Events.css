@@ -46,7 +46,8 @@
 .image-events {
     top: 0;
     left: 0;
-    position: absolute;
+    position: fixed;
+    z-index: 0;
     background-image: url("../../assets/earth-g174993377_1920\ 1.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -92,7 +93,28 @@
     padding: 0 12%;
     flex: 0 1 auto;
 }
-
+.hover-cards-passes {
+    background-color: black;
+  position: relative;
+  height: 390px;
+  width: 400px;
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 15px;
+  margin-bottom: 40%;
+  margin-left: 1.5rem;
+  font-family: "Inter";
+  color: #fffffc;
+  text-transform: uppercase;
+  bottom: 0;
+  animation: 2s ease-out 0s 1 fadeIn;
+  padding-left: 10%;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  transition: transform 0.5s;
+}
 .hover-cards-one {
     position: relative;
     background-image: url(../../assets/Algomaniac_dp.jpg);
@@ -157,8 +179,7 @@
 }
 .hover-cards-five {
     position: relative;
-    /* background-image: url(/events-photos/cubing-cover.jpeg); */
-    background-size: cover;
+    background-position: center;
     height: 220px;
     width: 180px;
     border-radius: 15px;
@@ -168,7 +189,7 @@
     text-transform: uppercase;
     bottom: 0;
     animation: 2s ease-out 0s 1 fadeIn;
-    background-size: cover;
+    background-size: contain;
     transition: transform 0.5s;
 }
 
@@ -181,7 +202,37 @@
     line-height: 27px;
     width: 210px;
 }
-
+.passes-name {
+    font-size: 22px;
+    position: absolute;
+    top: 270px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 27px;
+    width: 210px;
+}
+.passes-prize {
+    background-color: rgba(250, 250, 250, 0.2);
+    border-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 230px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 30px;
+    width: 210px;
+}
+.passes-buy {
+    background-color: rgba(250, 250, 250, 0.05);
+    border-radius: 10px;
+    font-size: 20px;
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%);
+    line-height: 30px;
+    width: 210px;
+}
 .hover-cards-two p {
     font-size: 18px;
     position: absolute;
@@ -223,6 +274,11 @@
     z-index: 10;
     
 }
+.hover-cards-passes:hover {
+    transform:scale(1.3);
+    z-index: 10;
+    
+}
 .hover-cards-two:hover {
     transform:scale(1.3);
     z-index: 10;
@@ -232,6 +288,10 @@
     z-index: 10;
 }
 .hover-cards-four:hover {
+    transform:scale(1.3);
+    z-index: 10;
+}
+.hover-cards-five:hover {
     transform:scale(1.3);
     z-index: 10;
 }
@@ -260,6 +320,10 @@
         width: 280px;
         margin-bottom: 30%;
       }
+      .hover-cards-passes{
+        width: 280px;
+        margin-bottom: 30%;
+      }
       .hover-cards-two{
         width: 280px;
         margin-bottom: 30%;
@@ -271,7 +335,18 @@
       .hover-cards-four{
         width: 280px;
         margin-bottom: 30%;
-      }
+      
+    }
+    .hover-cards-five{
+        width: 280px;
+        margin-bottom: 30%;
+      
+    }
+    .hover-cards-passes:hover {
+        transform:scale(1);
+        z-index: 10;
+        
+    }
       .hover-cards-one:hover {
         transform:scale(1);
         z-index: 10;
@@ -286,6 +361,10 @@
         z-index: 10;
     }
     .hover-cards-four:hover {
+        transform:scale(1);
+        z-index: 10;
+    }
+    .hover-cards-five:hover {
         transform:scale(1);
         z-index: 10;
     }

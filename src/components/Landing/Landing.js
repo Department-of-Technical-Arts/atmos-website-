@@ -72,7 +72,7 @@ const Landing = () => {
   }, []);
 
   const passesClicked = () => {
-    navigate("/proshows");
+    navigate("/passes");
   };
 
   return (

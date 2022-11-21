@@ -1,5 +1,6 @@
 import "./App.css";
 import Events from "./components/Events/Events";
+import Passes from "./components/Events/Passes";
 import Prefest from "./components/Events/Prefest";
 import Gallery from "./components/Gallery/Gallery";
 import NavBar from "./components/Navbar/NavBar";
@@ -67,6 +68,7 @@ const App = () => {
             <Route path="/" element={<Landing />} />
             <Route path="explore" element={<Explore />} />
             <Route path="events" element={<Events />} />
+            <Route path="passes" element={<Passes />} />
             <Route path="gallery" element={<Gallery />} />
             <Route path="sponsors" element={<Sponsors />} />
             <Route path="about" element={<About />} />
