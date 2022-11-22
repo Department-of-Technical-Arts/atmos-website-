@@ -40,7 +40,7 @@ function Talks() {
                       key={eachTalk.NAME}
                       className="hover-cards-talks"
                       style={{
-                        backgroundImage: `url(${urlEndpoint}talks/${eachTalk.IMAGEURL})`,
+                        backgroundImage: `url(${urlEndpoint}${eachTalk.IMAGEURL})`,
                       }}
                     >
                       <p>{eachTalk.NAME}</p>

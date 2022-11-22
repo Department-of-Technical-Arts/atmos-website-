@@ -67,7 +67,7 @@ const EventSlider = ({ type, data }) => {
               className="slide-standout" 
 
               style={{ 
-                backgroundImage: `url(${urlEndpoint}talks/${value.IMAGEURL})`
+                backgroundImage: `url(${urlEndpoint}${value.IMAGEURL})`
               }} 
 
               onClick={imageClicked} 
