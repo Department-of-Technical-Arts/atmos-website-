@@ -19,7 +19,7 @@ export const sheetLinks = {
   "workshops": ""
 }
 
-export const urlEndpoint = "https://ik.imagekit.io/atmosbphc/"
+export const urlEndpoint = "https://ucarecdn.com/"
 
 
 export default firebase
