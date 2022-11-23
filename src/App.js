@@ -20,6 +20,7 @@ import { useDispatch } from "react-redux";
 import Papa from "papaparse"
 import { Actions } from "./redux";
 import P404page from "./components/Contest/404page";
+import Schedule from "./components/Schedule/Schedule";
 
 const App = () => {
 
@@ -78,6 +79,7 @@ const App = () => {
             <Route path="proshows" element={<ProShows />} />
             <Route path="prefest" element={<Prefest />} />
             <Route path="404" element={<P404page />} />
+            <Route path="schedule" element={<Schedule />} />
             <Route path="contest/:type/:id" element={<Contest />} />
             <Route path="contest/:type/:id/register" element = {<RegistrationForm />} />
             <Route path="*" element={<P404page />} />

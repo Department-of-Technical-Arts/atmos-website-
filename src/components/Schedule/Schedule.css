@@ -1,0 +1,38 @@
+.day-box {
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.highlighted-box {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+}
+
+.time-box {
+    background-color: white;
+    color: black;
+    border: 1px solid white;
+    padding: 10px;
+    margin: 20px;
+    width: 100px;
+    font-weight: bold;
+}
+
+.event-box {
+    border: 1px solid white;
+    color: white;
+    padding: 10px;
+    margin: 20px;
+    width: 250px;
+    height: max-content;
+}
+
+.event-heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+}

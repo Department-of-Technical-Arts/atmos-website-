@@ -61,6 +61,17 @@ const DrawerComp = () => {
           </ListItem>
           <ListItem>
             <ListItemButton>
+              <a href="/schedule">
+                <ListItemText
+                  primaryTypographyProps={{ fontSize: itemTextSize }}
+                  primary="SCHEDULE"
+                  sx={{ color: "white", marginTop: marginTop }}
+                />
+              </a>
+            </ListItemButton>
+          </ListItem>
+          <ListItem>
+            <ListItemButton>
               <a href="/events">
                 <ListItemText
                   primaryTypographyProps={{ fontSize: itemTextSize }}
