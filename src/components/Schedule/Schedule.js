@@ -41,7 +41,7 @@ class Schedule extends React.Component {
         }
         return (
             <div style={{display:"flex", margin:"20px", flexDirection:"column"}}>
-                <h4 style={{border: "1px solid white", padding: "10px", color: "white", alignSelf:"center"}}>SCHEDULE</h4>
+                <h4 style={{border: "1px solid white", padding: "10px", color: "white", alignSelf:"center", marginTop: "50px"}}>SCHEDULE</h4>
                 <div style={{display:"flex", justifyContent:"center", marginBottom:"15px"}}>
                     <div onClick={() =>changeDate("25")} className={`day-box ${this.state.currentDate === "25" ? `highlighted-box` : null}`}>
                         DAY 1 (25<sup>th</sup> NOV)
@@ -61,7 +61,8 @@ class Schedule extends React.Component {
                                 {eachElement !== "12" ? eachElement%12 : "12"}:00 {index <= 2 ? "AM" : "PM"}
                             </div>
                             <div style={{display:"flex", flexWrap:"wrap"}}>
-                                {this.state.currentDate === "25" ? <div style={{display:"flex", flexWrap:"wrap"}}>
+                                {this.state.currentDate === "25" ? <div 
+                                style={{display:"flex", flexWrap:"wrap"}}>
                                     {this.state.day1.map((eachEvent) => {
                                     if (eachEvent.time === eachElement)
                                         return (
