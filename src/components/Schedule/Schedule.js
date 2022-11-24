@@ -54,11 +54,11 @@ class Schedule extends React.Component {
                     </div>
                 </div>
                 <div>
-                {["9","10","11","12","1","2","3","4","5","6","7","8","9","10"].map((eachElement,index) => {
+                {["9","10","11","12","13","14","15","16","17","18","19","20","21","22"].map((eachElement,index) => {
                     return (
                         <div>
                             <div className="time-box">
-                                {eachElement}:00 {index <= 2 ? "AM" : "PM"}
+                                {eachElement !== "12" ? eachElement%12 : "12"}:00 {index <= 2 ? "AM" : "PM"}
                             </div>
                             <div style={{display:"flex", flexWrap:"wrap"}}>
                                 {this.state.currentDate === "25" ? <div style={{display:"flex", flexWrap:"wrap"}}>
