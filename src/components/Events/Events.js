@@ -5,9 +5,7 @@ const Events = () => {
     useEffect(() => {
         document.title = "Events - ATMOS"
     }, []);
-    const passesClicked = () => {
-        navigate("/passes");
-      };
+    
 
     return(
         <div>
