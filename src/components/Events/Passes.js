@@ -6,7 +6,7 @@ const Passes = () => {
     const passes = [
         {
             name:"SUNDAY MUSIC NIGHT PASS",
-            link:"https://unstop.com/p/fest-sunday-music-night-pass-27th-nov-during-atmos-22-atmos-22-birla-institute-of-technology-and-sciences-bits-pilani--509931",
+            link:"https://www.townscript.com/e/sunday-night-pass-001444",
             image:"/events-photos/passes.png",
             price:"₹ 700"
         }
