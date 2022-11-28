@@ -7,8 +7,31 @@ const Imagegrid = () => {
     <div>
       <div className="background-image-sponsors"></div>
       <div className="heading-text-spons">
+        <h1 className="sponsors-title" >Our Current Sponsors</h1>
+      </div>
+
+      <div className="text-spons">
+      <h1 className="sponsors-title">Digital Media Sponsors</h1>
+    </div>
+
+      <div class="container-grid-2_items">
+       
+        <div class="spons-container w-1 h-1">
+          <div class="spons-item">
+            <img src={require("../../assets/zeeNews.jpeg")} alt="" class="zee-image" />
+          </div>
+        </div>
+        <div class="spons-container w-1 h-1">
+          <div class="spons-item">
+            <img src={require("../../assets/DNA.jpeg")} alt="" class="dna-image" />
+          </div>
+        </div>
+      </div>
+
+      <div className="heading-text-old-spons">
         <h1 className="sponsors-title" >Our Previous Sponsors</h1>
       </div>
+
     <div className="text-spons">
       <h1 className="sponsors-title">Title Sponsor</h1>
     </div>
