@@ -161,9 +161,7 @@ const Imagegrid = () => {
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
-            <img style={{
-              backgroundColor:"white"
-            }} src={require("../../assets/Gatsby_logo.png")} alt="" class="asus-image" />
+            <img src={require("../../assets/GatsbyLogo-2.png")} alt="" class="asus-image" />
           </div>
         </div>
       </div>
