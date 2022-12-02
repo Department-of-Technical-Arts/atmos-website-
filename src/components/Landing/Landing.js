@@ -83,9 +83,7 @@ const Landing = () => {
             <div className="bg"></div>
             <h1 className="landing-title">ATMOS</h1>
             <h4 className="dates">25-27 November</h4>
-            <button className="passes-btn" onClick={passesClicked}>
-              PASSES AVAILABLE
-            </button>
+            
             {scrolling && (
               <p className="scroll-text">
                 {isTouch.matches ? "SWIPE UP" : "SCROLL DOWN"}

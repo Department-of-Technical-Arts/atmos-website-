@@ -27,7 +27,7 @@ const Imagegrid = () => {
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
-            <img src={require("../../assets/ICICI.png")} alt="" class="asus-image" />
+            <img src={require("../../assets/9C48A685-1316-42E2-9081-5791A4A730F1.PNG")} alt="" class="asus-image" />
           </div>
         </div>
       </div>
