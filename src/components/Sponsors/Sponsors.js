@@ -87,14 +87,14 @@ const Imagegrid = () => {
         </div>
       </div>
       <div className="text-spons">
-        <h1 className="sponsors-title">Official Footware Partner & Title Partner Robowars</h1>
+        <h1 className="sponsors-title">Official Footwear Partner & Title Partner Robowars</h1>
       </div>
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
             <img style={{
               backgroundColor:"white"
-            }} src={require("../../assets/sparx.jpg")} alt="" class="asus-image" />
+            }} src={require("../../assets/sparx.jpeg")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
@@ -114,7 +114,7 @@ const Imagegrid = () => {
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
-            <img src={require("../../assets/Unacademy_logo.png")} alt="" class="asus-image" />
+            <img src={require("../../assets/Unacademy_logo.png")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@ const Imagegrid = () => {
           <div class="spons-item">
             <img style={{
               backgroundColor:"white"
-            }} src={require("../../assets/AsusTek-black-logo.png")} alt="" class="asus-image" />
+            }} src={require("../../assets/AsusTek-black-logo.png")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
@@ -151,7 +151,7 @@ const Imagegrid = () => {
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
-            <img src={require("../../assets/Standard_Chartered_(2021).svg.png")} alt="" class="asus-image" />
+            <img src={require("../../assets/Standard_Chartered_(2021).svg.png")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
@@ -161,7 +161,7 @@ const Imagegrid = () => {
       <div class="container-grid-2_items">
         <div class="spons-container w-2 h-1">
           <div class="spons-item">
-            <img src={require("../../assets/GatsbyLogo-2.png")} alt="" class="asus-image" />
+            <img src={require("../../assets/GatsbyLogo-2.png")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
@@ -173,7 +173,7 @@ const Imagegrid = () => {
           <div class="spons-item">
             <img style={{
               backgroundColor:"white"
-            }} src={require("../../assets/logo-2.png")} alt="" class="asus-image" />
+            }} src={require("../../assets/logo-2.png")} alt="" class="telangana-logo" />
           </div>
         </div>
       </div>
@@ -305,7 +305,7 @@ const Imagegrid = () => {
         </div>
         <div class="spons-container w-1 h-1">
           <div class="spons-item">
-            <img src={require("../../assets/unacademyLogo.png")} alt="" class="logo-image" />
+            <img src={require("../../assets/unacademyLogo.png")} alt="" class="sparx-logo" />
           </div>
         </div>
       </div>
